@@ -2,7 +2,8 @@
 #define OUTLINE_DECIDER_INCLUDED
 
 void OutlineDecider_float(float NormalEdge, float DepthEdge, float DepthDifference,
-    float Rs, float Gs, float Bs, 
+    float Rs, float Gs, float Bs,
+    float HL, float SH,
     out float R, out float G, out float B, out float A) 
 {
     R = Rs;
@@ -16,16 +17,16 @@ void OutlineDecider_float(float NormalEdge, float DepthEdge, float DepthDifferen
     {
         if (DepthEdge > 0.0)
         {
-            R *= 0.5;
-            G *= 0.5;
-            B *= 0.5;
+            R *= SH;
+            G *= SH;
+            B *= SH;
             A = DepthEdge;
         }
         else
         {
-            R *= 1.5;
-            G *= 1.5;
-            B *= 1.5;
+            R *= HL;
+            G *= HL;
+            B *= HL;
             A = NormalEdge;
         }
     }

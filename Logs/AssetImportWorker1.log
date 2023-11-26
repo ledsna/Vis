@@ -3573,3 +3573,119 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.454 seconds
+Refreshing native plugins compatible for Editor in 1.87 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.888 seconds
+Domain Reload Profiling: 2343ms
+	BeginReloadAssembly (167ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (59ms)
+	RebuildCommonClasses (45ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (25ms)
+	LoadAllAssembliesAndSetupDomain (204ms)
+		LoadAssemblies (252ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (24ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1889ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (568ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (58ms)
+			ProcessInitializeOnLoadAttributes (443ms)
+			ProcessInitializeOnLoadMethodAttributes (57ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (20ms)
+Refreshing native plugins compatible for Editor in 1.99 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4783 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 49 unused Assets / (0.6 MB). Loaded Objects now: 6076.
+Memory consumption went from 0.54 GB to 0.54 GB.
+Total: 6.136987 ms (FindLiveObjects: 0.570023 ms CreateObjectMapping: 0.507132 ms MarkObjects: 4.492215 ms  DeleteObjects: 0.566756 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.665 seconds
+Refreshing native plugins compatible for Editor in 1.90 ms, found 2 plugins.
+The file 'MemoryStream' is corrupted! Remove it and launch unity again!
+[Position out of bounds!]
+Fatal Error! The file 'MemoryStream' is corrupted! Remove it and launch unity again!
+[Position out of bounds!]
+Obtained 41 stack frames.
+#0  0x007ff81bc61202 in __pthread_kill
+#1  0x007ff81bbbfb45 in abort
+#2  0x000001081ebdbe in CrashDontLaunchBugReporter()
+#3  0x00000106bbeb52 in EditorMonoConsole::LogToConsoleImplementation(CppLogEntry&)
+#4  0x00000106bbe6c3 in EditorMonoConsole::LogToConsoleImplementation(DebugStringToFileData const&)
+#5  0x00000106bc025b in LogToConsoleImplementation(DebugStringToFileData const&)
+#6  0x00000107a7b952 in DebugStringToFilePostprocessedStacktrace(DebugStringToFileData const&)
+#7  0x00000107a7c46b in DebugStringToFile(DebugStringToFileData const&)
+#8  0x00000105d6a7ae in CachedReader::OutOfBoundsError(unsigned long, unsigned long)
+#9  0x00000105d6af4c in CachedReader::UpdateReadCache(void*, unsigned long)
+#10 0x00000106119a6f in void Transfer_Blittable<StreamedBinaryRead, false, unsigned char>(SerializationCommandArguments const&, RuntimeSerializationCommandInfo&)
+#11 0x0000010611bc1c in void Transfer_ManagedObject<StreamedBinaryRead, false>(SerializationCommandArguments const&, RuntimeSerializationCommandInfo&)
+#12 0x000001060acf90 in void TransferScriptingObject<StreamedBinaryRead>(StreamedBinaryRead&, ScriptingObjectPtr, ScriptingClassPtr, SerializationCache::Data*&)::'lambda'(bool, bool)::operator()(bool, bool) const
+#13 0x000001060acd6f in void TransferScriptingObject<StreamedBinaryRead>(StreamedBinaryRead&, ScriptingObjectPtr, ScriptingClassPtr, SerializationCache::Data*&)
+#14 0x000001060ac84e in void SerializableManagedRefTransfer::TransferScriptingObjectWithSerializedRefSupport<StreamedBinaryRead>(Object*, SerializableManagedRef&, StreamedBinaryRead&)
+#15 0x000001060bd8bb in SerializableManagedRefTransfer::TransferBinaryInstanceOnly(Object*, SerializableManagedRef&, dynamic_array<unsigned char, 0ul>&, TransferInstructionFlags)
+#16 0x000001060bd6da in void SerializableManagedRefTransfer::RestoreBackupImpl<SerializableManagedRefBackupGenerator>(Object*, SerializableManagedRef&, TransferInstructionFlags)
+#17 0x000001061a05d9 in SerializableManagedRefsUtilities::RestoreBackups(DomainReloadingData const&)
+#18 0x000001060a0c68 in MonoManager::FinalizeReload()
+#19 0x000001075a474a in ScriptingInitializer::FinalizeReload()
+#20 0x00000107139bd7 in LoadUserAssemblies()
+#21 0x0000010769559e in AssetImportWorkerClient::ReloadMonoDomain(AssetResolver&)
+#22 0x000001076a1e24 in invocation function for block in AssetImportWorkerClient::HandleMessage(PrepareMessage const&)::$_4::operator()() const
+#23 0x007ff81baf8033 in _dispatch_client_callout
+#24 0x007ff81bb05c60 in _dispatch_async_and_wait_invoke
+#25 0x007ff81baf8033 in _dispatch_client_callout
+#26 0x007ff81bb04fcf in _dispatch_main_queue_drain
+#27 0x007ff81bb04c07 in _dispatch_main_queue_callback_4CF
+#28 0x007ff81bdb4205 in __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__
+#29 0x007ff81bd73f2f in __CFRunLoopRun
+#30 0x007ff81bd72f31 in CFRunLoopRunSpecific
+#31 0x007ff8257f3f3d in RunCurrentEventLoopInMode
+#32 0x007ff8257f3d4e in ReceiveNextEventCommon
+#33 0x007ff8257f3aa8 in _BlockUntilNextEventMatchingListInModeWithFilter
+#34 0x007ff81ee0f25c in _DPSNextEvent
+#35 0x007ff81ee0e106 in -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:]
+#36 0x007ff81ee00788 in -[NSApplication run]
+#37 0x007ff81edd49a1 in NSApplicationMain
+#38 0x00000108214ba5 in EditorMain(int, char const**)
+#39 0x00000108214ed9 in main
+#40 0x007ff81b93f41f in start

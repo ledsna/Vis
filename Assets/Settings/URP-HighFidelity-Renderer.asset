@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62c9c65cf3354c93be831c8bc075510, type: 3}
   m_Name: SSAO
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   m_Settings:
     AOMethod: 1
     Downsample: 0
@@ -118,15 +118,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   outlineSettings:
-    outlineColor: {r: 0, g: 0, b: 0, a: 1}
     outlineScale: 1
-    normalColor: {r: 1, g: 1, b: 1, a: 1}
     normalScale: 1
-    depthThreshold: 0.0001
-    robertsCrossMultiplier: 0
+    depthThreshold: 1
     normalThreshold: 0.7
-    steepAngleThreshold: 0
-    steepAngleMultiplier: 0
+    highlightIntensity: 1.5
+    shadowIntensity: 0.3
   viewSpaceNormalsTextureSettings:
     colorFormat: 0
     depthBufferBits: 16

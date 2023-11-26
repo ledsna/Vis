@@ -10,31 +10,39 @@ public class ScreenSpaceOutlines : ScriptableRendererFeature {
     [System.Serializable]
     private class ScreenSpaceOutlineSettings {
 
-        [Header("General Outline Settings")]
-        public Color outlineColor = Color.black;
-        [Range(0.0f, 20.0f)]
+        //[Header("General Outline Settings")]
+        //public Color outlineColor = Color.black;
+        //[Range(0.0f, 20.0f)]
         public float outlineScale = 1.0f;
 
-        [Header("Normal Outline Settings")] 
-        public Color normalColor = Color.white;
-		[Range(0.0f, 20.0f)]
+        //[Header("Normal Outline Settings")] 
+        //public Color normalColor = Color.white;
+		//[Range(0.0f, 20.0f)]
         public float normalScale = 1.0f;
 
         [Header("Depth Settings")]
-        [Range(0.0f, 100.0f)]
-        public float depthThreshold = 1.5f;
-        [Range(0.0f, 500.0f)]
-        public float robertsCrossMultiplier = 100.0f;
+        [Range(0.0f, 40.0f)]
+        public float depthThreshold = 1f;
+        //[Range(0.0f, 500.0f)]
+        //public float robertsCrossMultiplier = 100.0f;
 
         [Header("Normal Settings")]
         [Range(0.0f, 1.0f)]
         public float normalThreshold = 0.4f;
 
-        [Header("Depth Normal Relation Settings")]
-        [Range(0.0f, 2.0f)]
-        public float steepAngleThreshold = 0.2f;
-        [Range(0.0f, 500.0f)]
-        public float steepAngleMultiplier = 25.0f;
+		[Header("Normal Highlight Intensity")]
+		[Range(1.0f, 10f)]
+		public float highlightIntensity = 1.5f;
+
+		[Header("Depth Shadow Intensity")]
+		[Range(0.0f, 1.0f)]
+		public float shadowIntensity = 0.5f;
+
+        //[Header("Depth Normal Relation Settings")]
+        //[Range(0.0f, 2.0f)]
+        //public float steepAngleThreshold = 0.0f;
+        //[Range(0.0f, 500.0f)]
+        //public float steepAngleMultiplier = 0.0f;
 
     }
 
@@ -141,19 +149,24 @@ public class ScreenSpaceOutlines : ScriptableRendererFeature {
             this.renderPassEvent = renderPassEvent;
 
             screenSpaceOutlineMaterial = new Material(Shader.Find("Hidden/Outlines"));
-            screenSpaceOutlineMaterial.SetColor("_OutlineColor", settings.outlineColor);
+            //screenSpaceOutlineMaterial.SetColor("_OutlineColor", settings.outlineColor);
             screenSpaceOutlineMaterial.SetFloat("_OutlineScale", settings.outlineScale);
+
+
+            screenSpaceOutlineMaterial.SetFloat("_HighlightIntensity", settings.highlightIntensity);
+            screenSpaceOutlineMaterial.SetFloat("_ShadowIntensity", settings.shadowIntensity);
+
             
-            screenSpaceOutlineMaterial.SetColor("_NormalColor", settings.normalColor);
+            //screenSpaceOutlineMaterial.SetColor("_NormalColor", settings.normalColor);
             screenSpaceOutlineMaterial.SetFloat("_NormalScale", settings.normalScale);
 
             screenSpaceOutlineMaterial.SetFloat("_DepthThreshold", settings.depthThreshold);
-            screenSpaceOutlineMaterial.SetFloat("_RobertsCrossMultiplier", settings.robertsCrossMultiplier);
+            //screenSpaceOutlineMaterial.SetFloat("_RobertsCrossMultiplier", settings.robertsCrossMultiplier);
 
             screenSpaceOutlineMaterial.SetFloat("_NormalThreshold", settings.normalThreshold);
 
-            screenSpaceOutlineMaterial.SetFloat("_SteepAngleThreshold", settings.steepAngleThreshold);
-            screenSpaceOutlineMaterial.SetFloat("_SteepAngleMultiplier", settings.steepAngleMultiplier);
+            //screenSpaceOutlineMaterial.SetFloat("_SteepAngleThreshold", settings.steepAngleThreshold);
+            //screenSpaceOutlineMaterial.SetFloat("_SteepAngleMultiplier", settings.steepAngleMultiplier);
         }
 
         public override void OnCameraSetup(CommandBuffer cmd, ref RenderingData renderingData) {
