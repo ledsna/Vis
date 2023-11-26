@@ -14,7 +14,12 @@ public class ScreenSpaceOutlines : ScriptableRendererFeature {
         public Color outlineColor = Color.black;
         [Range(0.0f, 20.0f)]
         public float outlineScale = 1.0f;
-        
+
+        [Header("Normal Outline Settings")] 
+        public Color normalColor = Color.white;
+		[Range(0.0f, 20.0f)]
+        public float normalScale = 1.0f;
+
         [Header("Depth Settings")]
         [Range(0.0f, 100.0f)]
         public float depthThreshold = 1.5f;
@@ -138,6 +143,9 @@ public class ScreenSpaceOutlines : ScriptableRendererFeature {
             screenSpaceOutlineMaterial = new Material(Shader.Find("Hidden/Outlines"));
             screenSpaceOutlineMaterial.SetColor("_OutlineColor", settings.outlineColor);
             screenSpaceOutlineMaterial.SetFloat("_OutlineScale", settings.outlineScale);
+            
+            screenSpaceOutlineMaterial.SetColor("_NormalColor", settings.normalColor);
+            screenSpaceOutlineMaterial.SetFloat("_NormalScale", settings.normalScale);
 
             screenSpaceOutlineMaterial.SetFloat("_DepthThreshold", settings.depthThreshold);
             screenSpaceOutlineMaterial.SetFloat("_RobertsCrossMultiplier", settings.robertsCrossMultiplier);
