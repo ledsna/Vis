@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62c9c65cf3354c93be831c8bc075510, type: 3}
   m_Name: SSAO
   m_EditorClassIdentifier: 
-  m_Active: 0
+  m_Active: 1
   m_Settings:
     AOMethod: 1
     Downsample: 0
@@ -20,7 +20,7 @@ MonoBehaviour:
     Source: 1
     NormalSamples: 1
     Intensity: 0.5
-    DirectLightingStrength: 0.25
+    DirectLightingStrength: 0
     Radius: 0.25
     Samples: 0
     BlurQuality: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
     normalScale: 1
     depthThreshold: 0.0001
     robertsCrossMultiplier: 0
-    normalThreshold: 0.207
+    normalThreshold: 0.7
     steepAngleThreshold: 0
     steepAngleMultiplier: 0
   viewSpaceNormalsTextureSettings:
