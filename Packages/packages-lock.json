@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.kink3d.mirrors": {
-      "version": "file:/Users/kallklokhet/Downloads/kMirrors-master",
+      "version": "file:/Users/aspisov/Downloads/kMirrors-master",
       "depth": 0,
       "source": "local",
       "dependencies": {
