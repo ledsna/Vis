@@ -21,10 +21,10 @@ public class ScreenSpaceOutlines : ScriptableRendererFeature {
         public float normalScale = 1.0f;
 
         [Header("Depth Settings")]
-        [Range(0.0f, 40.0f)]
+        [Range(0.0f, 200.0f)]
         public float depthThreshold = 1f;
         //[Range(0.0f, 500.0f)]
-        //public float robertsCrossMultiplier = 100.0f;
+        // public float robertsCrossMultiplier = 100.0f;
 
         [Header("Normal Settings")]
         [Range(0.0f, 1.0f)]
@@ -38,11 +38,11 @@ public class ScreenSpaceOutlines : ScriptableRendererFeature {
 		[Range(0.0f, 1.0f)]
 		public float shadowIntensity = 0.5f;
 
-        //[Header("Depth Normal Relation Settings")]
-        //[Range(0.0f, 2.0f)]
-        //public float steepAngleThreshold = 0.0f;
-        //[Range(0.0f, 500.0f)]
-        //public float steepAngleMultiplier = 0.0f;
+        // [Header("Depth Normal Relation Settings")]
+        // [Range(0.0f, 2.0f)]
+        // public float steepAngleThreshold = 0.0f;
+        // [Range(0.0f, 500.0f)]
+        // public float steepAngleMultiplier = 0.0f;
 
     }
 
