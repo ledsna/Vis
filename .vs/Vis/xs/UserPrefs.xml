@@ -1,9 +1,11 @@
 ﻿<Properties StartupConfiguration="{962F4B5A-8769-FA6F-0E10-762F8322C455}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CameraPivot_Isometric.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/PlayerLocomotionManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player/PlayerInputManager.cs" Line="14" Column="44" />
-      <File FileName="Assets/Scripts/CameraPivot_Isometric.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/PlayerInputManager.cs" Line="46" Column="6" />
+      <File FileName="Assets/Scripts/CameraPivot_Isometric.cs" Line="11" Column="1" />
       <File FileName="Assets/Scripts/ScreenSpaceOutlines.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/CameraManager.cs" Line="26" Column="1" />
+      <File FileName="Assets/Scripts/Player/PlayerLocomotionManager.cs" Line="6" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,8 +13,9 @@
           <Node name="Vis" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Player" expanded="True" />
-                <Node name="CameraPivot_Isometric.cs" selected="True" />
+                <Node name="Player" expanded="True">
+                  <Node name="PlayerLocomotionManager.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>

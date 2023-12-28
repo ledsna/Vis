@@ -7,20 +7,25 @@ using UnityEngine.SceneManagement;
 
 public class PlayerInputManager : MonoBehaviour
 {
-    CharacterController characterController;
+    public static PlayerInputManager instance;
+
     PlayerControls playerControls;
 
     [Header("MOVEMENT INPUT")]
     [SerializeField] Vector2 movementInput;
-
-    [Header("MOVEMENT SETTINGS")]
-    private Vector3 movementDirection;
-    [SerializeField] float walkingSpeed = 2;
-
+    public float verticalInput;
+    public float horizontalInput;
 
     private void Awake()
     {
-        characterController = GetComponent<CharacterController>();
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnEnable()
@@ -37,11 +42,7 @@ public class PlayerInputManager : MonoBehaviour
 
     private void Update()
     {
-        movementDirection = transform.forward * movementInput.y +
-            transform.right * movementInput.x;
-        movementDirection.Normalize();
-        movementDirection.y = 0;
-
-        characterController.Move(movementDirection * walkingSpeed * Time.deltaTime);
+        verticalInput = movementInput.y;
+        horizontalInput = movementInput.x;
     }
 }
