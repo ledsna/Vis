@@ -100,7 +100,7 @@ Material:
     - _SrcBlend: 5
     - _Strength: 1.26
     - _Surface: 1
-    - _T: 0.5
+    - _T: 0.535
     - _T2: 100
     - _Texture_Move_Speed: 0
     - _Tint_Strength: 4.01
