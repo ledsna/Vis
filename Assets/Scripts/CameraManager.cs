@@ -9,8 +9,9 @@ public class CameraManager : MonoBehaviour
     public Transform player;
 
     [Header("Camera Settings")]
-    private float cameraSmoothSpeed = 1; // the bigger this number is the longer it takes your camera to catch up
+    [SerializeField] float cameraSmoothSpeed = 7; // the bigger this number is the longer it takes your camera to catch up
     private Vector3 cameraVelocity;
+    [SerializeField] float cameraLookSpeed = 10;
 
     private void Awake()
     {
@@ -26,6 +27,18 @@ public class CameraManager : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (PlayerInputManager.instance.cameraMovementInput != Vector2.zero)
+        {
+            Vector3 movementDirection = transform.forward * PlayerInputManager.instance.cameraMovementInput.y +
+                transform.right * PlayerInputManager.instance.cameraMovementInput.x;
+            movementDirection.Normalize();
+            movementDirection.y = 0;
+
+            transform.position += movementDirection * cameraLookSpeed * Time.deltaTime;
+
+            return;
+        }
+
         if (player != null)
         {
             Vector3 targetCameraPosition = Vector3.SmoothDamp

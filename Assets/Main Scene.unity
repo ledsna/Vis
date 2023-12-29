@@ -869,7 +869,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementInput: {x: 0, y: 0}
-  walkingSpeed: 2
+  verticalInput: 0
+  horizontalInput: 0
+  cameraMovementInput: {x: 0, y: 0}
 --- !u!4 &400742931
 Transform:
   m_ObjectHideFlags: 0
@@ -885,7 +887,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!84 &490454377
+--- !u!84 &532410735
 RenderTexture:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1591,7 +1593,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a0ea66db419438999137f030e45558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1844451769}
+  cameraSmoothSpeed: 3
+  cameraLookSpeed: 4
 --- !u!1 &1018480731
 GameObject:
   m_ObjectHideFlags: 0
@@ -2370,7 +2374,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 490454377}
+  m_TargetTexture: {fileID: 532410735}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -2419,6 +2423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a039c89becbe14b7181430bb303d35c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkingSpeed: 2
 --- !u!114 &1844451773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2863,7 +2868,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 252695111}
+  - {fileID: 400742931}
   - {fileID: 998389382}
   - {fileID: 87716040}
   - {fileID: 590719815}
-  - {fileID: 400742931}
