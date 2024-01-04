@@ -16,7 +16,7 @@ public class PlayerInputManager : MonoBehaviour
     public float verticalInput;
     public float horizontalInput;
 
-    [Header("CAMERA MOVEMET INNPUT")]
+    [Header("CAMERA MOVEMENT INPUT")]
     public Vector2 cameraMovementInput;
 
     private void Awake()
