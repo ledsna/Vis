@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CameraManager : MonoBehaviour
@@ -7,16 +8,15 @@ public class CameraManager : MonoBehaviour
     public static CameraManager instance;
 
     [SerializeField] Camera mainCamera;
+    
     [SerializeField] Transform player;
-
+    
     [Header("Camera Settings")]
     [SerializeField] float cameraSmoothSpeed = 7; // the bigger this number is the longer it takes your camera to catch up
     private Vector3 cameraVelocity;
 
     [Header("Camera Free Rotation Settings")]
     [SerializeField] float cameraLookSpeed = 10;
-    private bool cameraIsMoving = false;
-
 
     private void Awake()
     {
@@ -39,7 +39,7 @@ public class CameraManager : MonoBehaviour
             movementDirection.Normalize();
             movementDirection.y = 0;
 
-            transform.position += movementDirection * cameraLookSpeed * Time.deltaTime;
+            transform.position += Time.deltaTime * cameraLookSpeed * movementDirection;
         }
         else if (player is not null)
         {
@@ -54,19 +54,32 @@ public class CameraManager : MonoBehaviour
         
         AdjustCameraPosition();
     }
+    
+    bool IsApproximately(float value, float target, float threshold = 0.01f)
+    {
+        return Mathf.Abs(value - target) < threshold;
+    }
 
     private void AdjustCameraPosition()
     {
-        float pixelsPerUnit = mainCamera.scaledPixelHeight / mainCamera.orthographicSize / 2;
+        
+        float pixelsPerUnit = mainCamera.scaledPixelHeight / mainCamera.orthographicSize / 4;
+        Vector3 euler = transform.localEulerAngles;
+
+        if (IsApproximately(euler.y, 45f) || IsApproximately(euler.y, 135f) ||
+            IsApproximately(euler.y, 225f) || IsApproximately(euler.y, 315f))
+        {
+            pixelsPerUnit /= Mathf.Sqrt(2);
+        }
+        
+        Debug.Log(euler.y);
+        Debug.Log(pixelsPerUnit);
         
         float newPosX = Mathf.Round(transform.position.x * pixelsPerUnit) / pixelsPerUnit;
-        float xDifference = newPosX - transform.position.x;
         
         float newPosY = Mathf.Round(transform.position.y * pixelsPerUnit) / pixelsPerUnit;
-        float yDifferece = newPosY - transform.position.y; 
             
         float newPosZ = Mathf.Round(transform.position.z * pixelsPerUnit) / pixelsPerUnit;
-        float zDifference = newPosZ - transform.position.z;
 
         transform.position = new Vector3(newPosX, newPosY, newPosZ);
     }
