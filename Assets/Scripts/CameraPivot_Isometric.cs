@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -37,6 +36,5 @@ public class CameraPivot_Isometric : MonoBehaviour
         currentAngle = Mathf.LerpAngle(transform.eulerAngles.y,
             targetAngle, rotationSpeed * Time.deltaTime);
         transform.rotation = Quaternion.Euler(30, currentAngle, 0);
-        
     }
 }
