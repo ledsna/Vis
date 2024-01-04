@@ -108,7 +108,11 @@ Material:
     - _Upper_Pixel_Depth_Threshold: 0.029
     - _Water_Clearness: 0.35
     - _Water_Depth: 1.41
+<<<<<<< Updated upstream
     - _Water_Opacity: 0.3
+=======
+    - _Water_Opacity: 0.764
+>>>>>>> Stashed changes
     - _Water_Thickness: 1
     - _WorkflowMode: 1
     - _ZTest: 4
