@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 using Quaternion = UnityEngine.Quaternion;
@@ -121,7 +120,7 @@ public class CameraManager : MonoBehaviour
     {
         // Pixels per Unit
         float ppu = mainCamera.scaledPixelHeight / mainCamera.orthographicSize / 2;
-        Vector3 pos = transform.position + transform.TransformVector(offset);
+        Vector3 pos = transform.position - transform.TransformVector(offset);
         // Convert the ( origin->position ) vector from World Space to Screen Space
         Vector3 ssPos = transform.InverseTransformVector(pos - wsOrigin);
         // Snap the Screen Space position vector to the closest Screen Space texel
@@ -132,13 +131,11 @@ public class CameraManager : MonoBehaviour
         // Convert the snapped Screen Space position vector to World Space and add back to the origin in World Space
         transform.position = wsOrigin + transform.TransformVector(ssPosSnapped);
         // Convert the difference between the initial and snapped positions from World Space to Screen Space
-        offset = (ssPosSnapped - ssPos);
+        offset = ssPosSnapped - ssPos;
         
         var uvRect = rawImage.uvRect;
-        
         uvRect.x = (1f - offset.x * ppu) * pixelW;
-        // uvRect.y = (1f - offset.y * ppu) * pixelH;
-        
+        uvRect.y = (1f - offset.y * ppu) * pixelH;
         rawImage.uvRect = uvRect;
     }
 }
