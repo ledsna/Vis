@@ -1,32 +1,96 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+using System;
 using UnityEngine;
+using UnityEngine.UI;
+using Quaternion = UnityEngine.Quaternion;
+using Vector2 = UnityEngine.Vector2;
+using Vector3 = UnityEngine.Vector3;
 
 public class CameraManager : MonoBehaviour
 {
     public static CameraManager instance;
-
+    
     [SerializeField] Camera mainCamera;
-    
+    [SerializeField] RawImage rawImage;
     [SerializeField] Transform player;
-    
-    [Header("Camera Settings")]
-    [SerializeField] float cameraSmoothSpeed = 7; // the bigger this number is the longer it takes your camera to catch up
+
+    [Header("Camera Follow Settings")]
+    [SerializeField] float cameraSmoothTime = 7; // the bigger this number is the longer it takes your camera to catch up
+
     private Vector3 cameraVelocity;
 
-    [Header("Camera Free Rotation Settings")]
-    [SerializeField] float cameraLookSpeed = 10;
+    [Header("Camera Overviewing Settings")] 
+    [SerializeField] float cameraSpeed = 10;
+
+    [Header("Camera Rotation Settings")]
+    public float angleThreshold = 0.05f;
+    public float incrementAngle = 45f;
+    
+    public float targetAngle = 45f;
+    private float currentAngle = 0f;
+    public float mouseSensitivity = 8f;
+    public float rotationSpeed = 5f;
+    
+    [Header("Blit to Viewport")]
+    [SerializeField] public Vector3 offset = Vector3.zero;
+    private Vector3 wsOrigin;
+    public float pixelW;
+    public float pixelH;
+
+    private void Start()
+    {
+        // Fraction of pixel size to screen size
+        pixelW = 1f / mainCamera.scaledPixelWidth;
+        pixelH = 1f / mainCamera.scaledPixelHeight;
+        
+        var uvRect = rawImage.uvRect;
+        
+        // Offsetting vertical and horizontal positions by 1 pixel
+        uvRect.x = pixelW;
+        uvRect.y = pixelH;
+        
+        // Shrinking the screen size by 2 pixels from each side
+        uvRect.width = 1f - 2 * pixelW;
+        uvRect.height = 1f - 2 * pixelH;
+        
+        rawImage.uvRect = uvRect;
+    }
 
     private void Awake()
     {
+        wsOrigin = transform.position;
         if (instance == null)
-        {
             instance = this;
+        else
+            Destroy(gameObject);
+    }
+
+    void Update()
+    {
+        float mouseX = Input.GetAxis("Mouse X");
+        // float mouseY = Input.GetAxis("Mouse Y");
+
+        if (Input.GetMouseButton(0))
+        {
+            targetAngle += mouseX * mouseSensitivity;
         }
         else
         {
-            Destroy(gameObject);
+            targetAngle = Mathf.Round(targetAngle / incrementAngle);
+            targetAngle *= incrementAngle;
+        }
+
+        if (targetAngle < 0) targetAngle += 360;
+        else if (targetAngle > 360) targetAngle -= 360;
+
+        currentAngle = Mathf.LerpAngle(transform.eulerAngles.y,
+            targetAngle, rotationSpeed * Time.deltaTime);
+
+        var originalRotation = transform.rotation;
+        transform.rotation = Quaternion.Euler(30, currentAngle, 0);
+        if (Mathf.Abs(targetAngle - currentAngle) > angleThreshold)
+        {
+            wsOrigin = transform.position;
+            offset = Vector3.zero;
         }
     }
 
@@ -34,53 +98,47 @@ public class CameraManager : MonoBehaviour
     {
         if (PlayerInputManager.instance.cameraMovementInput != Vector2.zero)
         {
-            Vector3 movementDirection = transform.forward * PlayerInputManager.instance.cameraMovementInput.y +
-                                        transform.right * PlayerInputManager.instance.cameraMovementInput.x;
-            movementDirection.Normalize();
-            movementDirection.y = 0;
+            var movementIn = PlayerInputManager.instance.cameraMovementInput.normalized;
+            Vector3 movementDirection = transform.up * movementIn.y + transform.right * movementIn.x;
 
-            transform.position += Time.deltaTime * cameraLookSpeed * movementDirection;
+            transform.position += Time.deltaTime * cameraSpeed * movementDirection;
         }
         else if (player is not null)
         {
             Vector3 targetCameraPosition = Vector3.SmoothDamp
             (transform.position,
-            player.transform.position,
-            ref cameraVelocity,
-            cameraSmoothSpeed * Time.deltaTime);
+                player.transform.position,
+                ref cameraVelocity,
+                cameraSmoothTime * Time.deltaTime);
 
-            transform.position = targetCameraPosition;
+            // transform.position = targetCameraPosition;
         }
-        
+
         AdjustCameraPosition();
-    }
-    
-    bool IsApproximately(float value, float target, float threshold = 0.01f)
-    {
-        return Mathf.Abs(value - target) < threshold;
     }
 
     private void AdjustCameraPosition()
     {
+        // Pixels per Unit
+        float ppu = mainCamera.scaledPixelHeight / mainCamera.orthographicSize / 2;
+        Vector3 pos = transform.position + transform.TransformVector(offset);
+        // Convert the ( origin->position ) vector from World Space to Screen Space
+        Vector3 ssPos = transform.InverseTransformVector(pos - wsOrigin);
+        // Snap the Screen Space position vector to the closest Screen Space texel
+        Vector3 ssPosSnapped = new Vector3(
+            Mathf.Round(ssPos.x * ppu),
+            Mathf.Round(ssPos.y * ppu),
+            Mathf.Round(ssPos.z * ppu)) / ppu;
+        // Convert the snapped Screen Space position vector to World Space and add back to the origin in World Space
+        transform.position = wsOrigin + transform.TransformVector(ssPosSnapped);
+        // Convert the difference between the initial and snapped positions from World Space to Screen Space
+        offset = (ssPosSnapped - ssPos);
         
-        float pixelsPerUnit = mainCamera.scaledPixelHeight / mainCamera.orthographicSize / 4;
-        Vector3 euler = transform.localEulerAngles;
-
-        if (IsApproximately(euler.y, 45f) || IsApproximately(euler.y, 135f) ||
-            IsApproximately(euler.y, 225f) || IsApproximately(euler.y, 315f))
-        {
-            pixelsPerUnit /= Mathf.Sqrt(2);
-        }
+        var uvRect = rawImage.uvRect;
         
-        Debug.Log(euler.y);
-        Debug.Log(pixelsPerUnit);
+        uvRect.x = (1f - offset.x * ppu) * pixelW;
+        // uvRect.y = (1f - offset.y * ppu) * pixelH;
         
-        float newPosX = Mathf.Round(transform.position.x * pixelsPerUnit) / pixelsPerUnit;
-        
-        float newPosY = Mathf.Round(transform.position.y * pixelsPerUnit) / pixelsPerUnit;
-            
-        float newPosZ = Mathf.Round(transform.position.z * pixelsPerUnit) / pixelsPerUnit;
-
-        transform.position = new Vector3(newPosX, newPosY, newPosZ);
+        rawImage.uvRect = uvRect;
     }
 }
