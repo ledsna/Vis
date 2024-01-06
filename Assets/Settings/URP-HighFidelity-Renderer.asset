@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: ScreenSpaceOutlines
   m_EditorClassIdentifier: 
   m_Active: 1
-  renderPassEvent: 400
+  renderPassEvent: 350
   outlinesLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295

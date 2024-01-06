@@ -124,7 +124,7 @@ public class CameraManager : MonoBehaviour
         // Difference between the initial and snapped positions from World Space to Screen Space
         snapOffset = ssPosSnapped - ssPos;
 
-        var uvRect = rawImage.uvRect;
+        Rect uvRect = rawImage.uvRect;
         // Offset the Viewport by 1 - offset pixels in both dimensions
         
         uvRect.x = (1f - snapOffset.x * ppu) * pixelW;
