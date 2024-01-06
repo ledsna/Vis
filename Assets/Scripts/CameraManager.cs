@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Quaternion = UnityEngine.Quaternion;
 using Vector2 = UnityEngine.Vector2;
@@ -12,51 +13,42 @@ public class CameraManager : MonoBehaviour
     [SerializeField] RawImage rawImage;
     [SerializeField] Transform player;
 
-    [Header("Camera Follow Settings")]
-    [SerializeField] float cameraSmoothTime = 7; // the bigger this number is the longer it takes your camera to catch up
+    [Header("Locked Settings")]
+    [SerializeField] float cameraSmoothTime = 7;
+    private Vector3 currentVelocity;
 
-    private Vector3 cameraVelocity;
-
-    [Header("Camera Overviewing Settings")] 
+    [Header("Unlocked Settings")] 
     [SerializeField] float cameraSpeed = 10;
 
-    [Header("Camera Rotation Settings")]
-    public float angleThreshold = 0.05f;
-    public float incrementAngle = 45f;
-    
-    public float targetAngle = 45f;
+    [Header("Rotation Settings")]
+    [SerializeField] float angleIncrement = 45f;
+    [SerializeField] float targetAngle = 45f;
+    [SerializeField] float mouseSensitivity = 8f;
+    [SerializeField] float rotationSpeed = 5f;
+    private float angleThreshold = 0.05f;
     private float currentAngle = 0f;
-    public float mouseSensitivity = 8f;
-    public float rotationSpeed = 5f;
     
     [Header("Blit to Viewport")]
-    [SerializeField] public Vector3 offset = Vector3.zero;
+    private Vector3 snapOffset = Vector3.zero;
+    private float pixelW;
+    private float pixelH;
     private Vector3 wsOrigin;
-    public float pixelW;
-    public float pixelH;
 
     private void Start()
     {
         // Fraction of pixel size to screen size
         pixelW = 1f / mainCamera.scaledPixelWidth;
         pixelH = 1f / mainCamera.scaledPixelHeight;
-        
-        var uvRect = rawImage.uvRect;
-        
         // Offsetting vertical and horizontal positions by 1 pixel
-        uvRect.x = pixelW;
-        uvRect.y = pixelH;
+        //  and shrinking the screen size by 2 pixels from each side
+        // mainCamera.pixelRect = new Rect(1, 1, mainCamera.pixelWidth - 2, mainCamera.pixelHeight - 2);
+        rawImage.uvRect = new Rect(pixelW, pixelH, 1f - 2 * pixelW, 1f - 2 * pixelH);
         
-        // Shrinking the screen size by 2 pixels from each side
-        uvRect.width = 1f - 2 * pixelW;
-        uvRect.height = 1f - 2 * pixelH;
-        
-        rawImage.uvRect = uvRect;
+        wsOrigin = transform.position;
     }
 
     private void Awake()
     {
-        wsOrigin = transform.position;
         if (instance == null)
             instance = this;
         else
@@ -69,48 +61,45 @@ public class CameraManager : MonoBehaviour
         // float mouseY = Input.GetAxis("Mouse Y");
 
         if (Input.GetMouseButton(0))
-        {
+            // While holding LMB, the Camera will follow the cursor
             targetAngle += mouseX * mouseSensitivity;
-        }
         else
         {
-            targetAngle = Mathf.Round(targetAngle / incrementAngle);
-            targetAngle *= incrementAngle;
+            // After that, it'll snap to the closest whole increment angle
+            targetAngle = Mathf.Round(targetAngle / angleIncrement);
+            targetAngle *= angleIncrement;
         }
 
-        if (targetAngle < 0) targetAngle += 360;
-        else if (targetAngle > 360) targetAngle -= 360;
-
+        targetAngle = (targetAngle + 360) % 360;
         currentAngle = Mathf.LerpAngle(transform.eulerAngles.y,
             targetAngle, rotationSpeed * Time.deltaTime);
-
-        var originalRotation = transform.rotation;
         transform.rotation = Quaternion.Euler(30, currentAngle, 0);
-        if (Mathf.Abs(targetAngle - currentAngle) > angleThreshold)
-        {
-            wsOrigin = transform.position;
-            offset = Vector3.zero;
-        }
+        
+        if (Mathf.Abs(targetAngle - currentAngle) > angleThreshold) return;
+        wsOrigin = transform.position;
+        snapOffset = Vector3.zero;
     }
 
     private void LateUpdate()
     {
+        // Unlocked camera
         if (PlayerInputManager.instance.cameraMovementInput != Vector2.zero)
         {
-            var movementIn = PlayerInputManager.instance.cameraMovementInput.normalized;
-            Vector3 movementDirection = transform.up * movementIn.y + transform.right * movementIn.x;
-
-            transform.position += Time.deltaTime * cameraSpeed * movementDirection;
+            // Normalize movement to ensure consistent speed
+            Vector2 ssDirection = PlayerInputManager.instance.cameraMovementInput.normalized;
+            Vector3 wsDirection = transform.right * ssDirection.x + transform.up * ssDirection.y;
+            transform.position += Time.deltaTime * cameraSpeed * wsDirection;
         }
+        // Locked camera
         else if (player is not null)
         {
-            Vector3 targetCameraPosition = Vector3.SmoothDamp
-            (transform.position,
-                player.transform.position,
-                ref cameraVelocity,
-                cameraSmoothTime * Time.deltaTime);
+            Vector3 targetCameraPosition = 
+                Vector3.SmoothDamp(transform.position, 
+                    player.transform.position, 
+                    ref currentVelocity, 
+                    cameraSmoothTime * Time.deltaTime);
 
-            // transform.position = targetCameraPosition;
+            transform.position = targetCameraPosition;
         }
 
         AdjustCameraPosition();
@@ -118,9 +107,10 @@ public class CameraManager : MonoBehaviour
 
     private void AdjustCameraPosition()
     {
-        // Pixels per Unit
+        // Calculate Pixels per Unit
         float ppu = mainCamera.scaledPixelHeight / mainCamera.orthographicSize / 2;
-        Vector3 pos = transform.position - transform.TransformVector(offset);
+        // Current unsnapped position = previous snapped position + unsnapped offset
+        Vector3 pos = transform.position - transform.TransformVector(snapOffset);
         // Convert the ( origin->position ) vector from World Space to Screen Space
         Vector3 ssPos = transform.InverseTransformVector(pos - wsOrigin);
         // Snap the Screen Space position vector to the closest Screen Space texel
@@ -128,14 +118,18 @@ public class CameraManager : MonoBehaviour
             Mathf.Round(ssPos.x * ppu),
             Mathf.Round(ssPos.y * ppu),
             Mathf.Round(ssPos.z * ppu)) / ppu;
+        
         // Convert the snapped Screen Space position vector to World Space and add back to the origin in World Space
         transform.position = wsOrigin + transform.TransformVector(ssPosSnapped);
-        // Convert the difference between the initial and snapped positions from World Space to Screen Space
-        offset = ssPosSnapped - ssPos;
-        
+        // Difference between the initial and snapped positions from World Space to Screen Space
+        snapOffset = ssPosSnapped - ssPos;
+
         var uvRect = rawImage.uvRect;
-        uvRect.x = (1f - offset.x * ppu) * pixelW;
-        uvRect.y = (1f - offset.y * ppu) * pixelH;
+        // Offset the Viewport by 1 - offset pixels in both dimensions
+        
+        uvRect.x = (1f - snapOffset.x * ppu) * pixelW;
+        uvRect.y = (1f - snapOffset.y * ppu) * pixelH;
+        // Blit to Viewport
         rawImage.uvRect = uvRect;
     }
 }

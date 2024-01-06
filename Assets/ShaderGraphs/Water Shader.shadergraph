@@ -9634,8 +9634,8 @@
     "m_ObjectId": "5385424d7fcf4a61a33525f14828a091",
     "m_Title": "Planar Reflection (https://github.com/eldskald/planar-reflections-unity/)",
     "m_Position": {
-        "x": 9128.5,
-        "y": 1170.0
+        "x": 9248.84765625,
+        "y": 1172.64501953125
     }
 }
 
@@ -9651,10 +9651,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 9469.5,
-            "y": 1331.0001220703125,
+            "x": 9589.5,
+            "y": 1333.5,
             "width": 127.0,
-            "height": 100.9998779296875
+            "height": 101.0
         }
     },
     "m_Slots": [
@@ -11709,8 +11709,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 9685.0,
-            "y": 1228.5,
+            "x": 9805.0,
+            "y": 1231.0,
             "width": 183.0,
             "height": 250.0
         }
@@ -15492,10 +15492,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 9317.0,
-            "y": 1259.5,
+            "x": 9437.0,
+            "y": 1262.0,
             "width": 127.5,
-            "height": 94.0
+            "height": 94.0001220703125
         }
     },
     "m_Slots": [
@@ -18354,9 +18354,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 9153.5,
-            "y": 1259.5,
-            "width": 119.0,
+            "x": 9273.5,
+            "y": 1262.0,
+            "width": 117.0,
             "height": 149.0
         }
     },
@@ -21651,10 +21651,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 9465.0,
-            "y": 1269.0001220703125,
+            "x": 9585.0,
+            "y": 1271.5,
             "width": 169.5,
-            "height": 33.9998779296875
+            "height": 34.0
         }
     },
     "m_Slots": [
