@@ -1,9 +1,5 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
-using Quaternion = UnityEngine.Quaternion;
-using Vector2 = UnityEngine.Vector2;
-using Vector3 = UnityEngine.Vector3;
 
 public class CameraManager : MonoBehaviour
 {
@@ -124,7 +120,7 @@ public class CameraManager : MonoBehaviour
         // Difference between the initial and snapped positions from World Space to Screen Space
         snapOffset = ssPosSnapped - ssPos;
 
-        var uvRect = rawImage.uvRect;
+        Rect uvRect = rawImage.uvRect;
         // Offset the Viewport by 1 - offset pixels in both dimensions
         
         uvRect.x = (1f - snapOffset.x * ppu) * pixelW;

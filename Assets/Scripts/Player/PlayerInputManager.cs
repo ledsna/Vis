@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.Interactions;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class PlayerInputManager : MonoBehaviour
 {
     public static PlayerInputManager instance;
 
     PlayerControls playerControls;
+    [HideInInspector] public PlayerManager player;
 
     [Header("MOVEMENT INPUT")]
     [SerializeField] Vector2 movementInput;
@@ -18,6 +20,9 @@ public class PlayerInputManager : MonoBehaviour
 
     [Header("CAMERA MOVEMENT INPUT")]
     public Vector2 cameraMovementInput;
+
+    [FormerlySerializedAs("jumpIsPressed")] [Header("ACTION INPUT")] 
+    public bool jumpInput = false;
 
     private void Awake()
     {
@@ -39,6 +44,8 @@ public class PlayerInputManager : MonoBehaviour
 
             playerControls.PlayerMovement.Movement.performed += i => movementInput = i.ReadValue<Vector2>();
             playerControls.CameraMovement.Movement.performed += i => cameraMovementInput = i.ReadValue<Vector2>();
+
+            playerControls.PlayerActions.Jump.performed += i => jumpInput = true;
         }
 
         playerControls.Enable();
@@ -48,5 +55,15 @@ public class PlayerInputManager : MonoBehaviour
     {
         verticalInput = movementInput.y;
         horizontalInput = movementInput.x;
+
+        float moveAmount = Mathf.Clamp01(Mathf.Abs(verticalInput) + Mathf.Abs(horizontalInput));
+        
+        player.animatorManager.UpdateAnimatorMovementParameters(0, moveAmount);
+
+        if (jumpInput)
+        {
+            player.locomotionManager.HandleJump();
+            jumpInput = false;
+        }
     }
 }

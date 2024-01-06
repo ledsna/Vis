@@ -38,7 +38,7 @@ public class MirrorCamera : MonoBehaviour {
         if (viewer.cameraType is CameraType.Reflection or CameraType.Preview) return;
         if (!renderInEditor && viewer.cameraType == CameraType.SceneView) return;
 
-        var parent = transform.parent;
+        Transform parent = transform.parent;
         UpdateSettings(viewer, out float offset);
         CalculateCurrentPosition(viewer.transform, parent, offset);
         CalculateObliqueProjection(parent, offset);
@@ -54,8 +54,8 @@ public class MirrorCamera : MonoBehaviour {
         // Make sure it's < 0.5 pixels big, so it doesn't create a visible 1 pixel offset.
         offset = 0.49f * mirror.orthographicSize * 2 / viewer.scaledPixelHeight;
         
-        var width = (int) (viewer.scaledPixelWidth * reflectionsQuality);
-        var height = (int) (viewer.scaledPixelHeight * reflectionsQuality);
+        int width = (int) (viewer.scaledPixelWidth * reflectionsQuality);
+        int height = (int) (viewer.scaledPixelHeight * reflectionsQuality);
         
         if (renderTexture && renderTexture.width == width && renderTexture.height == height) return;
         if (renderTexture) renderTexture.Release();
@@ -71,12 +71,12 @@ public class MirrorCamera : MonoBehaviour {
         Vector3 normal = plane.up;
         Vector3 viewerPos = viewer.position;
         // Flip viewer's position across the \offset\ reflective plane
-        var proj = normal * Vector3.Dot(normal, viewerPos - (plane.position + offset * normal));
+        Vector3 proj = normal * Vector3.Dot(normal, viewerPos - (plane.position + offset * normal));
         transform.position = viewerPos - 2 * proj;
         
         // Reflect the viewer's rotation across the normal to the reflective plane
-        var probeForward = Vector3.Reflect(viewer.forward, normal);
-        var probeUp = Vector3.Reflect(viewer.up, normal);
+        Vector3 probeForward = Vector3.Reflect(viewer.forward, normal);
+        Vector3 probeUp = Vector3.Reflect(viewer.up, normal);
         transform.LookAt(transform.position + probeForward, probeUp);
     }
     
@@ -87,7 +87,7 @@ public class MirrorCamera : MonoBehaviour {
         Matrix4x4 viewMatrix = mirror.worldToCameraMatrix;
         Vector3 viewPosition = viewMatrix.MultiplyPoint(plane.position + offset * normal);
         Vector3 viewNormal = viewMatrix.MultiplyVector(normal).normalized;
-        var clipPlane = 
+        Vector4 clipPlane = 
             new Vector4(viewNormal.x, viewNormal.y, viewNormal.z, 
                 -Vector3.Dot(viewPosition, viewNormal));
         mirror.projectionMatrix = mirror.CalculateObliqueMatrix(clipPlane);
