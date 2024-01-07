@@ -60,6 +60,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Absorption_Coefficient: 1
     - _Absorption_Level: -1.84
     - _Added_Intensity: 0.048
     - _AlphaClip: 0
@@ -68,12 +69,13 @@ Material:
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _CastShadows: 0
+    - _Colors: 20
     - _Cull: 0
     - _Current_Pixel_Depth_Threshold: 0.517
     - _Depth: 10
     - _DstBlend: 10
-    - _Float: 0.0025
-    - _Float_1: 4
+    - _Float: 0.597
+    - _Float_1: 1
     - _Foam_Brightness: 0.63
     - _Foam_Distance: 20
     - _Foam_Distance_Gradient_Levels: 0
@@ -90,6 +92,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _Reflection_Incidence_Fresnel: 1
     - _Reflection_Strength: 1
     - _Reflection_Vertical_Offset: 0
     - _Refraction_Added_Height: 3.95
@@ -109,20 +112,21 @@ Material:
     - _Upper_Pixel_Depth_Threshold: 0.63
     - _Water_Clearness: 0.07
     - _Water_Depth: 1.41
-    - _Water_Opacity: 0.795
+    - _Water_Opacity: 0.743
     - _Water_Thickness: 1
     - _WorkflowMode: 1
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
+    - _Absorbed_Color: {r: 0, g: 0.058823586, b: 1, a: 1}
     - _Deep_Tint: {r: 0, g: 0.083388895, b: 0.21698111, a: 1}
     - _Far_Tint: {r: 0, g: 0.19270587, b: 1, a: 1}
-    - _Foam_Colour: {r: 0.7688679, g: 0.91183615, b: 1, a: 1}
+    - _Foam_Colour: {r: 0.76886797, g: 0.91183615, b: 1, a: 1}
     - _Near_Tint: {r: 1, g: 0, b: 0, a: 1}
     - _Shallow_Tint: {r: 0.38968495, g: 0.5943396, b: 0.5788159, a: 1}
     - _Texture_Scale: {r: 0, g: 0, b: 0, a: 0}
-    - _Tint: {r: 1, g: 1, b: 1, a: 0}
+    - _Tint: {r: 0, g: 0, b: 0, a: 0.9490196}
     - _Water_Color: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &5371310464552051913

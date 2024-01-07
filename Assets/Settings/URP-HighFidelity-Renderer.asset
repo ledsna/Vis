@@ -121,7 +121,7 @@ MonoBehaviour:
     outlineScale: 1
     normalScale: 1
     depthThreshold: 54
-    normalThreshold: 0.7
+    normalThreshold: 0.17
     highlightIntensity: 2.39
     shadowIntensity: 0.103
   viewSpaceNormalsTextureSettings:
