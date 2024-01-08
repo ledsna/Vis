@@ -26,7 +26,7 @@ public class CameraManager : MonoBehaviour
     [SerializeField] float mouseSensitivity = 8f;
     [SerializeField] float rotationSpeed = 5f;
     private float angleThreshold = 0.05f;
-    private float currentAngle = 0f;
+    private float currentAngle;
     
     [Header("Blit to Viewport")]
     private Vector3 snapOffset = Vector3.zero;
