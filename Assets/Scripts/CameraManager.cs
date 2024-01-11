@@ -57,6 +57,11 @@ public class CameraManager : MonoBehaviour
 
     void Update()
     {
+        // Application.targetFrameRate = -1; // Uncapped
+
+        Debug.Log(Application.targetFrameRate);
+        Debug.Log(QualitySettings.vSyncCount);
+        
         float mouseX = Input.GetAxis("Mouse X");
         // float mouseY = Input.GetAxis("Mouse Y");
 

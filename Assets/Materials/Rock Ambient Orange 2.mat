@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Snow Ambient
+  m_Name: Rock Ambient Orange 2
   m_Shader: {fileID: -6465566751694194690, guid: 7442e5c79e1754fbabffadb57694c13d,
     type: 3}
   m_Parent: {fileID: 0}
@@ -63,22 +63,22 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AmbientEnvironmentMultiplier: 2
-    - _EdgeDiffuse: 0.571
-    - _EdgeDistanceAttenuation: 0.935
-    - _EdgeRim: 0.367
-    - _EdgeShadowAttenuation: 0.837
-    - _EdgeSpecular: 0.519
+    - _AmbientEnvironmentMultiplier: 0.65
+    - _EdgeDiffuse: 0
+    - _EdgeDistanceAttenuation: 0
+    - _EdgeRim: 0
+    - _EdgeShadowAttenuation: 0
+    - _EdgeSpecular: 0
     - _Fresnel_Power: 0
     - _Fresnel_Ramps: 1
     - _Metallic_Value: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RimAmount: 0.423
-    - _RimStrength: 0.622
-    - _RimThreshold: 0.441
-    - _Smoothness: 0.5
+    - _RimAmount: 0
+    - _RimStrength: 0
+    - _RimThreshold: 0.01
+    - _Smoothness: 0.342
     m_Colors:
-    - _AmbientColor: {r: 0.39489147, g: 0.4905929, b: 0.9622642, a: 1}
-    - _BaseColor: {r: 1, g: 0.9596108, b: 0.7216981, a: 1}
+    - _AmbientColor: {r: 0.3568441, g: 0.5763753, b: 0.9339623, a: 1}
+    - _BaseColor: {r: 0.41960788, g: 0.49411768, b: 0.16078432, a: 1}
   m_BuildTextureStacks: []

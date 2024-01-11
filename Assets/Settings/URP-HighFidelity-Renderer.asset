@@ -123,7 +123,7 @@ MonoBehaviour:
     depthThreshold: 54
     normalThreshold: 0.17
     highlightIntensity: 2.39
-    shadowIntensity: 0.103
+    shadowIntensity: 0.316
   viewSpaceNormalsTextureSettings:
     colorFormat: 0
     depthBufferBits: 16

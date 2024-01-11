@@ -39,7 +39,7 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _AmbientEnvironmentMultiplier: 0
+    - _AmbientEnvironmentMultiplier: 2
     - _EdgeDiffuse: 0.921
     - _Fresnel_Power: 0.22
     - _Fresnel_Ramps: 5
