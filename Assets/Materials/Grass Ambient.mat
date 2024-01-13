@@ -64,11 +64,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _AmbientEnvironmentMultiplier: 2
-    - _EdgeDiffuse: 0.463
-    - _EdgeDistanceAttenuation: 1.09
-    - _EdgeRim: 0.219
-    - _EdgeShadowAttenuation: 1.22
-    - _EdgeSpecular: 0
+    - _EdgeDiffuse: 0
+    - _EdgeDistanceAttenuation: 1.19
+    - _EdgeRim: 0.418
+    - _EdgeShadowAttenuation: 1.1
+    - _EdgeSpecular: 0.384
     - _Fresnel_Power: 0
     - _Fresnel_Ramps: 1
     - _Metallic_Value: 0
