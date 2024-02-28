@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="42e10117-56c9-4e1d-9184-2ba526cdfa7f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Depth Diff.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Depth Diff.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l/.idea/.idea.MinionsArt.dir/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l/.idea/.idea.MinionsArt.dir/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l/.idea/.idea.MinionsArt.dir/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l/.idea/.idea.MinionsArt.dir/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l/CullingTreeNode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l/CullingTreeNode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l/GrassBlades.compute" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l/GrassBlades.compute.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l/GrassComputeScript.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l/GrassComputeScript.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l/GrassMinions.hlsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l/GrassMinions.hlsl.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l/MinionsGrass.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l/MinionsGrass.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l/MinionsGrass.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l/MinionsGrass.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l/RenderTerrainMap.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l/RenderTerrainMap.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l/SO_GrassSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l/SO_GrassSettings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l/SO_GrassToolSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l/SO_GrassToolSettings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l/ShaderInteractor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/l/ShaderInteractor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler2.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler3.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler4.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2cdqTxYiZz5Ai5pUjl9iY1U32Ce" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="42e10117-56c9-4e1d-9184-2ba526cdfa7f" name="Changes" comment="" />
+      <created>1708451815439</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708451815439</updated>
+      <workItem from="1708451817717" duration="286000" />
+      <workItem from="1708885853111" duration="16000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
