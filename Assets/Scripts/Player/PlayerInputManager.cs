@@ -57,6 +57,8 @@ public class PlayerInputManager : MonoBehaviour
         horizontalInput = movementInput.x;
 
         float moveAmount = Mathf.Clamp01(Mathf.Abs(verticalInput) + Mathf.Abs(horizontalInput));
+
+        HandleJumpInput();
         
         player.animatorManager.UpdateAnimatorMovementParameters(0, moveAmount);
     }

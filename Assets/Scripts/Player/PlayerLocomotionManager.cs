@@ -1,11 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.TextCore.Text;
-using UnityEngine.XR;
 
 public class PlayerLocomotionManager : MonoBehaviour
 {
@@ -14,8 +7,14 @@ public class PlayerLocomotionManager : MonoBehaviour
     [Header("MOVEMENT SETTINGS")]
     private Vector3 movementDirection;
     [SerializeField] float walkingSpeed = 2;
-    [SerializeField] float airSpeed = 0.5f;
+    [SerializeField] private float runningSpeed = 3;
     [SerializeField] float rotationSpeed = 15;
+    
+    [Header("JUMP SETTINGS")]
+    private Vector3 jumpDirection;
+    [SerializeField] private float jumpHeight = 3;
+    [SerializeField] private float jumpForwardVelocity = 3;
+    [SerializeField] private float freeFallVelocity = 2;
 
     [Header("Ground check & Jumping")] 
     [SerializeField] private LayerMask groundLayer;
@@ -73,16 +72,23 @@ public class PlayerLocomotionManager : MonoBehaviour
         
         HandleMovement();
         HandleRotation();
+        HandleJumpingMovement();
+        HandleFreeFallMovement();
     }
 
     private void HandleMovement()
     {
-        movementDirection = CameraManager.instance.transform.forward * PlayerInputManager.instance.verticalInput +
-                            CameraManager.instance.transform.right * PlayerInputManager.instance.horizontalInput;
-        movementDirection.Normalize();
+        if (!player.isGrounded)
+        {
+            return;
+        }
+        
+        movementDirection = CameraManager.instance.transform.forward * PlayerInputManager.instance.verticalInput;
+        movementDirection += CameraManager.instance.transform.right * PlayerInputManager.instance.horizontalInput;
+        // movementDirection.Normalize();d
         movementDirection.y = 0;
         
-        player.characterController.Move(movementDirection * walkingSpeed * Time.deltaTime);
+        player.characterController.Move( runningSpeed * Time.deltaTime * movementDirection);
     }
     
     private void HandleRotation() 
@@ -99,6 +105,30 @@ public class PlayerLocomotionManager : MonoBehaviour
         Quaternion newRotation = Quaternion.LookRotation(targetRotationDirection);
         Quaternion targetRotation = Quaternion.Slerp(transform.rotation, newRotation, rotationSpeed * Time.deltaTime);
         transform.rotation = targetRotation;
+    }
+
+    private void HandleJumpingMovement()
+    {
+        if (player.isJumping)
+        {
+            player.characterController.Move( jumpForwardVelocity * Time.deltaTime * jumpDirection);
+        }
+    }
+
+    private void HandleFreeFallMovement()
+    {
+        if (player.isGrounded)
+        {
+            return;
+        }
+
+        Vector3 freeFallDirection;
+        
+        freeFallDirection = CameraManager.instance.transform.forward * PlayerInputManager.instance.verticalInput;
+        freeFallDirection += CameraManager.instance.transform.right * PlayerInputManager.instance.horizontalInput;
+        freeFallDirection.y = 0;
+
+        player.characterController.Move(freeFallVelocity * Time.deltaTime * freeFallDirection);
     }
 
     public void AttemptToPerformJump()
@@ -119,11 +149,16 @@ public class PlayerLocomotionManager : MonoBehaviour
         player.animatorManager.PlayTargetActionAnimation("jump_start", false);
 
         player.isJumping = true;
+
+        jumpDirection = CameraManager.instance.transform.forward * PlayerInputManager.instance.verticalInput;
+        jumpDirection += CameraManager.instance.transform.right * PlayerInputManager.instance.horizontalInput;
+        jumpDirection.y = 0;
     }
 
     public void ApplyJumpingVelocity()
     {
         // APPLY AN UPWARD VELOCITY
+        yVelocity.y = Mathf.Sqrt(jumpHeight * -2 * gravityForce);
     }
 
     private void HandleGroundCheck()

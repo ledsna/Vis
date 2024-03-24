@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerActionFlagsReset : StateMachineBehaviour
+public class ResetIsJumping : StateMachineBehaviour
 {
     private PlayerManager player;
     
@@ -14,7 +14,6 @@ public class PlayerActionFlagsReset : StateMachineBehaviour
         }
         
         player.isJumping = false;
-        player.applyRootMotion = false;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

@@ -14,7 +14,6 @@ public class PlayerManager : MonoBehaviour
 
     [Header("Flags")] 
     public bool applyRootMotion = false;
-    public bool isInAir = false;
     public bool isGrounded = true;
     public bool isJumping = false;
     

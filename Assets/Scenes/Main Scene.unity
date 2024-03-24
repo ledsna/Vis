@@ -4453,8 +4453,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797533879698251763, guid: 1debff5cf74f0480e869eb832a25528d,
         type: 3}
+      propertyPath: jumpHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797533879698251763, guid: 1debff5cf74f0480e869eb832a25528d,
+        type: 3}
       propertyPath: gravityForce
       value: -5.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797533879698251763, guid: 1debff5cf74f0480e869eb832a25528d,
+        type: 3}
+      propertyPath: freeFallVelocity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7797533879698251763, guid: 1debff5cf74f0480e869eb832a25528d,
         type: 3}
@@ -4470,6 +4480,11 @@ PrefabInstance:
         type: 3}
       propertyPath: groundLayer.m_Bits
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797533879698251763, guid: 1debff5cf74f0480e869eb832a25528d,
+        type: 3}
+      propertyPath: jumpForwardVelocity
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7797533879698251763, guid: 1debff5cf74f0480e869eb832a25528d,
         type: 3}

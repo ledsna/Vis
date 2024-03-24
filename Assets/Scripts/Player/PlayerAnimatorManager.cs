@@ -17,7 +17,7 @@ public class PlayerAnimatorManager : MonoBehaviour
         player.animator.SetFloat("Vertical", verticalValue, 0.1f, Time.deltaTime);
     }
 
-    public virtual void PlayTargetActionAnimation(string targetAnimation, bool isInAir, bool applyRootMotion = true)
+    public virtual void PlayTargetActionAnimation(string targetAnimation, bool applyRootMotion = true)
     {
         player.applyRootMotion = applyRootMotion;
         player.animator.CrossFade(targetAnimation, 0.2f);
@@ -25,7 +25,6 @@ public class PlayerAnimatorManager : MonoBehaviour
         // for example if you get damaged, and begin performing a damage animation
         // this flag will turn true if you are stunned
         // we can then check for this before attempting new action
-        player.isInAir = isInAir;
         // player.canRotate = canRotate;
         // player.canMove = canMove;
     }
