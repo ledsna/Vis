@@ -267,13 +267,13 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 1.7
+  m_Height: 1.58
   m_Radius: 0.19
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.85, z: 0}
+  m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!114 &7797533879698251763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,7 +294,8 @@ MonoBehaviour:
     m_Bits: 0
   groundCheckSphereRadius: 1
   yVelocity: {x: 0, y: 0, z: 0}
-  groundedVeloctiy: 20
+  gravityForce: -5.55
+  groundedYVelocity: -20
   fallStartVelocity: 5
 --- !u!114 &6651249228922178843
 MonoBehaviour:

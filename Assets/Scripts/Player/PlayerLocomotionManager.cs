@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -18,11 +19,13 @@ public class PlayerLocomotionManager : MonoBehaviour
 
     [Header("Ground check & Jumping")] 
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private float groundCheckSphereRadius = 1;
-    [SerializeField] private Vector3 yVelocity;
+    [SerializeField] private float groundCheckSphereRadius = 2;
+    [SerializeField] private Vector3 yVelocity; // FORCE THAT PULLS OUR CHARACTER UP OR DOWN
     [SerializeField] private float gravityForce = -5.55f;
-    [SerializeField] private float groundedYVeloctiy = -20;
-    [SerializeField] private float fallStartVelocity = -5;
+    [SerializeField] private float groundedYVelocity = -20; // force at which character is sticking to the ground
+    // while he is grounded
+    [SerializeField] private float fallStartVelocity = -5; // force at which character starts to fall when he become 
+    // ungrounded 
     private bool fallVelocityHasBeenSet = false;
     protected float inAirTime = 0;
     
@@ -34,36 +37,40 @@ public class PlayerLocomotionManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        HandleMovement();
+        HandleRotation();
+    }
+
+    private void FixedUpdate()
+    {
         HandleGroundCheck();
 
         if (player.isGrounded)
         {
+            // if we are not attempting to jump
             if (yVelocity.y < 0)
             {
                 inAirTime = 0;
                 fallVelocityHasBeenSet = false;
-                yVelocity.y = groundedYVeloctiy;
+                yVelocity.y = groundedYVelocity;
             }
         }
         else
         {
+            // if we are not jumping and fall velocity has not been set yet
             if (!player.isJumping && !fallVelocityHasBeenSet)
             {
-                fallVelocityHasBeenSet = true;
                 yVelocity.y = fallStartVelocity;
+                fallVelocityHasBeenSet = true;
             }
 
             inAirTime += Time.deltaTime;
-
+            player.animator.SetFloat("inAirTimer", inAirTime);
+            
             yVelocity.y += gravityForce * Time.deltaTime;
 
             player.characterController.Move(yVelocity * Time.deltaTime);
         }
-        
-        
-        
-        HandleMovement();
-        HandleRotation();
     }
 
     private void HandleMovement()
@@ -72,15 +79,8 @@ public class PlayerLocomotionManager : MonoBehaviour
                             CameraManager.instance.transform.right * PlayerInputManager.instance.horizontalInput;
         movementDirection.Normalize();
         movementDirection.y = 0;
-
-        if (player.isInAir)
-        {
-            player.characterController.Move(movementDirection * airSpeed * Time.deltaTime);
-        }
-        else
-        {
-            player.characterController.Move(movementDirection * walkingSpeed * Time.deltaTime);
-        }
+        
+        player.characterController.Move(movementDirection * walkingSpeed * Time.deltaTime);
     }
     
     private void HandleRotation() 
@@ -99,15 +99,36 @@ public class PlayerLocomotionManager : MonoBehaviour
         transform.rotation = targetRotation;
     }
 
-    public void HandleJump()
+    public void AttemptToPerformJump()
     {
-        player.animatorManager.PlayTargetActionAnimation("jump", true);
+        // if we are already in a jump, we do not allow jump until our current jump is finished
+        if (player.isJumping)
+        {
+            return;
+        }
+
+        // if we are not grounded, we do not allow jump
+        if (!player.isGrounded)
+        {
+            return;
+        }
+        
+        // play jumping animation
+        player.animatorManager.PlayTargetActionAnimation("jump_start", false);
+
+        player.isJumping = true;
+    }
+
+    public void ApplyJumpingVelocity()
+    {
+        // APPLY AN UPWARD VELOCITY
     }
 
     private void HandleGroundCheck()
     {
         // if we collide with ground layer, we are grounded
         player.isGrounded = Physics.CheckSphere(player.transform.position, groundCheckSphereRadius, groundLayer);
+        player.animator.SetBool("isGrounded", player.isGrounded);
     }
 
     // Draws a sphere that represents our ground check hitbox

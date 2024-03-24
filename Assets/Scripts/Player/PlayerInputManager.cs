@@ -59,11 +59,18 @@ public class PlayerInputManager : MonoBehaviour
         float moveAmount = Mathf.Clamp01(Mathf.Abs(verticalInput) + Mathf.Abs(horizontalInput));
         
         player.animatorManager.UpdateAnimatorMovementParameters(0, moveAmount);
+    }
 
+    private void HandleJumpInput()
+    {
         if (jumpInput)
         {
-            player.locomotionManager.HandleJump();
             jumpInput = false;
+            
+            // IF WE HAVE MENU OPEN, RETURN WITHOUT DOING ANYTHING
+            
+            // ATTEMPT TO PERFORM JUMP
+            player.locomotionManager.AttemptToPerformJump();
         }
     }
 }
