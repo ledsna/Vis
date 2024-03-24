@@ -30,4 +30,9 @@ public class PlayerManager : MonoBehaviour
     {
         PlayerInputManager.instance.player = this;
     }
+
+    private void Update()
+    {
+        animator.SetBool("isGrounded", isGrounded);
+    }
 }

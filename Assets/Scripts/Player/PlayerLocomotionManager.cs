@@ -32,19 +32,16 @@ public class PlayerLocomotionManager : MonoBehaviour
     private void Awake()
     {
         player = GetComponent<PlayerManager>();
+        
+        // instantly set yVelocity to groundedYVelocity so that we dont float
+        yVelocity.y = groundedYVelocity;
     }
 
     // Update is called once per frame
     void Update()
     {
-        HandleMovement();
-        HandleRotation();
-    }
-
-    private void FixedUpdate()
-    {
         HandleGroundCheck();
-
+        
         if (player.isGrounded)
         {
             // if we are not attempting to jump
@@ -69,8 +66,13 @@ public class PlayerLocomotionManager : MonoBehaviour
             
             yVelocity.y += gravityForce * Time.deltaTime;
 
-            player.characterController.Move(yVelocity * Time.deltaTime);
         }
+        
+        // we always apply gravity force
+        player.characterController.Move(yVelocity * Time.deltaTime);
+        
+        HandleMovement();
+        HandleRotation();
     }
 
     private void HandleMovement()
@@ -128,7 +130,6 @@ public class PlayerLocomotionManager : MonoBehaviour
     {
         // if we collide with ground layer, we are grounded
         player.isGrounded = Physics.CheckSphere(player.transform.position, groundCheckSphereRadius, groundLayer);
-        player.animator.SetBool("isGrounded", player.isGrounded);
     }
 
     // Draws a sphere that represents our ground check hitbox
