@@ -19,7 +19,7 @@ public class PlayerLocomotionManager : MonoBehaviour
     [Header("Ground check & Jumping")] 
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float groundCheckSphereRadius = 2;
-    [SerializeField] private Vector3 yVelocity; // FORCE THAT PULLS OUR CHARACTER UP OR DOWN
+    [SerializeField] Vector3 yVelocity; // FORCE THAT PULLS OUR CHARACTER UP OR DOWN
     [SerializeField] private float gravityForce = -5.55f;
     [SerializeField] private float groundedYVelocity = -20; // force at which character is sticking to the ground
     // while he is grounded
@@ -31,9 +31,6 @@ public class PlayerLocomotionManager : MonoBehaviour
     private void Awake()
     {
         player = GetComponent<PlayerManager>();
-        
-        // instantly set yVelocity to groundedYVelocity so that we dont float
-        yVelocity.y = groundedYVelocity;
     }
 
     // Update is called once per frame
@@ -167,9 +164,14 @@ public class PlayerLocomotionManager : MonoBehaviour
         player.isGrounded = Physics.CheckSphere(player.transform.position, groundCheckSphereRadius, groundLayer);
     }
 
-    // Draws a sphere that represents our ground check hitbox
-    private void OnDrawGizmosSelected()
+    public void SetYVelocity()
     {
-        Gizmos.DrawSphere(player.transform.position, groundCheckSphereRadius);
+        yVelocity.y = groundedYVelocity;
     }
+
+    // Draws a sphere that represents our ground check hitbox
+    // private void OnDrawGizmosSelected()
+    // {
+    //     Gizmos.DrawSphere(player.transform.position, groundCheckSphereRadius);
+    // }
 }

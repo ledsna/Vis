@@ -36,6 +36,11 @@ public class PlayerInputManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     private void OnEnable()
     {
         if (playerControls is null)

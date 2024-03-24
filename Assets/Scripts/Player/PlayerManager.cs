@@ -28,10 +28,35 @@ public class PlayerManager : MonoBehaviour
     private void Start()
     {
         PlayerInputManager.instance.player = this;
+        CameraManager.instance.player = transform;
+        WorldSaveGameManager.instance.player = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Update()
     {
         animator.SetBool("isGrounded", isGrounded);
+    }
+    
+    public void SaveGameDataToCurrentCharacterData(ref PlayerSaveData currentCharacterData)
+    {
+        currentCharacterData.xPosition = transform.position.x;
+        currentCharacterData.yPosition = transform.position.y + 0.3f;
+        currentCharacterData.zPosition = transform.position.z;
+        
+        // instantly set yVelocity to groundedYVelocity so that we dont float
+        locomotionManager.SetYVelocity();
+    }
+
+    public void LoadGameDataFromCurrentCharacterData(ref PlayerSaveData currentCharacterData)
+    {
+        Debug.Log(currentCharacterData.xPosition);
+        Debug.Log(currentCharacterData.yPosition);
+        Debug.Log(currentCharacterData.zPosition);
+        transform.position = new Vector3(
+            currentCharacterData.xPosition, currentCharacterData.yPosition, currentCharacterData.zPosition);
+
+        // moving camera to player
+        // CameraManager.instance.transform.position = new Vector3(transform.position.x, transform.position.y, -10);
     }
 }
