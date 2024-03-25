@@ -17,6 +17,10 @@ public class PlayerManager : MonoBehaviour
     public bool isGrounded = true;
     public bool isJumping = false;
     
+    [FormerlySerializedAs("respawnPoint")]
+    [Header("Respawn")]
+    [SerializeField] Vector3 respawnPosition;
+    
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
@@ -36,16 +40,18 @@ public class PlayerManager : MonoBehaviour
     private void Update()
     {
         animator.SetBool("isGrounded", isGrounded);
+
+        if (transform.position.y <= -5)
+        {
+            ReviveCharacter();
+        }
     }
     
     public void SaveGameDataToCurrentCharacterData(ref PlayerSaveData currentCharacterData)
     {
-        currentCharacterData.xPosition = transform.position.x;
-        currentCharacterData.yPosition = transform.position.y + 0.3f;
-        currentCharacterData.zPosition = transform.position.z;
-        
-        // instantly set yVelocity to groundedYVelocity so that we dont float
-        locomotionManager.SetYVelocity();
+        currentCharacterData.xPosition = respawnPosition.x;
+        currentCharacterData.yPosition = respawnPosition.y;
+        currentCharacterData.zPosition = respawnPosition.z;
     }
 
     public void LoadGameDataFromCurrentCharacterData(ref PlayerSaveData currentCharacterData)
@@ -56,7 +62,27 @@ public class PlayerManager : MonoBehaviour
         transform.position = new Vector3(
             currentCharacterData.xPosition, currentCharacterData.yPosition, currentCharacterData.zPosition);
 
-        // moving camera to player
-        // CameraManager.instance.transform.position = new Vector3(transform.position.x, transform.position.y, -10);
+        locomotionManager.ResetYVelocity();
+    }
+
+    public void ReviveCharacter()
+    {
+        transform.position = respawnPosition;
+        locomotionManager.ResetYVelocity();
+    }
+
+    public void SetRespawnPoint(Vector3 respawnPoint)
+    {
+        respawnPosition = respawnPoint;
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.collider.CompareTag("Respawn")) // Assuming your respawn point has the tag "Respawn"
+        {
+            RespawnPointManager respawnPoint = hit.gameObject.GetComponent<RespawnPointManager>();
+            Debug.Log("Character hit the respawn zone.");
+            SetRespawnPoint(respawnPoint.GetRespawnPosition());
+        }
     }
 }

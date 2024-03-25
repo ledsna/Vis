@@ -1,4 +1,7 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerLocomotionManager : MonoBehaviour
 {
@@ -164,8 +167,17 @@ public class PlayerLocomotionManager : MonoBehaviour
         player.isGrounded = Physics.CheckSphere(player.transform.position, groundCheckSphereRadius, groundLayer);
     }
 
-    public void SetYVelocity()
+    public void ResetYVelocity()
     {
+        yVelocity.y = 0;
+
+        StartCoroutine(SetYVelocity());
+    }
+    
+    private IEnumerator SetYVelocity()
+    {
+        yield return new WaitForSeconds(0.2f);
+
         yVelocity.y = groundedYVelocity;
     }
 
