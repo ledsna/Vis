@@ -8,6 +8,7 @@ public class TitleScreenManager : MonoBehaviour
     public static TitleScreenManager instance;
 
     [SerializeField] private GameObject mainMenuObject;
+    [SerializeField] private GameObject pauseMenuObject;
 
     private void Awake()
     {
@@ -24,6 +25,8 @@ public class TitleScreenManager : MonoBehaviour
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
+        mainMenuObject.SetActive(true);
+        pauseMenuObject.SetActive(false);
     }
 
     public void StartNewGame()
@@ -38,5 +41,34 @@ public class TitleScreenManager : MonoBehaviour
         WorldSaveGameManager.instance.LoadGame();
         mainMenuObject.SetActive(false);
         Debug.Log("Loading Game!");
+    }
+
+    public void Quit()
+    {
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
+    }
+
+    public void Pause()
+    {
+        WorldUtilityManager.instance.gameIsPause = true;
+        pauseMenuObject.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void Resume()
+    {
+        WorldUtilityManager.instance.gameIsPause = false;
+        pauseMenuObject.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    public void OpenMenu()
+    {
+        pauseMenuObject.SetActive(false);
+        mainMenuObject.SetActive(true);
     }
 }

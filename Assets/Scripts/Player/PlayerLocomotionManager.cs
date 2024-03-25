@@ -85,8 +85,8 @@ public class PlayerLocomotionManager : MonoBehaviour
         
         movementDirection = CameraManager.instance.transform.forward * PlayerInputManager.instance.verticalInput;
         movementDirection += CameraManager.instance.transform.right * PlayerInputManager.instance.horizontalInput;
-        // movementDirection.Normalize();d
         movementDirection.y = 0;
+        movementDirection.Normalize();
         
         player.characterController.Move( runningSpeed * Time.deltaTime * movementDirection);
     }
@@ -96,8 +96,8 @@ public class PlayerLocomotionManager : MonoBehaviour
         Vector3 targetRotationDirection = 
             CameraManager.instance.transform.forward * PlayerInputManager.instance.verticalInput + 
             CameraManager.instance.transform.right * PlayerInputManager.instance.horizontalInput;
-        targetRotationDirection.Normalize();
         targetRotationDirection.y = 0;
+        targetRotationDirection.Normalize();
 
         if (targetRotationDirection == Vector3.zero) {
             targetRotationDirection = transform.forward;
@@ -127,6 +127,7 @@ public class PlayerLocomotionManager : MonoBehaviour
         freeFallDirection = CameraManager.instance.transform.forward * PlayerInputManager.instance.verticalInput;
         freeFallDirection += CameraManager.instance.transform.right * PlayerInputManager.instance.horizontalInput;
         freeFallDirection.y = 0;
+        freeFallDirection.Normalize();
 
         player.characterController.Move(freeFallVelocity * Time.deltaTime * freeFallDirection);
     }
@@ -153,6 +154,7 @@ public class PlayerLocomotionManager : MonoBehaviour
         jumpDirection = CameraManager.instance.transform.forward * PlayerInputManager.instance.verticalInput;
         jumpDirection += CameraManager.instance.transform.right * PlayerInputManager.instance.horizontalInput;
         jumpDirection.y = 0;
+        jumpDirection.Normalize();
     }
 
     public void ApplyJumpingVelocity()

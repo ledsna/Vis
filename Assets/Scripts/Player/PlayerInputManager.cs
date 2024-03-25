@@ -21,8 +21,10 @@ public class PlayerInputManager : MonoBehaviour
     [Header("CAMERA MOVEMENT INPUT")]
     public Vector2 cameraMovementInput;
 
-    [FormerlySerializedAs("jumpIsPressed")] [Header("ACTION INPUT")] 
+    [Header("ACTION INPUT")] 
     public bool jumpInput = false;
+
+    [Header("UI")] public bool pauseInput = false;
 
     private void Awake()
     {
@@ -51,6 +53,8 @@ public class PlayerInputManager : MonoBehaviour
             playerControls.CameraMovement.Movement.performed += i => cameraMovementInput = i.ReadValue<Vector2>();
 
             playerControls.PlayerActions.Jump.performed += i => jumpInput = true;
+
+            playerControls.UI.Pause.performed += i => pauseInput = true;
         }
 
         playerControls.Enable();
@@ -66,6 +70,8 @@ public class PlayerInputManager : MonoBehaviour
         HandleJumpInput();
         
         player.animatorManager.UpdateAnimatorMovementParameters(0, moveAmount);
+
+        HandlePauseInput();
     }
 
     private void HandleJumpInput()
@@ -78,6 +84,23 @@ public class PlayerInputManager : MonoBehaviour
             
             // ATTEMPT TO PERFORM JUMP
             player.locomotionManager.AttemptToPerformJump();
+        }
+    }
+
+    private void HandlePauseInput()
+    {
+        if (pauseInput)
+        {
+            pauseInput = false;
+
+            if (WorldUtilityManager.instance.gameIsPause)
+            {
+                TitleScreenManager.instance.Resume();
+            }
+            else
+            {
+                TitleScreenManager.instance.Pause();
+            }
         }
     }
 }

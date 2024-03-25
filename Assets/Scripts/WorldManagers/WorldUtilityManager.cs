@@ -10,6 +10,8 @@ public class WorldUtilityManager : MonoBehaviour
     [SerializeField] LayerMask characterLayers;
     [SerializeField] LayerMask environmentLayers;
 
+    [Header("Game State")] public bool gameIsPause = false;
+    
     private void Awake()
     {
         if (instance is null)
