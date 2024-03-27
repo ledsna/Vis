@@ -10,9 +10,6 @@ public class WorldSaveGameManager : MonoBehaviour
 
     public PlayerManager player; 
 
-    [Header("World Scene Index")]
-    public int worldSceneIndex = 1;
-
     [Header("Save Data Writer")]
     private SaveFileDataWriter saveFileDataWriter;
 
@@ -46,23 +43,15 @@ public class WorldSaveGameManager : MonoBehaviour
         saveFileDataWriter.saveFileName = saveFileName;
 
         // if this profile slot is not taken, we gonna use it
-        if (!saveFileDataWriter.CheckIfFileExists())
-        {
-            playerData = new PlayerSaveData();
-            NewGame();
-        }
-        else
-        {
-            playerData = new PlayerSaveData();
-            NewGame();
-        }
+        playerData = new PlayerSaveData(); 
+        NewGame();
     }
 
     private void NewGame()
     {
         // saves the newly created character stats, and items (when creation screen is added)
-        SaveGame();
-        StartCoroutine(LoadWorldScene());
+        SaveGame(true);
+        LoadGame();
     }
 
     public void LoadGame()
@@ -73,18 +62,27 @@ public class WorldSaveGameManager : MonoBehaviour
         saveFileDataWriter.saveFileName = saveFileName;
         playerData = saveFileDataWriter.LoadSaveFile();
 
-        StartCoroutine(LoadWorldScene());
+        StartCoroutine(LoadScene(1));
     }
 
-    public void SaveGame()
+    public void SaveGame(bool newGame=false)
     {
         saveFileDataWriter = new SaveFileDataWriter();
         // generally works on multiple machine types (Application.persistentDataPath)
         saveFileDataWriter.saveDataDirectoryPath = Application.persistentDataPath;
         saveFileDataWriter.saveFileName = saveFileName;
 
-        // pass the players info, from game, to their save file
-        player.SaveGameDataToCurrentCharacterData(ref playerData);
+        if (newGame)
+        {
+            playerData.xPosition = 0;
+            playerData.yPosition = 0;
+            playerData.zPosition = 0;
+        }
+        else
+        {
+            // pass the players info, from game, to their save file
+            player.SaveGameDataToCurrentCharacterData(ref playerData);
+        }
 
         // write that info onto a json file, saved to this machine
         saveFileDataWriter.CreateNewCharacterSaveFile(playerData);
@@ -98,9 +96,9 @@ public class WorldSaveGameManager : MonoBehaviour
         saveFileDataWriter.DeleteSaveFile();
     }
 
-    public IEnumerator LoadWorldScene()
+    public IEnumerator LoadScene(int sceneIndex)
     {
-        AsyncOperation loadOperation = SceneManager.LoadSceneAsync(worldSceneIndex);
+        AsyncOperation loadOperation = SceneManager.LoadSceneAsync(sceneIndex);
 
         player.LoadGameDataFromCurrentCharacterData(ref playerData);
 

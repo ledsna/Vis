@@ -11,11 +11,13 @@ public class PlayerManager : MonoBehaviour
     [HideInInspector] public Animator animator;
     [HideInInspector] public PlayerLocomotionManager locomotionManager;
     [HideInInspector] public PlayerAnimatorManager animatorManager;
+    [HideInInspector] public PlayerSoundFXManager playerSoundFXManager;
 
     [Header("Flags")] 
     public bool applyRootMotion = false;
     public bool isGrounded = true;
     public bool isJumping = false;
+    public bool isLanding = false;
     
     [FormerlySerializedAs("respawnPoint")]
     [Header("Respawn")]
@@ -27,6 +29,7 @@ public class PlayerManager : MonoBehaviour
         animator = GetComponent<Animator>();
         locomotionManager = GetComponent<PlayerLocomotionManager>();
         animatorManager = GetComponent<PlayerAnimatorManager>();
+        playerSoundFXManager = GetComponent<PlayerSoundFXManager>();
     }
 
     private void Start()
@@ -43,6 +46,7 @@ public class PlayerManager : MonoBehaviour
 
         if (transform.position.y <= -5)
         {
+            playerSoundFXManager.PlayDeathSoundFX();
             ReviveCharacter();
         }
     }

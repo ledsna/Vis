@@ -78,7 +78,7 @@ public class PlayerLocomotionManager : MonoBehaviour
 
     private void HandleMovement()
     {
-        if (!player.isGrounded)
+        if (!player.isGrounded || player.isLanding)
         {
             return;
         }
@@ -87,7 +87,12 @@ public class PlayerLocomotionManager : MonoBehaviour
         movementDirection += CameraManager.instance.transform.right * PlayerInputManager.instance.horizontalInput;
         movementDirection.y = 0;
         movementDirection.Normalize();
-        
+
+        if (movementDirection != Vector3.zero)
+        {
+            player.playerSoundFXManager.PlayStepSoundFX();
+        }
+         
         player.characterController.Move( runningSpeed * Time.deltaTime * movementDirection);
     }
     

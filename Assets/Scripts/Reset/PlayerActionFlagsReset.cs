@@ -15,6 +15,7 @@ public class PlayerActionFlagsReset : StateMachineBehaviour
         
         player.isJumping = false;
         player.applyRootMotion = false;
+        player.isLanding = false;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

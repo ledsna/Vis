@@ -14,6 +14,7 @@ public class ResetIsJumping : StateMachineBehaviour
         }
         
         player.isJumping = false;
+        player.isLanding = true;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

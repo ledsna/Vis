@@ -68,7 +68,9 @@ public class TitleScreenManager : MonoBehaviour
 
     public void OpenMenu()
     {
+        WorldSaveGameManager.instance.SaveGame();
         pauseMenuObject.SetActive(false);
         mainMenuObject.SetActive(true);
+        Time.timeScale = 1f;
     }
 }
