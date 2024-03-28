@@ -33,6 +33,7 @@ public class TitleScreenManager : MonoBehaviour
     {
         WorldSaveGameManager.instance.AttemptToCreateNewGame();
         mainMenuObject.SetActive(false);
+        Time.timeScale = 1f;
         Debug.Log("New Game!");
     }
 
@@ -40,6 +41,7 @@ public class TitleScreenManager : MonoBehaviour
     {
         WorldSaveGameManager.instance.LoadGame();
         mainMenuObject.SetActive(false);
+        Time.timeScale = 1f;
         Debug.Log("Loading Game!");
     }
 
@@ -54,6 +56,11 @@ public class TitleScreenManager : MonoBehaviour
 
     public void Pause()
     {
+        if (mainMenuObject.activeSelf)
+        {
+            return;
+        }
+        
         WorldUtilityManager.instance.gameIsPause = true;
         pauseMenuObject.SetActive(true);
         Time.timeScale = 0f;
@@ -71,6 +78,5 @@ public class TitleScreenManager : MonoBehaviour
         WorldSaveGameManager.instance.SaveGame();
         pauseMenuObject.SetActive(false);
         mainMenuObject.SetActive(true);
-        Time.timeScale = 1f;
     }
 }

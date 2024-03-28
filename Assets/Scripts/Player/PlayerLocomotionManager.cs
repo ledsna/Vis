@@ -78,7 +78,7 @@ public class PlayerLocomotionManager : MonoBehaviour
 
     private void HandleMovement()
     {
-        if (!player.isGrounded || player.isLanding)
+        if (!player.isGrounded || player.isJumping || player.isLanding)
         {
             return;
         }

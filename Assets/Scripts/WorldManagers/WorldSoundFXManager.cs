@@ -7,6 +7,10 @@ public class WorldSoundFXManager : MonoBehaviour
 {
     public static WorldSoundFXManager instance;
 
+    [Header("Music")] 
+    private AudioSource musicAudioSource;
+    public AudioClip backgroundMusic;
+
     [Header("Player SFX")]
     public AudioClip stepSFX;
     public AudioClip jumpSFX;
@@ -27,6 +31,10 @@ public class WorldSoundFXManager : MonoBehaviour
 
     private void Start()
     {
+        musicAudioSource = GetComponent<AudioSource>();
         DontDestroyOnLoad(gameObject);
+
+        musicAudioSource.clip = backgroundMusic;
+        musicAudioSource.Play();
     }
 }
