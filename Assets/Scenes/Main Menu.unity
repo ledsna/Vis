@@ -264,6 +264,11 @@ PrefabInstance:
       objectReference: {fileID: 2142688502}
     - target: {fileID: 6651249228922178843, guid: 1debff5cf74f0480e869eb832a25528d,
         type: 3}
+      propertyPath: isJumping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651249228922178843, guid: 1debff5cf74f0480e869eb832a25528d,
+        type: 3}
       propertyPath: respawnPoint.x
       value: 15.96935
       objectReference: {fileID: 0}
@@ -290,7 +295,7 @@ PrefabInstance:
     - target: {fileID: 6651249228922178843, guid: 1debff5cf74f0480e869eb832a25528d,
         type: 3}
       propertyPath: respawnPosition.x
-      value: 15.96935
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6651249228922178843, guid: 1debff5cf74f0480e869eb832a25528d,
         type: 3}
@@ -300,7 +305,7 @@ PrefabInstance:
     - target: {fileID: 6651249228922178843, guid: 1debff5cf74f0480e869eb832a25528d,
         type: 3}
       propertyPath: respawnPosition.z
-      value: -0.8250564
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6651249228922178843, guid: 1debff5cf74f0480e869eb832a25528d,
         type: 3}
@@ -688,7 +693,7 @@ PrefabInstance:
     - target: {fileID: 7046604327730719109, guid: a9f2a2a1788e14943a6538b14f174c28,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 866.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7046604327730719109, guid: a9f2a2a1788e14943a6538b14f174c28,
         type: 3}
@@ -713,7 +718,7 @@ PrefabInstance:
     - target: {fileID: 7215685378302911947, guid: a9f2a2a1788e14943a6538b14f174c28,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 866.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7215685378302911947, guid: a9f2a2a1788e14943a6538b14f174c28,
         type: 3}

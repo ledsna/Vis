@@ -74,9 +74,9 @@ public class WorldSaveGameManager : MonoBehaviour
 
         if (newGame)
         {
-            playerData.xPosition = 0;
-            playerData.yPosition = 0;
-            playerData.zPosition = 0;
+            playerData.xPosition = 16f;
+            playerData.yPosition = 2.3f;
+            playerData.zPosition = -1;
         }
         else
         {

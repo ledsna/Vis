@@ -23,6 +23,7 @@ public class RespawnPointManager : MonoBehaviour
         Vector3 scale = gameObject.transform.localScale;
         float height = scale.y;
         Vector3 topCenter = gameObject.transform.position + new Vector3(0, height / 2, 0);
+        topCenter.y += 1f;
 
         return topCenter;
     }

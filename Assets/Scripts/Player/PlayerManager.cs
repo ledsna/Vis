@@ -43,6 +43,10 @@ public class PlayerManager : MonoBehaviour
     private void Update()
     {
         animator.SetBool("isGrounded", isGrounded);
+        if (!isGrounded)
+        {
+            transform.SetParent(null);
+        }
 
         if (transform.position.y <= -5)
         {
@@ -65,7 +69,7 @@ public class PlayerManager : MonoBehaviour
         Debug.Log(currentCharacterData.zPosition);
         transform.position = new Vector3(
             currentCharacterData.xPosition, currentCharacterData.yPosition, currentCharacterData.zPosition);
-
+        CameraManager.instance.transform.position = transform.position;
         locomotionManager.ResetYVelocity();
     }
 
@@ -87,6 +91,11 @@ public class PlayerManager : MonoBehaviour
             RespawnPointManager respawnPoint = hit.gameObject.GetComponent<RespawnPointManager>();
             Debug.Log("Character hit the respawn zone.");
             SetRespawnPoint(respawnPoint.GetRespawnPosition());
+        }
+
+        if (hit.collider.CompareTag("MovingPlatform"))
+        {
+            transform.SetParent(hit.gameObject.transform);
         }
     }
 }
