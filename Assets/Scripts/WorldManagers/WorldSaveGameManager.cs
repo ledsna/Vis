@@ -51,7 +51,7 @@ public class WorldSaveGameManager : MonoBehaviour
     private void NewGame()
     {
         // saves the newly created character stats, and items (when creation screen is added)
-        SaveGame(true);
+        SaveGame();
         LoadGame();
     }
 
@@ -63,27 +63,18 @@ public class WorldSaveGameManager : MonoBehaviour
         saveFileDataWriter.saveFileName = saveFileName;
         playerData = saveFileDataWriter.LoadSaveFile();
 
-        StartCoroutine(LoadScene(1));
+        StartCoroutine(LoadScene());
     }
 
-    public void SaveGame(bool newGame=false)
+    public void SaveGame()
     {
         saveFileDataWriter = new SaveFileDataWriter();
         // generally works on multiple machine types (Application.persistentDataPath)
         saveFileDataWriter.saveDataDirectoryPath = Application.persistentDataPath;
         saveFileDataWriter.saveFileName = saveFileName;
-
-        if (newGame)
-        {
-            playerData.xPosition = 16f;
-            playerData.yPosition = 2.3f;
-            playerData.zPosition = -1;
-        }
-        else
-        {
+        
             // pass the players info, from game, to their save file
-            player.SaveGameDataToCurrentCharacterData(ref playerData);
-        }
+        player.SaveGameDataToCurrentCharacterData(ref playerData);
 
         // write that info onto a json file, saved to this machine
         saveFileDataWriter.CreateNewCharacterSaveFile(playerData);
@@ -97,10 +88,11 @@ public class WorldSaveGameManager : MonoBehaviour
         saveFileDataWriter.DeleteSaveFile();
     }
 
-    public IEnumerator LoadScene(int sceneIndex)
+    public IEnumerator LoadScene()
     {
+        int sceneIndex = playerData.floor;
+        
         AsyncOperation loadOperation = SceneManager.LoadSceneAsync(sceneIndex);
-        currentSceneIndex = sceneIndex;
 
         player.LoadGameDataFromCurrentCharacterData(ref playerData);
 
@@ -109,9 +101,20 @@ public class WorldSaveGameManager : MonoBehaviour
 
     public IEnumerator LoadNextScene()
     {
-        currentSceneIndex = (currentSceneIndex + 1) % 6;
+        // Get the current scene
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        // Get the index of the current scene
+        int sceneIndex = (currentScene.buildIndex + 1) % 6;
         
-        AsyncOperation loadOperation = SceneManager.LoadSceneAsync(currentSceneIndex);
+        AsyncOperation loadOperation = SceneManager.LoadSceneAsync(sceneIndex);
+
+        playerData.floor = sceneIndex;
+        playerData.xPosition = 0;
+        playerData.yPosition = 2;
+        playerData.zPosition = 0;
+        
+        player.LoadGameDataFromCurrentCharacterData(ref playerData);
 
         yield return null;
     }

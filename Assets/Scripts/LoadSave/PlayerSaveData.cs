@@ -9,8 +9,11 @@ public class PlayerSaveData
     [Header("Time Played")]
     public float secondsPlayed;
 
+    [Header("Current Floor")] 
+    public int floor = 1;
+
     [Header("World Coordinates")]
-    public float xPosition;
-    public float yPosition;
-    public float zPosition;
+    public float xPosition = 0;
+    public float yPosition = 2;
+    public float zPosition = 0;
 }

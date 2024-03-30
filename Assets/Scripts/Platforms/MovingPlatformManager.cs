@@ -45,17 +45,8 @@ public class MovingPlatformManager : MonoBehaviour
 
         if (trigger.player)
         {
-            // Calculate the platform's movement and rotation deltas
-
-            // Apply movement and rotation to the player using CharacterController
-            
-            // Move the player by the platform's delta movement
-            // trigger.player.characterController.Move(deltaPosition); 
             trigger.player.transform.rotation *= deltaRotation;
             trigger.player.locomotionManager.SetExternalForces(deltaPosition, deltaRotation);
-
-            // Optionally adjust the player's position based on platform rotation if needed
-            // This requires more complex calculation to ensure correct behavior
         }
     
         if (elapsedPercentage >= 1)

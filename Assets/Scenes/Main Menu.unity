@@ -295,17 +295,17 @@ PrefabInstance:
     - target: {fileID: 6651249228922178843, guid: 1debff5cf74f0480e869eb832a25528d,
         type: 3}
       propertyPath: respawnPosition.x
-      value: 16
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6651249228922178843, guid: 1debff5cf74f0480e869eb832a25528d,
         type: 3}
       propertyPath: respawnPosition.y
-      value: 2.3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6651249228922178843, guid: 1debff5cf74f0480e869eb832a25528d,
         type: 3}
       propertyPath: respawnPosition.z
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6651249228922178843, guid: 1debff5cf74f0480e869eb832a25528d,
         type: 3}

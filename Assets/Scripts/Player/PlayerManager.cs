@@ -19,7 +19,6 @@ public class PlayerManager : MonoBehaviour
     public bool isJumping = false;
     public bool isLanding = false;
     
-    [FormerlySerializedAs("respawnPoint")]
     [Header("Respawn")]
     [SerializeField] Vector3 respawnPosition;
     
@@ -31,7 +30,7 @@ public class PlayerManager : MonoBehaviour
         animatorManager = GetComponent<PlayerAnimatorManager>();
         playerSoundFXManager = GetComponent<PlayerSoundFXManager>();
     }
-
+    
     private void Start()
     {
         PlayerInputManager.instance.player = this;
@@ -39,7 +38,7 @@ public class PlayerManager : MonoBehaviour
         WorldSaveGameManager.instance.player = this;
         DontDestroyOnLoad(gameObject);
     }
-
+    
     private void Update()
     {
         animator.SetBool("isGrounded", isGrounded);
@@ -61,7 +60,7 @@ public class PlayerManager : MonoBehaviour
         currentCharacterData.yPosition = respawnPosition.y;
         currentCharacterData.zPosition = respawnPosition.z;
     }
-
+    
     public void LoadGameDataFromCurrentCharacterData(ref PlayerSaveData currentCharacterData)
     {
         Debug.Log(currentCharacterData.xPosition);
@@ -72,29 +71,24 @@ public class PlayerManager : MonoBehaviour
         CameraManager.instance.transform.position = transform.position;
         locomotionManager.ResetYVelocity();
     }
-
+    
     public void ReviveCharacter()
     {
         transform.position = respawnPosition;
         locomotionManager.ResetYVelocity();
     }
-
+    
     public void SetRespawnPoint(Vector3 respawnPoint)
     {
         respawnPosition = respawnPoint;
     }
-
+    
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.collider.CompareTag("Respawn")) // Assuming your respawn point has the tag "Respawn"
+        if (hit.collider.CompareTag("Respawn"))
         {
             RespawnPointManager respawnPoint = hit.gameObject.GetComponent<RespawnPointManager>();
             SetRespawnPoint(respawnPoint.GetRespawnPosition());
         }
-
-        // if (hit.collider.CompareTag("MovingPlatform"))
-        // {
-        //     transform.SetParent(hit.gameObject.transform);
-        // }
     }
 }
