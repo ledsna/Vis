@@ -89,13 +89,12 @@ public class PlayerManager : MonoBehaviour
         if (hit.collider.CompareTag("Respawn")) // Assuming your respawn point has the tag "Respawn"
         {
             RespawnPointManager respawnPoint = hit.gameObject.GetComponent<RespawnPointManager>();
-            Debug.Log("Character hit the respawn zone.");
             SetRespawnPoint(respawnPoint.GetRespawnPosition());
         }
 
-        if (hit.collider.CompareTag("MovingPlatform"))
-        {
-            transform.SetParent(hit.gameObject.transform);
-        }
+        // if (hit.collider.CompareTag("MovingPlatform"))
+        // {
+        //     transform.SetParent(hit.gameObject.transform);
+        // }
     }
 }

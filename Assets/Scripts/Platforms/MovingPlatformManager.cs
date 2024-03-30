@@ -7,6 +7,7 @@ using UnityEngine.Serialization;
 public class MovingPlatformManager : MonoBehaviour
 {
     [SerializeField] private WaypointManager waypointManager;
+    private MovingPlatformTrigger trigger;
 
     [Header("Platform Settings")]
     [SerializeField] private float velocity;
@@ -15,6 +16,11 @@ public class MovingPlatformManager : MonoBehaviour
     private Transform targetWaypoint;
     private float timeToWaypoint;
     private float elapsedTime;
+
+    private void Awake()
+    {
+        trigger = GetComponentInChildren<MovingPlatformTrigger>();
+    }
 
     private void Start()
     {
@@ -27,9 +33,31 @@ public class MovingPlatformManager : MonoBehaviour
 
         float elapsedPercentage = elapsedTime / timeToWaypoint;
         elapsedPercentage = Mathf.SmoothStep(0, 1, elapsedPercentage);
-        transform.position = Vector3.Lerp(previousWaypoint.position, targetWaypoint.position, elapsedPercentage);
-        transform.rotation = Quaternion.Lerp(previousWaypoint.rotation, targetWaypoint.rotation, elapsedPercentage);
+        
+        // Calculate the new position and rotation
+        Vector3 newPosition = Vector3.Lerp(previousWaypoint.position, targetWaypoint.position, elapsedPercentage);
+        Quaternion newRotation = Quaternion.Lerp(previousWaypoint.rotation, targetWaypoint.rotation, elapsedPercentage);
+        
+        Vector3 deltaPosition = newPosition - transform.position;
+        Quaternion deltaRotation = newRotation * Quaternion.Inverse(transform.rotation);
+        transform.position = newPosition;
+        transform.rotation = newRotation;
 
+        if (trigger.player)
+        {
+            // Calculate the platform's movement and rotation deltas
+
+            // Apply movement and rotation to the player using CharacterController
+            
+            // Move the player by the platform's delta movement
+            // trigger.player.characterController.Move(deltaPosition); 
+            trigger.player.transform.rotation *= deltaRotation;
+            trigger.player.locomotionManager.SetExternalForces(deltaPosition, deltaRotation);
+
+            // Optionally adjust the player's position based on platform rotation if needed
+            // This requires more complex calculation to ensure correct behavior
+        }
+    
         if (elapsedPercentage >= 1)
         {
             TargetNextWaypoint();
@@ -45,16 +73,5 @@ public class MovingPlatformManager : MonoBehaviour
         elapsedTime = 0;
         float distanceToWaypoint = Vector3.Distance(previousWaypoint.position, targetWaypoint.position);
         timeToWaypoint = distanceToWaypoint / velocity;
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        other.transform.SetParent(transform);
-
-    }
-
-    private void OnCollisionExit(Collision other)
-    {
-        other.transform.SetParent(null);
     }
 }

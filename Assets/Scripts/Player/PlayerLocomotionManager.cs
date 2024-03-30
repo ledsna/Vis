@@ -30,6 +30,10 @@ public class PlayerLocomotionManager : MonoBehaviour
     // ungrounded 
     private bool fallVelocityHasBeenSet = false;
     protected float inAirTime = 0;
+
+    [Header("External forces")] 
+    private Vector3 movementForce;
+    private Quaternion rotationForce;
     
     private void Awake()
     {
@@ -74,6 +78,7 @@ public class PlayerLocomotionManager : MonoBehaviour
         HandleRotation();
         HandleJumpingMovement();
         HandleFreeFallMovement();
+        ProcessExternalForces();
     }
 
     private void HandleMovement()
@@ -193,4 +198,17 @@ public class PlayerLocomotionManager : MonoBehaviour
     // {
     //     Gizmos.DrawSphere(player.transform.position, groundCheckSphereRadius);
     // }
+
+    public void SetExternalForces(Vector3 movement, Quaternion rotation)
+    {
+        movementForce += movement;
+        rotationForce = rotation;
+    }
+    
+    public void ProcessExternalForces()
+    {
+        player.characterController.Move(movementForce);
+        movementForce = Vector3.zero;
+        // transform.rotation *= rotationForce;
+    }
 }
