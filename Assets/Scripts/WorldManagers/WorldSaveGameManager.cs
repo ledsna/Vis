@@ -13,9 +13,10 @@ public class WorldSaveGameManager : MonoBehaviour
     [Header("Save Data Writer")]
     private SaveFileDataWriter saveFileDataWriter;
 
-    [Header("Current Character Data")]
+    [Header("Character Data")]
     public PlayerSaveData playerData;
     private string saveFileName = "saveFile";
+    private int currentSceneIndex;
 
     private void Awake()
     {
@@ -99,8 +100,18 @@ public class WorldSaveGameManager : MonoBehaviour
     public IEnumerator LoadScene(int sceneIndex)
     {
         AsyncOperation loadOperation = SceneManager.LoadSceneAsync(sceneIndex);
+        currentSceneIndex = sceneIndex;
 
         player.LoadGameDataFromCurrentCharacterData(ref playerData);
+
+        yield return null;
+    }
+
+    public IEnumerator LoadNextScene()
+    {
+        currentSceneIndex = (currentSceneIndex + 1) % 6;
+        
+        AsyncOperation loadOperation = SceneManager.LoadSceneAsync(currentSceneIndex);
 
         yield return null;
     }
