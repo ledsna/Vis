@@ -925,7 +925,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4494573819055105151, guid: a9f2a2a1788e14943a6538b14f174c28,
         type: 3}
-      insertIndex: -1
+      insertIndex: 1
       addedObject: {fileID: 1560636620}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5657654825618780516, guid: a9f2a2a1788e14943a6538b14f174c28,
@@ -1286,7 +1286,7 @@ PrefabInstance:
         type: 3}
       propertyPath: backgroundMusic
       value: 
-      objectReference: {fileID: 8300000, guid: 1497ad2afbf4b4a268070ca44ea888fe, type: 3}
+      objectReference: {fileID: 8300000, guid: 0c87b1254407c4f64a4f089bcd90b8d5, type: 3}
     - target: {fileID: 9161656845429317969, guid: d766e1f4988e44c0d9bea0315d123ca2,
         type: 3}
       propertyPath: OutputAudioMixerGroup

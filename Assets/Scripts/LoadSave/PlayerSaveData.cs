@@ -14,6 +14,6 @@ public class PlayerSaveData
 
     [Header("World Coordinates")]
     public float xPosition = 0;
-    public float yPosition = 2;
+    public float yPosition = 5;
     public float zPosition = 0;
 }
