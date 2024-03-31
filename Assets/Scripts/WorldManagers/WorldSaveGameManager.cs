@@ -101,17 +101,28 @@ public class WorldSaveGameManager : MonoBehaviour
 
     public IEnumerator LoadNextScene()
     {
+        player.doNotRevive = true;
+        
         // Get the current scene
         Scene currentScene = SceneManager.GetActiveScene();
 
         // Get the index of the current scene
-        int sceneIndex = (currentScene.buildIndex + 1) % 6;
+        int sceneIndex = currentScene.buildIndex + 1;
+        if (sceneIndex == 6)
+        {
+            sceneIndex = 1;
+        }
+
+        
+        yield return new WaitForSeconds(2);
         
         AsyncOperation loadOperation = SceneManager.LoadSceneAsync(sceneIndex);
+        
+        player.doNotRevive = false;
 
         playerData.floor = sceneIndex;
         playerData.xPosition = 0;
-        playerData.yPosition = 2;
+        playerData.yPosition = 5;
         playerData.zPosition = 0;
         
         player.LoadGameDataFromCurrentCharacterData(ref playerData);

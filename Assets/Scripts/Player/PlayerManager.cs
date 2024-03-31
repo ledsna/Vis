@@ -18,6 +18,7 @@ public class PlayerManager : MonoBehaviour
     public bool isGrounded = true;
     public bool isJumping = false;
     public bool isLanding = false;
+    public bool doNotRevive = false;
     
     [Header("Respawn")]
     [SerializeField] Vector3 respawnPosition;
@@ -47,11 +48,7 @@ public class PlayerManager : MonoBehaviour
             transform.SetParent(null);
         }
 
-        if (transform.position.y <= -5)
-        {
-            playerSoundFXManager.PlayDeathSoundFX();
-            ReviveCharacter();
-        }
+        RespawnIfNeeded();
     }
     
     public void SaveGameDataToCurrentCharacterData(ref PlayerSaveData currentCharacterData)
@@ -72,13 +69,19 @@ public class PlayerManager : MonoBehaviour
         locomotionManager.ResetYVelocity();
     }
     
-    public void ReviveCharacter()
+    private void RespawnIfNeeded()
     {
+        if (doNotRevive || transform.position.y >= -5)
+        {
+            return;
+        }
+        
+        playerSoundFXManager.PlayDeathSoundFX();
         transform.position = respawnPosition;
         locomotionManager.ResetYVelocity();
     }
     
-    public void SetRespawnPoint(Vector3 respawnPoint)
+    private void SetRespawnPoint(Vector3 respawnPoint)
     {
         respawnPosition = respawnPoint;
     }
