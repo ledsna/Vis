@@ -20,20 +20,19 @@ float3 _OrthographicCamPosTerrain;
 //get the data from the compute shader
 void GetComputeData_float(float vertexID, out float3 worldPos, out float3 normal, out float2 uv, out float3 col)
 {
-      DrawTriangle tri = _DrawTriangles[vertexID / 3];
-      DrawVertex input = tri.vertices[vertexID % 3];
-      worldPos = input.positionWS;
-      normal =  tri.normalOS;   
-      uv = input.uv;      
-      col = tri.diffuseColor;
-  
+    DrawTriangle tri = _DrawTriangles[vertexID / 3];
+    DrawVertex input = tri.vertices[vertexID % 3];
+    worldPos = input.positionWS;
+    normal =  tri.normalOS;   
+    uv = input.uv;      
+    col = tri.diffuseColor;
 }
 
 // world space uv for blending
 void GetWorldUV_float(float3 worldPos, out float2 worldUV)
 {
-      float2 uv =worldPos.xz - _OrthographicCamPosTerrain.xz;
-      uv = uv / (_OrthographicCamSizeTerrain * 2);
-      uv += 0.5;
-      worldUV = uv;
+    float2 uv =worldPos.xz - _OrthographicCamPosTerrain.xz;
+    uv = uv / (_OrthographicCamSizeTerrain * 2);
+    uv += 0.5;
+    worldUV = uv;
 }

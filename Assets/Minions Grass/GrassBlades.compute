@@ -1,12 +1,7 @@
-// @Minionsart version
-// credits  to  forkercat https://gist.github.com/junhaowww/fb6c030c17fe1e109a34f1c92571943f
-// and  NedMakesGames https://gist.github.com/NedMakesGames/3e67fabe49e2e3363a657ef8a6a09838
-// for the base setup for compute shaders
-
 // Each #kernel tells which function to compile; you can have many kernels
 #pragma kernel Main
 // Define some constants
-#define TWO_PI      6.28318530717958647693
+#define TWO_PI 6.28318530717958647693
 
 // This describes a vertex on the source mesh
 struct SourceVertex
@@ -56,9 +51,7 @@ RWStructuredBuffer<IndirectArgs> _IndirectArgsBuffer;
 // because in the script we need to specify the buffer size
 #define GRASS_BLADES 10
 #define GRASS_SEGMENTS 4// segments per blade
-#define GRASS_NUM_VERTICES_PER_BLADE (GRASS_SEGMENTS * 2)+ 1
-
-// ----------------------------------------
+#define GRASS_NUM_VERTICES_PER_BLADE (GRASS_SEGMENTS * 2) + 1
 
 // Variables set by the renderer
 int _NumSourceVertices;
@@ -108,8 +101,8 @@ float rand(float3 co)
 
 float Unity_RandomRange_float(float2 Seed, float Min, float Max)
 {
-    float randomno =  frac(sin(dot(Seed, float2(12.9898, 78.233)))*43758.5453);
-    return lerp(Min, Max, randomno);
+    float rand =  frac(sin(dot(Seed, float2(12.9898, 78.233)))*43758.5453);
+    return lerp(Min, Max, rand);
 }
 
 // A function to compute an rotation matrix which rotates a point
@@ -197,7 +190,7 @@ void Main(uint id : SV_DispatchThreadID)
     _GrassHeight = sv.uv.y;
     _GrassWidth = sv.uv.x;  // UV.x == width multiplier (set in GrassPainter.cs)
      float randomisedPos = rand(sv.positionWS.xyz);
-     // random height offsets
+    // random height offsets
     float randomOffset = Unity_RandomRange_float(sv.positionWS.xz, _GrassRandomHeightMin, _GrassRandomHeightMax);
     _GrassHeight = clamp(_GrassHeight + randomOffset, _MinHeight, _MaxHeight);
     _GrassWidth=  clamp(_GrassWidth, _MinWidth, _MaxWidth);
@@ -259,7 +252,7 @@ void Main(uint id : SV_DispatchThreadID)
         float3 topPosOS = sv.positionWS + combinedDisp + wind1 + (faceNormal * _GrassHeight);
         drawVertices[numSegmentsPerBlade * 2] = GrassVertex(topPosOS, 0, _GrassHeight, offset, _BladeForward, float2(0.5, 1), facingRotationMatrix);
           
-          // add to indirect arguments buffer with the correct vertexcount       
+        // add to indirect arguments buffer with the correct vertexcount       
           InterlockedAdd(_IndirectArgsBuffer[0].numVerticesPerInstance, numTrianglesPerBlade * 3);
 
         // add to the drawbuffer to be read by the final shader

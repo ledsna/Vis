@@ -1,91 +1,71 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 [ExecuteInEditMode]
 public class RenderTerrainMap : MonoBehaviour
 {
+    public RenderTexture tempTex; // Temporary texture for rendering
+
+    
     public Camera camToDrawWith;
-    // layer to render
-    [SerializeField]
-    LayerMask layer;
+    // [SerializeField] private LayerMask layer; // Layer to render
+    [SerializeField] private Renderer[] renderers; // Objects to render
+    [SerializeField] private Terrain[] terrains; // Unity terrains to render
+    public int resolution = 2048; // Map resolution
+    public float adjustScaling = 2.5f; // Padding the total size
+    [SerializeField] private bool RealTimeDiffuse; // Toggle for real-time updating
+    public float repeatRate = 5f; // Update rate for real-time diffuse map generation
+    private Bounds bounds; // Combined bounds of all renderers and terrains
 
-    // objects to render
-    [SerializeField]
-    Renderer[] renderers;
-    // unity terrain to render
-    [SerializeField]
-    Terrain[] terrains;
-    // map resolution
-    public int resolution = 512;
-
-    // padding the total size
-    public float adjustScaling = 2.5f;
-    [SerializeField]
-    bool RealTimeDiffuse;
-    RenderTexture tempTex;
-
-    public float repeatRate = 5f;
-    private Bounds bounds;
-
-    void GetBounds()
-    {
-
-        if (renderers.Length > 0)
-        {
-            foreach (Renderer renderer in renderers)
-            {
-                if (bounds.size.magnitude < 0.1f)
-                {
-                    bounds = new Bounds(renderer.transform.position, Vector3.zero);
-                }
-                bounds.Encapsulate(renderer.bounds);
-            }
-        }
-
-        if (terrains.Length > 0)
-        {
-            foreach (Terrain terrain in terrains)
-            {
-                if (bounds.size.magnitude < 0.1f)
-                {
-                    bounds = new Bounds(terrain.transform.position, Vector3.zero);
-                }
-                Vector3 terrainCenter = terrain.GetPosition() + terrain.terrainData.bounds.center;
-                Bounds worldBounds = new Bounds(terrainCenter, terrain.terrainData.bounds.size);
-                bounds.Encapsulate(worldBounds);
-            }
-        }
-    }
+    public UniversalRendererData rendererData; // Reference to the UniversalRendererData
+    private LayerMask originalOpaqueLayerMask; // To store the original opaque layer mask
+    private LayerMask originalTransparentLayerMask; // To store the original transparent layer mask
 
     void OnEnable()
     {
-        // reset bounds
         bounds = new Bounds(transform.position, Vector3.zero);
-        tempTex = new RenderTexture(resolution, resolution, 24);
+        // tempTex = new RenderTexture(resolution, resolution, 24);
         GetBounds();
         SetUpCam();
         DrawDiffuseMap();
     }
 
-
     void Start()
     {
-        GetBounds();
-        SetUpCam();
-        DrawDiffuseMap();
         if (RealTimeDiffuse)
         {
             InvokeRepeating("UpdateTex", 1f, repeatRate);
         }
-
     }
 
+    void GetBounds()
+    {
+        foreach (Renderer renderer in renderers)
+        {
+            if (bounds.size == Vector3.zero)
+            {
+                bounds = new Bounds(renderer.transform.position, Vector3.zero);
+            }
+            bounds.Encapsulate(renderer.bounds);
+        }
+
+        foreach (Terrain terrain in terrains)
+        {
+            if (bounds.size == Vector3.zero)
+            {
+                bounds = new Bounds(terrain.transform.position, Vector3.zero);
+            }
+            Vector3 terrainCenter = terrain.GetPosition() + terrain.terrainData.bounds.center;
+            Bounds worldBounds = new Bounds(terrainCenter, terrain.terrainData.bounds.size);
+            bounds.Encapsulate(worldBounds);
+        }
+    }
 
     void UpdateTex()
     {
-        camToDrawWith.enabled = true;
-        camToDrawWith.targetTexture = tempTex;
-        Shader.SetGlobalTexture("_TerrainDiffuse", tempTex);
+        DrawDiffuseMap();
     }
+
     public void DrawDiffuseMap()
     {
         DrawToMap("_TerrainDiffuse");
@@ -112,11 +92,11 @@ public class RenderTerrainMap : MonoBehaviour
             camToDrawWith = GetComponentInChildren<Camera>();
         }
         float size = bounds.size.magnitude;
-        camToDrawWith.cullingMask = layer;
+        // camToDrawWith.cullingMask = layer;
         camToDrawWith.orthographicSize = size / adjustScaling;
         camToDrawWith.transform.parent = null;
         camToDrawWith.transform.position = bounds.center + new Vector3(0, bounds.extents.y + 5f, 0);
-        camToDrawWith.transform.parent = gameObject.transform;
+        camToDrawWith.transform.LookAt(bounds.center);
+        camToDrawWith.transform.parent = transform;
     }
-
 }
