@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TitleScreenManager : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class TitleScreenManager : MonoBehaviour
 
     [SerializeField] private GameObject mainMenuObject;
     [SerializeField] private GameObject pauseMenuObject;
+    
+    [Header("Fade")]
+    public Image fadeOutUIImage;
+    public float fadeSpeed = 0.8f;
 
     private void Awake()
     {
@@ -78,5 +83,29 @@ public class TitleScreenManager : MonoBehaviour
         WorldSaveGameManager.instance.SaveGame();
         pauseMenuObject.SetActive(false);
         mainMenuObject.SetActive(true);
+    }
+    
+    public IEnumerator FadeIn(float time)
+    {
+        yield return Fade(1, 0, time);
+    }
+
+    public IEnumerator FadeOut(float time)
+    {
+        yield return Fade(0, 1, time);
+    }
+
+    private IEnumerator Fade(float startAlpha, float endAlpha, float time)
+    {
+        Debug.Log("let's goooooo");
+        float elapsedTime = 0.0f;
+        Color c = fadeOutUIImage.color;
+        while (elapsedTime < time)
+        {
+            elapsedTime += Time.deltaTime;
+            c.a = Mathf.Lerp(startAlpha, endAlpha, elapsedTime / time);
+            fadeOutUIImage.color = c;
+            yield return null;
+        }
     }
 }

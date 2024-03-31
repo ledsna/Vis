@@ -8,7 +8,7 @@ public class WorldSaveGameManager : MonoBehaviour
 {
     public static WorldSaveGameManager instance;
 
-    public PlayerManager player; 
+    public PlayerManager player;
 
     [Header("Save Data Writer")]
     private SaveFileDataWriter saveFileDataWriter;
@@ -102,32 +102,35 @@ public class WorldSaveGameManager : MonoBehaviour
     public IEnumerator LoadNextScene()
     {
         player.doNotRevive = true;
-        
-        // Get the current scene
+
+        // Get the current scene.
         Scene currentScene = SceneManager.GetActiveScene();
 
-        // Get the index of the current scene
+        // Calculate the index for the next scene.
         int sceneIndex = currentScene.buildIndex + 1;
-        if (sceneIndex == 6)
+        if (sceneIndex >= SceneManager.sceneCountInBuildSettings) // Assuming looping back to the first scene after the last one.
         {
-            sceneIndex = 1;
+            sceneIndex = 1; // Reset to the first scene (make sure this is the desired behavior).
         }
-
         
-        yield return new WaitForSeconds(2);
-        
-        AsyncOperation loadOperation = SceneManager.LoadSceneAsync(sceneIndex);
-        
-        player.doNotRevive = false;
-
+        // Update player data to reflect the new scene.
         playerData.floor = sceneIndex;
-        playerData.xPosition = 0;
+        playerData.xPosition = 0; // Set these values as needed.
         playerData.yPosition = 5;
         playerData.zPosition = 0;
         
+        // Start the fade out effect and wait for it to finish.
+        yield return TitleScreenManager.instance.FadeOut(1);
+        
+        // After the new scene has loaded, start the fade in effect.
+        yield return TitleScreenManager.instance.FadeIn(1);
+        
+        // Load the next scene asynchronously.
+        AsyncOperation loadOperation = SceneManager.LoadSceneAsync(sceneIndex);
+        
+        // Load player data into the game.
         player.LoadGameDataFromCurrentCharacterData(ref playerData);
-
-        yield return null;
+        player.doNotRevive = false;
     }
 
     private void OnApplicationQuit()
