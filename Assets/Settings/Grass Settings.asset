@@ -28,11 +28,11 @@ MonoBehaviour:
   windStrength: 0.15
   allowedBladesPerVertex: 4
   allowedSegmentsPerBlade: 3
-  affectStrength: 1
+  affectStrength: 0.2
   topTint: {r: 0.4431373, g: 0.54509807, b: 0.227451, a: 1}
   bottomTint: {r: 0.4431373, g: 0.54509807, b: 0.227451, a: 1}
-  drawBounds: 0
-  minFadeDistance: 40
-  maxDrawDistance: 125
+  drawBounds: 1
+  minFadeDistance: 20
+  maxDrawDistance: 30
   cullingTreeDepth: 7
   castShadow: 0

@@ -35,6 +35,7 @@ public class MirrorCamera : MonoBehaviour {
 
     private void PreRender(ScriptableRenderContext context, Camera viewer)
     {
+        if (viewer.CompareTag("NoReflections")) return;
         if (viewer.cameraType is CameraType.Reflection or CameraType.Preview) return;
         if (!renderInEditor && viewer.cameraType == CameraType.SceneView) return;
 
