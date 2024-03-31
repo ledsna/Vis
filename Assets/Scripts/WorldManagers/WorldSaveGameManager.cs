@@ -122,9 +122,6 @@ public class WorldSaveGameManager : MonoBehaviour
         // Start the fade out effect and wait for it to finish.
         yield return TitleScreenManager.instance.FadeOut(1);
         
-        // After the new scene has loaded, start the fade in effect.
-        yield return TitleScreenManager.instance.FadeIn(1);
-        
         // Load the next scene asynchronously.
         AsyncOperation loadOperation = SceneManager.LoadSceneAsync(sceneIndex);
         

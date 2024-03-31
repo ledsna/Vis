@@ -60,9 +60,9 @@ public class PlayerManager : MonoBehaviour
     
     public void LoadGameDataFromCurrentCharacterData(ref PlayerSaveData currentCharacterData)
     {
-        Debug.Log(currentCharacterData.xPosition);
-        Debug.Log(currentCharacterData.yPosition);
-        Debug.Log(currentCharacterData.zPosition);
+        // After the new scene has loaded, start the fade in effect.
+        StartCoroutine(TitleScreenManager.instance.FadeIn(1));
+        
         transform.position = new Vector3(
             currentCharacterData.xPosition, currentCharacterData.yPosition, currentCharacterData.zPosition);
         CameraManager.instance.transform.position = transform.position;

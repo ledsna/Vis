@@ -10,7 +10,6 @@ public class FloorElevatorManager : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             StartCoroutine(WorldSaveGameManager.instance.LoadNextScene());
-            Debug.Log("Reached end!");
         }
     }
 }
