@@ -425,8 +425,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 475fe5f96ac944f58a16d2521f40c957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutUIImage: {fileID: 1560636622}
-  fadeSpeed: 0.8
 --- !u!114 &980629035 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3569927440028033225, guid: a9f2a2a1788e14943a6538b14f174c28,
@@ -921,7 +919,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1864888002235007426, guid: a9f2a2a1788e14943a6538b14f174c28, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4494573819055105151, guid: a9f2a2a1788e14943a6538b14f174c28,
         type: 3}
