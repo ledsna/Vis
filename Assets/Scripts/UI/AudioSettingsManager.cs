@@ -21,7 +21,7 @@ public class AudioSettingsManager : MonoBehaviour
         {
             LoadSFXVolume();
         }
-
+        
         SetMusicVolume();
         SetSFXVolume();
     }
@@ -30,7 +30,7 @@ public class AudioSettingsManager : MonoBehaviour
     {
         float volume = Mathf.Log10(musicSlider.value) * 20;
         audioMixer.SetFloat("musicVolume", volume);
-        PlayerPrefs.SetFloat("musicVolume", volume);
+        PlayerPrefs.SetFloat("musicVolume", musicSlider.value);
     }
 
     public void LoadMusicVolume()
@@ -42,7 +42,7 @@ public class AudioSettingsManager : MonoBehaviour
     {
         float volume = Mathf.Log10(soundFXSlider.value) * 20;
         audioMixer.SetFloat("soundFXVolume", volume);
-        PlayerPrefs.SetFloat("sfxVolume", volume);
+        PlayerPrefs.SetFloat("sfxVolume", soundFXSlider.value);
     }
 
     public void LoadSFXVolume()
