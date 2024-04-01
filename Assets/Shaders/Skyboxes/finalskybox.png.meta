@@ -6,7 +6,11 @@ TextureImporter:
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
+<<<<<<< HEAD:Assets/Shaders/Skyboxes/finalskybox.png.meta
     enableMipMap: 1
+=======
+    enableMipMap: 0
+>>>>>>> origin/rasper2:Assets/ShaderGraphs/Skyboxes/finalskybox.png.meta
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,11 +38,19 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< HEAD:Assets/Shaders/Skyboxes/finalskybox.png.meta
     filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 0
     wrapV: 0
+=======
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 1
+>>>>>>> origin/rasper2:Assets/ShaderGraphs/Skyboxes/finalskybox.png.meta
     wrapW: 0
   nPOTScale: 1
   lightmap: 0
@@ -55,7 +67,11 @@ TextureImporter:
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
   textureType: 0
+<<<<<<< HEAD:Assets/Shaders/Skyboxes/finalskybox.png.meta
   textureShape: 1
+=======
+  textureShape: 2
+>>>>>>> origin/rasper2:Assets/ShaderGraphs/Skyboxes/finalskybox.png.meta
   singleChannelComponent: 0
   flipbookRows: 1
   flipbookColumns: 1
@@ -72,7 +88,11 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
+<<<<<<< HEAD:Assets/Shaders/Skyboxes/finalskybox.png.meta
     textureCompression: 1
+=======
+    textureCompression: 0
+>>>>>>> origin/rasper2:Assets/ShaderGraphs/Skyboxes/finalskybox.png.meta
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
