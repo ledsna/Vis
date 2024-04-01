@@ -209,6 +209,5 @@ public class PlayerLocomotionManager : MonoBehaviour
     {
         player.characterController.Move(movementForce);
         movementForce = Vector3.zero;
-        // transform.rotation *= rotationForce;
     }
 }

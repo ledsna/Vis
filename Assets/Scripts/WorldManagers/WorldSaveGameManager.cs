@@ -108,7 +108,7 @@ public class WorldSaveGameManager : MonoBehaviour
 
         // Calculate the index for the next scene.
         int sceneIndex = currentScene.buildIndex + 1;
-        if (sceneIndex >= SceneManager.sceneCountInBuildSettings) // Assuming looping back to the first scene after the last one.
+        if (sceneIndex >= SceneManager.sceneCountInBuildSettings)
         {
             TitleScreenManager.instance.OpenEndGame();
         }

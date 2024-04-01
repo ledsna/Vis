@@ -21,12 +21,6 @@ public class PlayerAnimatorManager : MonoBehaviour
     {
         player.applyRootMotion = applyRootMotion;
         player.animator.CrossFade(targetAnimation, 0.2f);
-        // can be used to stop character from attempting new actions
-        // for example if you get damaged, and begin performing a damage animation
-        // this flag will turn true if you are stunned
-        // we can then check for this before attempting new action
-        // player.canRotate = canRotate;
-        // player.canMove = canMove;
     }
     
     private void OnAnimatorMove()

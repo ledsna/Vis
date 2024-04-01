@@ -80,8 +80,6 @@ public class PlayerInputManager : MonoBehaviour
         {
             jumpInput = false;
             
-            // IF WE HAVE MENU OPEN, RETURN WITHOUT DOING ANYTHING
-            
             // ATTEMPT TO PERFORM JUMP
             player.locomotionManager.AttemptToPerformJump();
         }
