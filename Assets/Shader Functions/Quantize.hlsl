@@ -1,22 +1,10 @@
-#ifndef FRESNEL_DECIDER_INCLUDED
-#define FRESNEL_DECIDER_INCLUDED
+#ifndef QUANTIZER_INCLUDED
+#define QUANTIZER_INCLUDED
 
-void FresnelClamper_float(float ramps, float shade, out float result)
+void Quantizer_float(float steps, float shade, out float result)
 {
-    for (int i = 0; i < ramps; i++)
-    {
-        if (shade >= (i + 1) / ramps)
-        {
-            if (i == ramps - 1)
-            {
-                result = 1;
-                return;
-            }
-            continue;
-        }
-        result = i / ramps;
-        return;
-    }
-	result = 1;
+    steps = max(steps, 2);
+    // result = min(round(shade * (steps - 1)), steps - 2) / (steps - 1);
+    result = floor(shade * (steps - 1) + 0.5) / (steps - 1);
 }
 #endif

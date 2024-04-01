@@ -70,7 +70,7 @@ Material:
     - _EdgeShadowAttenuation: 0.837
     - _EdgeSpecular: 0.519
     - _Fresnel_Power: 0
-    - _Fresnel_Ramps: 1
+    - _Fresnel_Ramps: 2
     - _Metallic_Value: 0
     - _QueueControl: 0
     - _QueueOffset: 0

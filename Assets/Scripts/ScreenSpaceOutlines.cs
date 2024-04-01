@@ -217,7 +217,10 @@ public class ScreenSpaceOutlines : ScriptableRendererFeature {
         screenSpaceOutlinePass = new ScreenSpaceOutlinePass(renderPassEvent, outlineSettings);
     }
 
-    public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData) {
+    public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData)
+    {
+        // if (renderingData.cameraData.camera.cameraType != CameraType.Game) return;
+        if (!renderingData.cameraData.camera.CompareTag("MainCamera")) return;
         renderer.EnqueuePass(viewSpaceNormalsTexturePass);
         renderer.EnqueuePass(screenSpaceOutlinePass);
     }

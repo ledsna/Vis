@@ -2679,7 +2679,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "0b23f215d65940db9164b9cb71e649b6",
     "m_Id": 0,
-    "m_DisplayName": "Colors",
+    "m_DisplayName": "Quantization",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -3465,7 +3465,7 @@
     "m_Group": {
         "m_Id": "a913f5ec42d44264b6d6fb1ce6c3472f"
     },
-    "m_Name": "FresnelClamper (Custom Function)",
+    "m_Name": "Quantizer (Custom Function)",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
@@ -3499,7 +3499,7 @@
         "m_SerializableColors": []
     },
     "m_SourceType": 0,
-    "m_FunctionName": "FresnelClamper",
+    "m_FunctionName": "Quantizer",
     "m_FunctionSource": "167c8855db88c4cfaa4a84ecd962e17f",
     "m_FunctionBody": "Enter function body here..."
 }
@@ -7002,7 +7002,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "70bb238789664cc993f7a5e979363720",
     "m_Id": 0,
-    "m_DisplayName": "Water Opacity",
+    "m_DisplayName": "Reflection Strength",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -12077,9 +12077,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 9165.0,
-            "y": 1620.5,
-            "width": 109.0,
+            "x": 9129.5,
+            "y": 1620.5001220703125,
+            "width": 141.0,
             "height": 34.0
         }
     },
