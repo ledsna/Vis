@@ -10,6 +10,7 @@ public class TitleScreenManager : MonoBehaviour
 
     [SerializeField] private GameObject mainMenuObject;
     [SerializeField] private GameObject pauseMenuObject;
+    [SerializeField] private GameObject endGameObject;
     
     [Header("Fade")]
     public Image fadeOutUIImage;
@@ -83,6 +84,13 @@ public class TitleScreenManager : MonoBehaviour
         WorldSaveGameManager.instance.SaveGame();
         pauseMenuObject.SetActive(false);
         mainMenuObject.SetActive(true);
+    }
+
+    public void OpenEndGame()
+    {
+        Time.timeScale = 0f;
+        pauseMenuObject.SetActive(false);
+        endGameObject.SetActive(true);
     }
     
     public IEnumerator FadeIn(float time)

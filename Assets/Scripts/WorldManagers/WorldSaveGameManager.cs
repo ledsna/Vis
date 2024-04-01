@@ -110,7 +110,7 @@ public class WorldSaveGameManager : MonoBehaviour
         int sceneIndex = currentScene.buildIndex + 1;
         if (sceneIndex >= SceneManager.sceneCountInBuildSettings) // Assuming looping back to the first scene after the last one.
         {
-            sceneIndex = 1; // Reset to the first scene (make sure this is the desired behavior).
+            TitleScreenManager.instance.OpenEndGame();
         }
         
         // Update player data to reflect the new scene.
