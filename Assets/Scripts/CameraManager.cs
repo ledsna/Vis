@@ -1,9 +1,5 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
-using Quaternion = UnityEngine.Quaternion;
-using Vector2 = UnityEngine.Vector2;
-using Vector3 = UnityEngine.Vector3;
 
 public class CameraManager : MonoBehaviour
 {
@@ -11,7 +7,7 @@ public class CameraManager : MonoBehaviour
     
     [SerializeField] Camera mainCamera;
     [SerializeField] RawImage rawImage;
-    [SerializeField] Transform player;
+    public Transform player;
 
     [Header("Locked Settings")]
     [SerializeField] float cameraSmoothTime = 7;
@@ -34,8 +30,18 @@ public class CameraManager : MonoBehaviour
     private float pixelH;
     private Vector3 wsOrigin;
 
+    private void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
+    }
+    
     private void Start()
     {
+        DontDestroyOnLoad(gameObject);
+        
         // Fraction of pixel size to screen size
         pixelW = 1f / mainCamera.scaledPixelWidth;
         pixelH = 1f / mainCamera.scaledPixelHeight;
@@ -45,14 +51,6 @@ public class CameraManager : MonoBehaviour
         rawImage.uvRect = new Rect(pixelW, pixelH, 1f - 2 * pixelW, 1f - 2 * pixelH);
         
         wsOrigin = transform.position;
-    }
-
-    private void Awake()
-    {
-        if (instance == null)
-            instance = this;
-        else
-            Destroy(gameObject);
     }
 
     void Update()
