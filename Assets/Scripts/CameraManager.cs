@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -11,7 +12,8 @@ public class CameraManager : MonoBehaviour
     
     [SerializeField] Camera mainCamera;
     [SerializeField] RawImage rawImage;
-    [SerializeField] Transform player;
+    // [SerializeField]
+    Transform player;
 
     [Header("Locked Settings")]
     [SerializeField] float cameraSmoothTime = 7;
@@ -80,6 +82,9 @@ public class CameraManager : MonoBehaviour
         if (Mathf.Abs(targetAngle - currentAngle) > angleThreshold) return;
         wsOrigin = transform.position;
         snapOffset = Vector3.zero;
+
+        // Set the global shader variable
+        AdjustCameraPosition();
     }
 
     private void LateUpdate()

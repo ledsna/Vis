@@ -18,7 +18,7 @@ MonoBehaviour:
     Downsample: 0
     AfterOpaque: 0
     Source: 1
-    NormalSamples: 1
+    NormalSamples: 0
     Intensity: 2.31
     DirectLightingStrength: 0.66
     Radius: 7.68
@@ -118,13 +118,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   outlineSettings:
-    outlineScale: 1
-    normalScale: 1
+    depthOutlineScale: 1
+    normalsOutlineScale: 1
     depthThreshold: 54
     normalThreshold: 0.17
-    highlightIntensity: 2.39
-    shadowIntensity: 0.316
-  viewSpaceNormalsTextureSettings:
+    highlightPower: 2.39
+    shadowPower: 0.316
+  normalsTextureSettings:
     colorFormat: 0
     depthBufferBits: 16
     filterMode: 0

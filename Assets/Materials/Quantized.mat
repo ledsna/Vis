@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Quantized
-  m_Shader: {fileID: -6465566751694194690, guid: 1d96aa808e3ad47d9b30cd2145d48fea,
+  m_Shader: {fileID: -6465566751694194690, guid: baaae2cdc31c40245973b00cfdcec770,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -40,13 +40,12 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Steps: 4
+    - _Steps: 5
     m_Colors:
-    - _Colour: {r: 0.5503673, g: 0.6698113, b: 0.18009077, a: 1}
-    - _Highlight_Colour: {r: 0.40784317, g: 0.47450984, b: 0.16862746, a: 1}
-    - _Shadow_Colour: {r: 0.14901961, g: 0.227451, b: 0.09019608, a: 1}
+    - _Highlight_Colour: {r: 1, g: 1, b: 1, a: 0}
+    - _Shadow_Colour: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &8753409796237587790
+--- !u!114 &762615252453279967
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
