@@ -9,6 +9,7 @@ struct EdgeConstants {
    float rim;
    float distanceAttenuation;
    float shadowAttenuation;
+   float quantizationSteps;
 
 };
 
@@ -27,6 +28,13 @@ struct SurfaceVariables {
    EdgeConstants ec;
 
 };
+
+float quantize(float steps, float shade)
+{
+   steps = max(steps, 2);
+   // result = min(round(shade * (steps - 1)), steps - 2) / (steps - 1);
+   return floor(shade * (steps - 1) + 0.5) / (steps - 1);
+}
 
 float3 CalculateCelShading(Light l, SurfaceVariables s) {
    float attenuation = 
@@ -53,7 +61,7 @@ float3 CalculateCelShading(Light l, SurfaceVariables s) {
       rim
    );
 
-   return l.color * (diffuse + max(specular, rim));
+   return l.color * quantize(s.ec.quantizationSteps, diffuse + max(specular, rim));
 }
 #endif
 
@@ -61,7 +69,7 @@ void LightingCelShaded_float(float Smoothness,
       float RimStrength, float RimAmount, float RimThreshold, 
       float3 Position, float3 Normal, float3 View, float EdgeDiffuse,
       float EdgeSpecular, float EdgeDistanceAttenuation,
-      float EdgeShadowAttenuation, float EdgeRim, out float3 Color) {
+      float EdgeShadowAttenuation, float EdgeRim, float QuantizationSteps, out float3 Color) {
 
 #if defined(SHADERGRAPH_PREVIEW)
    Color = half3(0.5f, 0.5f, 0.5f);
@@ -79,6 +87,7 @@ void LightingCelShaded_float(float Smoothness,
    s.ec.distanceAttenuation = EdgeDistanceAttenuation;
    s.ec.shadowAttenuation = EdgeShadowAttenuation;
    s.ec.rim = EdgeRim;
+   s.ec.quantizationSteps = QuantizationSteps;
 
 #if SHADOWS_SCREEN
    float4 clipPos = TransformWorldToHClip(Position);

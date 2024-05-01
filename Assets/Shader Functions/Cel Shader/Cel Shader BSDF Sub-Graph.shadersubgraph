@@ -29,6 +29,9 @@
         },
         {
             "m_Id": "81fa15c43f6f422e868d887eb4119efa"
+        },
+        {
+            "m_Id": "985e39bbd17f4dcaa6964d5c5588fa1f"
         }
     ],
     "m_Keywords": [],
@@ -83,6 +86,9 @@
         },
         {
             "m_Id": "6db27161568f4344b97726b79721c5e8"
+        },
+        {
+            "m_Id": "33d57b6f3d69467abe95533e88533945"
         }
     ],
     "m_GroupDatas": [],
@@ -156,6 +162,20 @@
                     "m_Id": "9c92bf4067b842419f0f017340bb49bb"
                 },
                 "m_SlotId": 5
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "33d57b6f3d69467abe95533e88533945"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "9c92bf4067b842419f0f017340bb49bb"
+                },
+                "m_SlotId": 16
             }
         },
         {
@@ -642,6 +662,21 @@
 }
 
 {
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "1e0972d9d0e34bbf94390585b189f288",
+    "m_Id": 0,
+    "m_DisplayName": "QuantizationSteps",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
+}
+
+{
     "m_SGVersion": 1,
     "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
     "m_ObjectId": "2ffb4e58749647d89787ae0f4d1c188c",
@@ -717,6 +752,42 @@
     "m_RangeValues": {
         "x": 0.0,
         "y": 1.0
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "33d57b6f3d69467abe95533e88533945",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -202.99993896484376,
+            "y": 282.9999694824219,
+            "width": 170.99996948242188,
+            "height": 33.999969482421878
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "1e0972d9d0e34bbf94390585b189f288"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "985e39bbd17f4dcaa6964d5c5588fa1f"
     }
 }
 
@@ -865,6 +936,9 @@
         },
         {
             "m_Id": "81fa15c43f6f422e868d887eb4119efa"
+        },
+        {
+            "m_Id": "985e39bbd17f4dcaa6964d5c5588fa1f"
         }
     ]
 }
@@ -1200,6 +1274,21 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "7b40b9dba0aa4e0abe19ecf3ef8b7ce6",
+    "m_Id": 16,
+    "m_DisplayName": "QuantizationSteps",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "QuantizationSteps",
+    "m_StageCapability": 3,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
     "m_ObjectId": "7f6e3b99249041d6b4d6f5167837bec7",
     "m_Group": {
@@ -1330,6 +1419,34 @@
 
 {
     "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "985e39bbd17f4dcaa6964d5c5588fa1f",
+    "m_Guid": {
+        "m_GuidSerialized": "14eaf94a-26c9-4341-a702-a6dd7bd825fa"
+    },
+    "m_Name": "QuantizationSteps",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "QuantizationSteps",
+    "m_DefaultReferenceName": "_QuantizationSteps",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 3.0,
+    "m_FloatType": 0,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 1.0
+    }
+}
+
+{
+    "m_SGVersion": 1,
     "m_Type": "UnityEditor.ShaderGraph.CustomFunctionNode",
     "m_ObjectId": "9c92bf4067b842419f0f017340bb49bb",
     "m_Group": {
@@ -1340,16 +1457,13 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 57.5,
-            "y": -169.25001525878907,
-            "width": 291.9998779296875,
-            "height": 589.9999389648438
+            "x": 57.499996185302737,
+            "y": -169.00001525878907,
+            "width": 262.00006103515627,
+            "height": 566.0000610351563
         }
     },
     "m_Slots": [
-        {
-            "m_Id": "30e47ec233874ba8afc797599f7b5966"
-        },
         {
             "m_Id": "5ccedd61ebc64039bc35cdeeb1f77844"
         },
@@ -1385,6 +1499,12 @@
         },
         {
             "m_Id": "9e4e41dc97914739a3217a573ded028e"
+        },
+        {
+            "m_Id": "7b40b9dba0aa4e0abe19ecf3ef8b7ce6"
+        },
+        {
+            "m_Id": "30e47ec233874ba8afc797599f7b5966"
         }
     ],
     "synonyms": [

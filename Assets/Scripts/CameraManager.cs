@@ -31,7 +31,7 @@ public class CameraManager : MonoBehaviour
     private float currentAngle;
     
     [Header("Blit to Viewport")]
-    private Vector3 snapOffset = Vector3.zero;
+    private Vector3 ssOffset = Vector3.zero;
     private float pixelW;
     private float pixelH;
     private Vector3 wsOrigin;
@@ -60,7 +60,6 @@ public class CameraManager : MonoBehaviour
     void Update()
     {
         // Application.targetFrameRate = -1; // Uncapped
-
         float mouseX = Input.GetAxis("Mouse X");
         // float mouseY = Input.GetAxis("Mouse Y");
 
@@ -79,12 +78,11 @@ public class CameraManager : MonoBehaviour
             targetAngle, rotationSpeed * Time.deltaTime);
         transform.rotation = Quaternion.Euler(30, currentAngle, 0);
         
-        if (Mathf.Abs(targetAngle - currentAngle) > angleThreshold) return;
+        if (Mathf.Abs(targetAngle - currentAngle) < angleThreshold) return;
         wsOrigin = transform.position;
-        snapOffset = Vector3.zero;
+        ssOffset = Vector3.zero;
 
-        // Set the global shader variable
-        AdjustCameraPosition();
+        // AdjustCameraPosition();
     }
 
     private void LateUpdate()
@@ -112,30 +110,39 @@ public class CameraManager : MonoBehaviour
         AdjustCameraPosition();
     }
 
+    private Vector3 ToWorldSpace(Vector3 vector)
+    {
+        return transform.TransformVector(vector);
+    }
+
+    private Vector3 ToScreenSpace(Vector3 vector)
+    {
+        return transform.InverseTransformVector(vector);
+    }
+
     private void AdjustCameraPosition()
     {
         // Calculate Pixels per Unit
         float ppu = mainCamera.scaledPixelHeight / mainCamera.orthographicSize / 2;
-        // Current unsnapped position = previous snapped position + unsnapped offset
-        Vector3 pos = transform.position - transform.TransformVector(snapOffset);
-        // Convert the ( origin->position ) vector from World Space to Screen Space
-        Vector3 ssPos = transform.InverseTransformVector(pos - wsOrigin);
-        // Snap the Screen Space position vector to the closest Screen Space texel
-        Vector3 ssPosSnapped = new Vector3(
-            Mathf.Round(ssPos.x * ppu),
-            Mathf.Round(ssPos.y * ppu),
-            Mathf.Round(ssPos.z * ppu)) / ppu;
         
-        // Convert the snapped Screen Space position vector to World Space and add back to the origin in World Space
-        transform.position = wsOrigin + transform.TransformVector(ssPosSnapped);
-        // Difference between the initial and snapped positions from World Space to Screen Space
-        snapOffset = ssPosSnapped - ssPos;
+        // Convert the ( origin --> current position) vector from World Space to Screen Space and add the offset
+        Vector3 ssToCurrentPos = ToScreenSpace(transform.position - wsOrigin) + ssOffset;
+        // Snap the Screen Space position vector to the closest Screen Space texel
+        Vector3 ssToCurrentSnappedPos = new Vector3(
+            Mathf.Round(ssToCurrentPos.x * ppu),
+            Mathf.Round(ssToCurrentPos.y * ppu),
+            Mathf.Round(ssToCurrentPos.z * ppu)) / ppu;
+        
+        // Convert the displacement vector to World Space and add to the origin in World Space
+        transform.position = wsOrigin + ToWorldSpace(ssToCurrentSnappedPos);
+        // Difference between the initial and snapped positions
+        ssOffset = ssToCurrentPos - ssToCurrentSnappedPos;
 
         Rect uvRect = rawImage.uvRect;
         // Offset the Viewport by 1 - offset pixels in both dimensions
         
-        uvRect.x = (1f - snapOffset.x * ppu) * pixelW;
-        uvRect.y = (1f - snapOffset.y * ppu) * pixelH;
+        uvRect.x = (1f + ssOffset.x * ppu) * pixelW;
+        uvRect.y = (1f + ssOffset.y * ppu) * pixelH;
         // Blit to Viewport
         rawImage.uvRect = uvRect;
     }

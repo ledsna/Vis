@@ -61,7 +61,10 @@ public class MirrorCamera : MonoBehaviour {
         if (renderTexture && renderTexture.width == width && renderTexture.height == height) return;
         if (renderTexture) renderTexture.Release();
         
-        renderTexture = new RenderTexture(width, height, 24);
+        renderTexture = new RenderTexture(width, height, 24)
+        {
+            filterMode = FilterMode.Point // Set the filter mode to Point
+        };
         mirror.targetTexture = renderTexture;
         mirror.orthographicSize = viewer.orthographicSize;
         mirror.clearFlags = viewer.clearFlags;
