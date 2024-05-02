@@ -24,7 +24,9 @@ struct CustomLightingData {
     float smoothness;
     float ambientOcclusion;
     float diffuseQuantizationSteps;
+    float specularQuantizationSteps;
     float rimQuantizationSteps;
+    float maxQuantizationStepsPerLight;
 
     // Baked lighting
     float3 bakedGI;
@@ -34,7 +36,9 @@ struct CustomLightingData {
 
 float quantize(float steps, float shade)
 {
-    steps = max(steps, 2);
+    if (steps == -1) return shade;
+    if (steps == 0) return 0;
+    if (steps == 1) return 0.5;
     return floor(shade * (steps - 1) + 0.5) / (steps - 1);
 }
 
@@ -63,15 +67,17 @@ float3 CustomGlobalIllumination(CustomLightingData d) {
 
 float3 CustomLightHandling(CustomLightingData d, Light light) {
 
-    float3 radiance = light.color * (light.distanceAttenuation * light.shadowAttenuation);
+    float3 radiance = light.color *  quantize(d.maxQuantizationStepsPerLight,
+        (light.distanceAttenuation * light.shadowAttenuation));
 
     // ledsna edit
     // float diffuse = saturate(dot(d.normalWS, light.direction));
-    float diffuse = quantize(d.diffuseQuantizationSteps, saturate(dot(d.normalWS, light.direction)));
+    float diffuse = saturate(dot(d.normalWS, light.direction));
     float specularDot = saturate(dot(d.normalWS, normalize(light.direction + d.viewDirectionWS)));
     float specular = pow(specularDot, GetSmoothnessPower(d.smoothness)) * diffuse;
 
-    float3 color = d.albedo * radiance * (diffuse + specular);
+    float3 color = d.albedo * radiance * (quantize(d.diffuseQuantizationSteps, diffuse) +
+                                          quantize(d.specularQuantizationSteps,specular));
 
     return color;
 }
@@ -111,7 +117,8 @@ float3 CalculateCustomLighting(CustomLightingData d) {
 
 void CalculateCustomLighting_float(float3 Position, float3 Normal, float3 ViewDirection,
     float3 Albedo, float Smoothness, float AmbientOcclusion,
-    float2 LightmapUV, float DiffuseQuantizationSteps, float RimQuantizationSteps,
+    float2 LightmapUV, float DiffuseQuantizationSteps, float SpecularQuantizationSteps, float RimQuantizationSteps,
+    float maxQuantizationStepsPerLight,
     out float3 Color) {
 
     CustomLightingData d;
@@ -122,7 +129,9 @@ void CalculateCustomLighting_float(float3 Position, float3 Normal, float3 ViewDi
     d.smoothness = Smoothness;
     d.ambientOcclusion = AmbientOcclusion;
     d.diffuseQuantizationSteps = DiffuseQuantizationSteps;
+    d.specularQuantizationSteps = SpecularQuantizationSteps;
     d.rimQuantizationSteps = RimQuantizationSteps;
+    d.maxQuantizationStepsPerLight = maxQuantizationStepsPerLight;
 
 #ifdef SHADERGRAPH_PREVIEW
     // In preview, there's no shadows or bakedGI

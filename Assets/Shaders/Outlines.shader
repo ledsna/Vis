@@ -38,9 +38,10 @@ Shader "Hidden/OutlineShader"
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
                 return o;
             }
+
             float4x4 _CameraViewToWorld;
+            // sampler2D _MainTex;
             Texture2D _MainTex;
-            SamplerState point_clamp_sampler;
             sampler2D _LightDir;
             sampler2D _CameraDepthTexture;
             sampler2D _CameraNormalTexture;
@@ -50,6 +51,10 @@ Shader "Hidden/OutlineShader"
             float _NormalThreshold;
             float _HighlightPower;
             float _ShadowPower;
+            uniform float4 _MainTex_TexelSize;
+            
+            SamplerState point_clamp_sampler;
+            float _Zoom;
             
             float3 getNormal(float2 uv)
             {
@@ -83,29 +88,31 @@ Shader "Hidden/OutlineShader"
                 neighbours[3] = uv - float2(pixel_size.x, 0) * distance;
             }
             
-            void get_neighbour_uvs3(float2 uv, float distance, out float2 neighbours[12])
-            {
-                float2 pixel_size = 1. / (_ScreenParams.xy - 2);
-                neighbours[0] = uv + float2(0, pixel_size.y) * distance;
-                neighbours[1] = uv - float2(0, pixel_size.y) * distance;
-                neighbours[2] = uv + float2(pixel_size.x, 0) * distance;
-                neighbours[3] = uv - float2(pixel_size.x, 0) * distance;
-                neighbours[4] = uv + float2(0, pixel_size.y * 2) * distance;
-                neighbours[5] = uv - float2(0, pixel_size.y * 2) * distance;
-                neighbours[6] = uv + float2(pixel_size.x * 2, 0) * distance;
-                neighbours[7] = uv - float2(pixel_size.x * 2, 0) * distance;
-                neighbours[8] = uv + float2(0, pixel_size.y * 3) * distance;
-                neighbours[9] = uv - float2(0, pixel_size.y * 3) * distance;
-                neighbours[10] = uv + float2(pixel_size.x * 3, 0) * distance;
-                neighbours[11] = uv - float2(pixel_size.x * 3, 0) * distance;
-
-            }
+            // void get_neighbour_uvs3(float2 uv, float distance, out float2 neighbours[12])
+            // {
+            //     float2 pixel_size = 1. / (_ScreenParams.xy - 2);
+            //     neighbours[0] = uv + float2(0, pixel_size.y) * distance;
+            //     neighbours[1] = uv - float2(0, pixel_size.y) * distance;
+            //     neighbours[2] = uv + float2(pixel_size.x, 0) * distance;
+            //     neighbours[3] = uv - float2(pixel_size.x, 0) * distance;
+            //     neighbours[4] = uv + float2(0, pixel_size.y * 2) * distance;
+            //     neighbours[5] = uv - float2(0, pixel_size.y * 2) * distance;
+            //     neighbours[6] = uv + float2(pixel_size.x * 2, 0) * distance;
+            //     neighbours[7] = uv - float2(pixel_size.x * 2, 0) * distance;
+            //     neighbours[8] = uv + float2(0, pixel_size.y * 3) * distance;
+            //     neighbours[9] = uv - float2(0, pixel_size.y * 3) * distance;
+            //     neighbours[10] = uv + float2(pixel_size.x * 3, 0) * distance;
+            //     neighbours[11] = uv - float2(pixel_size.x * 3, 0) * distance;
+            //
+            // }
             
             #ifndef OUTLINE_INCLUDED
             #define OUTLINE_INCLUDED
             float4 outline_color(float2 uv)
             {
+                
                 fixed4 base_color = _MainTex.Sample(point_clamp_sampler, uv);
+                // fixed4 base_color = tex2D(_MainTex, uv);
                 
                 float depth = getDepth(uv);
                 float3 normal = getNormal(uv);
@@ -138,7 +145,7 @@ Shader "Hidden/OutlineShader"
                 if (depth_diff_sum < 0.0)
                 {
                     // return float4(0, 0, 0, 1);
-                    return float4(base_color.rgb, 0);
+                    return float4(base_color.rgb, 1);
                 }
                 if (depth_edge > 0.0)
                 {
@@ -151,35 +158,9 @@ Shader "Hidden/OutlineShader"
             }
             #endif
 
-            
-
             fixed4 frag (v2f i) : SV_Target
             {
-                float scale = 1.5;
-                float2 blockcount = _ScreenParams.xy / scale;
-                float2 blocksize = 1.0 / blockcount;
-                float2 blockpos = floor(i.uv * blockcount);
-                float2 blockcenter = blockpos * blocksize + 0.5 * blocksize;
-
-                fixed4 processedColor = _MainTex.Sample(point_clamp_sampler, blockcenter);
-                fixed4 originalColor = fixed4(outline_color(i.uv).rgb, 1);
-
-                float2 neighbours[12];
-                get_neighbour_uvs3(i.uv, _DepthOutlineScale, neighbours);
-
-                bool hasOutline = true;
-                // bool hasOutline = false;
-                // for (int j = 0; j < 12; j++)
-                // {
-                //     if (outline_color(neighbours[j]).a != 0)
-                //     {
-                //         hasOutline = true;
-                //         break;
-                //     }
-                // }
-                
-                fixed4 finalColor = lerp(processedColor, originalColor, hasOutline ? 1.0 : 0.0);
-                return finalColor;
+                return outline_color(i.uv);
             }
             ENDCG
         }

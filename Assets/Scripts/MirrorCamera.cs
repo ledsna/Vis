@@ -53,6 +53,7 @@ public class MirrorCamera : MonoBehaviour {
         // For half a pixel to be < 7e-5 in Units,
         //  the entire screen should be at least 1 000 000 / 7 / 2 ~= 71 429 pixels tall.
         // Make sure it's < 0.5 pixels big, so it doesn't create a visible 1 pixel offset.
+        mirror.orthographicSize = viewer.orthographicSize;
         offset = 0.49f * mirror.orthographicSize * 2 / viewer.scaledPixelHeight;
         
         int width = (int) (viewer.scaledPixelWidth * reflectionsQuality);
