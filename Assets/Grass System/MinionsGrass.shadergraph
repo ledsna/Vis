@@ -122,9 +122,6 @@
         },
         {
             "m_Id": "d89da416639e400e94ab27336bf763c8"
-        },
-        {
-            "m_Id": "97d021bf3b1b489493b7fcb6f1264226"
         }
     ],
     "m_GroupDatas": [
@@ -579,9 +576,6 @@
             },
             {
                 "m_Id": "0113e4aad0ac408ca29aafec1e57298a"
-            },
-            {
-                "m_Id": "97d021bf3b1b489493b7fcb6f1264226"
             }
         ]
     },
@@ -2301,40 +2295,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
-    "m_ObjectId": "97d021bf3b1b489493b7fcb6f1264226",
-    "m_Group": {
-        "m_Id": ""
-    },
-    "m_Name": "SurfaceDescription.Alpha",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": 0.0,
-            "y": 0.0,
-            "width": 0.0,
-            "height": 0.0
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "b4839774fdbf4eb782837e3862cc5039"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": true,
-    "m_DismissedVersion": 0,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_SerializedDescriptor": "SurfaceDescription.Alpha"
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicVectorMaterialSlot",
     "m_ObjectId": "9abf30583b144ac6b0d2fcefc76ffd57",
     "m_Id": 0,
@@ -2521,7 +2481,7 @@
         "m_Id": "d9e748a6c55643dda4e8b1b8c673a9f7"
     },
     "m_AllowMaterialOverride": false,
-    "m_SurfaceType": 1,
+    "m_SurfaceType": 0,
     "m_ZTestMode": 4,
     "m_ZWriteControl": 0,
     "m_AlphaMode": 0,
@@ -2655,21 +2615,6 @@
     },
     "m_Labels": [],
     "m_Space": 0
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
-    "m_ObjectId": "b4839774fdbf4eb782837e3862cc5039",
-    "m_Id": 0,
-    "m_DisplayName": "Alpha",
-    "m_SlotType": 0,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Alpha",
-    "m_StageCapability": 2,
-    "m_Value": 1.0,
-    "m_DefaultValue": 1.0,
-    "m_Labels": []
 }
 
 {

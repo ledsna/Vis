@@ -1,5 +1,42 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5147334503927983154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb7697f8773489b835b90a9ae1ee432, type: 3}
+  m_Name: OutlinesPrevious
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  renderPassEvent: 350
+  outlinesLayerMask:
+    m_Bits: 897
+  outlinesOccluderLayerMask:
+    m_Bits: 897
+  previousOutlineSettings:
+    depthOutlineScale: 1
+    normalsOutlineScale: 1
+    depthThreshold: 52
+    normalThreshold: 0.17
+    highlightPower: 2.4
+    shadowPower: 1.2
+  normalsTextureSettings:
+    colorFormat: 0
+    depthBufferBits: 16
+    filterMode: 0
+    backgroundColor:
+      r: 0
+      g: 0
+      b: 0
+      a: 1
+    perObjectData: 0
+    enableDynamicBatching: 0
+    enableInstancing: 0
 --- !u!114 &-1878332245247344467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,10 +117,10 @@ MonoBehaviour:
   m_AssetVersion: 2
   m_OpaqueLayerMask:
     serializedVersion: 2
-    m_Bits: 9
+    m_Bits: 841
   m_TransparentLayerMask:
     serializedVersion: 2
-    m_Bits: 208
+    m_Bits: 17
   m_DefaultStencilState:
     overrideStencilState: 0
     stencilReference: 1
@@ -107,28 +144,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 718994c3cf2e241888e3393a1c2aa8c7, type: 3}
-  m_Name: ScreenSpaceOutlines
+  m_Name: Outlines
   m_EditorClassIdentifier: 
   m_Active: 1
   renderPassEvent: 350
   outlinesLayerMask:
     serializedVersion: 2
-    m_Bits: 127
-  outlinesOccluderLayerMask:
-    serializedVersion: 2
     m_Bits: 4294967295
   outlineSettings:
     depthOutlineScale: 1
     normalsOutlineScale: 1
-    depthThreshold: 10
-    normalThreshold: 0.17
-    highlightPower: 2.39
+    depthThreshold: 52
+    normalThreshold: 0.15
+    highlightPower: 2.42
     shadowPower: 1.24
-  normalsTextureSettings:
     colorFormat: 0
-    depthBufferBits: 16
+    depthBufferBits: 0
     filterMode: 0
-    backgroundColor: {r: 1, g: 1, b: 1, a: 1}
-    perObjectData: -1
+    backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+    perObjectData: 0
     enableDynamicBatching: 0
     enableInstancing: 0

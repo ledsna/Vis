@@ -45,14 +45,18 @@ Shader "Hidden/OutlineShader"
             sampler2D _LightDir;
             sampler2D _CameraDepthTexture;
             sampler2D _CameraNormalTexture;
+            sampler2D _BlitTexture;
             float _DepthOutlineScale;
             float _NormalOutlineScale;
+
+            
             float _DepthThreshold;
             float _NormalThreshold;
             float _HighlightPower;
             float _ShadowPower;
-            uniform float4 _MainTex_TexelSize;
             
+            uniform float4 _MainTex_TexelSize;
+
             SamplerState point_clamp_sampler;
             float _Zoom;
             
@@ -79,7 +83,7 @@ Shader "Hidden/OutlineShader"
                 return tex2D(_CameraDepthTexture, uv);
             }
 
-           void get_neighbour_uvs(float2 uv, float distance, out float2 neighbours[4])
+            void get_neighbour_uvs(float2 uv, float distance, out float2 neighbours[4])
             {
                 float2 pixel_size = 1. / (_ScreenParams.xy);
                 neighbours[0] = uv + float2(0, pixel_size.y) * distance;
@@ -108,11 +112,10 @@ Shader "Hidden/OutlineShader"
             
             #ifndef OUTLINE_INCLUDED
             #define OUTLINE_INCLUDED
-            float4 outline_color(float2 uv)
+            fixed3 outline_color(float2 uv)
             {
-                
                 fixed4 base_color = _MainTex.Sample(point_clamp_sampler, uv);
-                // fixed4 base_color = tex2D(_MainTex, uv);
+                // fixed3 base_color = tex2D(_MainTex, uv).rgb;
                 
                 float depth = getDepth(uv);
                 float3 normal = getNormal(uv);
@@ -144,23 +147,23 @@ Shader "Hidden/OutlineShader"
                 
                 if (depth_diff_sum < 0.0)
                 {
-                    // return float4(0, 0, 0, 1);
-                    return float4(base_color.rgb, 1);
+                    return base_color;
                 }
                 if (depth_edge > 0.0)
                 {
-                    // return float4(0, 0, 1, 1);
-                    return float4(lerp(base_color, base_color.rgb * (_ShadowPower - 1), depth_edge), 1);
+                    return lerp(base_color, base_color * (_ShadowPower - 1), depth_edge);
+                    // return lerp(base_color, fixed3(0, 0, 1), depth_edge);
+
                 }
-                // return float4(lerp(float4(0, 0, 0, 1), float4(1, 0, 0, 1), normal_edge));
-                // return float4(float4(base_color.rgb, 0));
-                return float4(lerp(float4(base_color.rgb, 0), base_color.rgb * DiffuseForView(normal), normal_edge), 1);
+                return lerp(base_color, base_color * DiffuseForView(normal), normal_edge);
+                // return lerp(base_color, fixed3(1, 0, 0), normal_edge);
+
             }
             #endif
 
             fixed4 frag (v2f i) : SV_Target
             {
-                return outline_color(i.uv);
+                return fixed4(outline_color(i.uv), 1);
             }
             ENDCG
         }
