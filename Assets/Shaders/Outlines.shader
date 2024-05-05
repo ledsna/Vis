@@ -42,14 +42,12 @@ Shader "Hidden/OutlineShader"
             float4x4 _CameraViewToWorld;
             // sampler2D _MainTex;
             Texture2D _MainTex;
-            sampler2D _LightDir;
             sampler2D _CameraDepthTexture;
             sampler2D _CameraNormalTexture;
-            sampler2D _BlitTexture;
-            float _DepthOutlineScale;
-            float _NormalOutlineScale;
 
             
+            float _DepthOutlineScale;
+            float _NormalOutlineScale;
             float _DepthThreshold;
             float _NormalThreshold;
             float _HighlightPower;

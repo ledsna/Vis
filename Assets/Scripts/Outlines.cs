@@ -74,11 +74,13 @@ public class Outlines : ScriptableRendererFeature {
                 new ("UniversalForward"),
                 new ("UniversalForwardOnly"),
                 new ("LightweightForward"),
-                new ("SRPDefaultUnlit")
+                new ("SRPDefaultUnlit"),
             };
 
-            normalsMaterial = new Material(Shader.Find("Hidden/ViewSpaceNormals"));
+            // normalsMaterial = new Material(Shader.Find("Hidden/ViewSpaceNormals"));
             
+            normalsMaterial = new Material(Shader.Find("Custom/VSN"));
+
         }
 
         public override void OnCameraSetup(CommandBuffer cmd, ref RenderingData renderingData) {
@@ -94,11 +96,10 @@ public class Outlines : ScriptableRendererFeature {
 
             ConfigureTarget(normals, renderingData.cameraData.renderer.cameraDepthTargetHandle);
             ConfigureClear(ClearFlag.Color, settings.backgroundColor);
-            
         }
         
         public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData) {
-            if (!OutlineMaterial || !normalsMaterial || // !depthsMaterial ||
+            if (!OutlineMaterial || !normalsMaterial ||
                 renderingData.cameraData.renderer.cameraColorTargetHandle.rt == null || temporaryBuffer.rt == null)
                 return;
 
@@ -116,7 +117,8 @@ public class Outlines : ScriptableRendererFeature {
             normalsRenderersList = context.CreateRendererList(ref normalsRenderersParams);
             cmd.DrawRendererList(normalsRenderersList);
             
-            cmd.SetGlobalTexture(Shader.PropertyToID("_MaskedDepthNormalsTexture"), normals.rt);
+            cmd.SetGlobalTexture(Shader.PropertyToID("_FilteredNormalsTexture"), normals.rt);
+            
             using (new ProfilingScope(cmd, new ProfilingSampler("Outlines"))) {
 
                 Blitter.BlitCameraTexture(cmd, renderingData.cameraData.renderer.cameraColorTargetHandle, temporaryBuffer, OutlineMaterial, 0);

@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 11118773}
   - component: {fileID: 11118775}
   - component: {fileID: 11118774}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArmStrap_Rings_low4:Group9510
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -585,7 +585,7 @@ GameObject:
   - component: {fileID: 47454943}
   - component: {fileID: 47454945}
   - component: {fileID: 47454944}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chest_Rings_low1:Group56180
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -668,7 +668,7 @@ GameObject:
   - component: {fileID: 48733051}
   - component: {fileID: 48733053}
   - component: {fileID: 48733052}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Padded_Pants_low1:Group5200
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -790,7 +790,7 @@ GameObject:
   - component: {fileID: 69006170}
   - component: {fileID: 69006172}
   - component: {fileID: 69006171}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Padded_NeckStrap_low1:Group38206
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -873,7 +873,7 @@ GameObject:
   - component: {fileID: 77749591}
   - component: {fileID: 77749593}
   - component: {fileID: 77749592}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low2:Group45608
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -956,7 +956,7 @@ GameObject:
   - component: {fileID: 91520033}
   - component: {fileID: 91520035}
   - component: {fileID: 91520034}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Chest_Belts_low1:Group58192
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1039,7 +1039,7 @@ GameObject:
   - component: {fileID: 126971928}
   - component: {fileID: 126971930}
   - component: {fileID: 126971929}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group9211
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1364,7 +1364,7 @@ GameObject:
   - component: {fileID: 150425522}
   - component: {fileID: 150425521}
   - component: {fileID: 150425520}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1466,7 +1466,7 @@ GameObject:
   - component: {fileID: 153581658}
   - component: {fileID: 153581660}
   - component: {fileID: 153581659}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shoulder_Elbow_low2:Group60197
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1549,7 +1549,7 @@ GameObject:
   - component: {fileID: 158570357}
   - component: {fileID: 158570359}
   - component: {fileID: 158570358}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chest_Bolts_low1:Group10493
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1633,7 +1633,7 @@ GameObject:
   - component: {fileID: 230398935}
   - component: {fileID: 230398934}
   - component: {fileID: 230398933}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1734,7 +1734,7 @@ GameObject:
   - component: {fileID: 254805236}
   - component: {fileID: 254805238}
   - component: {fileID: 254805237}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low1:Group16499
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1817,7 +1817,7 @@ GameObject:
   - component: {fileID: 258133811}
   - component: {fileID: 258133813}
   - component: {fileID: 258133812}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group60164
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1978,7 +1978,7 @@ GameObject:
   - component: {fileID: 286118089}
   - component: {fileID: 286118091}
   - component: {fileID: 286118090}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Crown:Group19458
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2061,7 +2061,7 @@ GameObject:
   - component: {fileID: 295917265}
   - component: {fileID: 295917267}
   - component: {fileID: 295917266}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group21053
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2192,7 +2192,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 633
+    m_Bits: 1017
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: ccfe8c44f29a84e3fbd124bc0794cd52, type: 2}
   m_TargetDisplay: 0
@@ -2230,7 +2230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_RenderShadows: 1
   m_RequiresDepthTextureOption: 1
-  m_RequiresOpaqueTextureOption: 1
+  m_RequiresOpaqueTextureOption: 0
   m_CameraType: 0
   m_Cameras: []
   m_RendererIndex: -1
@@ -2294,7 +2294,7 @@ GameObject:
   - component: {fileID: 311851989}
   - component: {fileID: 311851991}
   - component: {fileID: 311851990}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArmStrap_Straps_low3:Group37115
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2377,7 +2377,7 @@ GameObject:
   - component: {fileID: 329111532}
   - component: {fileID: 329111534}
   - component: {fileID: 329111533}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group32658
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2715,7 +2715,7 @@ GameObject:
   - component: {fileID: 336977813}
   - component: {fileID: 336977815}
   - component: {fileID: 336977814}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArmStrap_Straps_low3:Group16702
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2799,7 +2799,7 @@ GameObject:
   - component: {fileID: 356240934}
   - component: {fileID: 356240933}
   - component: {fileID: 356240932}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Mirror
   m_TagString: NoReflections
   m_Icon: {fileID: 0}
@@ -2993,7 +2993,7 @@ GameObject:
   - component: {fileID: 378822231}
   - component: {fileID: 378822233}
   - component: {fileID: 378822232}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Padded_Cover_low1:Group50185
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3076,7 +3076,7 @@ GameObject:
   - component: {fileID: 399999794}
   - component: {fileID: 399999796}
   - component: {fileID: 399999795}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Belt_SideRing_low1:Group6118
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3159,7 +3159,7 @@ GameObject:
   - component: {fileID: 400364966}
   - component: {fileID: 400364968}
   - component: {fileID: 400364967}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3401,7 +3401,7 @@ GameObject:
   - component: {fileID: 443099180}
   - component: {fileID: 443099182}
   - component: {fileID: 443099181}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Gloves_Gloves_low2:Group35219
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3484,7 +3484,7 @@ GameObject:
   - component: {fileID: 456970685}
   - component: {fileID: 456970687}
   - component: {fileID: 456970686}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shoulder_Plate_01_low1:Group62824
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3567,7 +3567,7 @@ GameObject:
   - component: {fileID: 471753353}
   - component: {fileID: 471753355}
   - component: {fileID: 471753354}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: RawImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3780,7 +3780,7 @@ GameObject:
   - component: {fileID: 540037370}
   - component: {fileID: 540037372}
   - component: {fileID: 540037371}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group8960
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3863,7 +3863,7 @@ GameObject:
   - component: {fileID: 554730801}
   - component: {fileID: 554730803}
   - component: {fileID: 554730802}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low2:Group61824
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3946,7 +3946,7 @@ GameObject:
   - component: {fileID: 566243204}
   - component: {fileID: 566243206}
   - component: {fileID: 566243205}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArmStrap_Rings_low4:Group29911
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4033,7 +4033,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &576760767
 Transform:
   m_ObjectHideFlags: 0
@@ -4113,7 +4113,7 @@ GameObject:
   - component: {fileID: 619400072}
   - component: {fileID: 619400074}
   - component: {fileID: 619400073}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Hood_Hood_low1:Group48674
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4196,7 +4196,7 @@ GameObject:
   - component: {fileID: 622501565}
   - component: {fileID: 622501567}
   - component: {fileID: 622501566}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group5739
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4279,7 +4279,7 @@ GameObject:
   - component: {fileID: 632937073}
   - component: {fileID: 632937075}
   - component: {fileID: 632937074}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group9553
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4362,7 +4362,7 @@ GameObject:
   - component: {fileID: 657652724}
   - component: {fileID: 657652726}
   - component: {fileID: 657652725}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shoulder_Plate_03_low1:Group16406
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4445,7 +4445,7 @@ GameObject:
   - component: {fileID: 679273468}
   - component: {fileID: 679273470}
   - component: {fileID: 679273469}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low2:Group1941
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4528,7 +4528,7 @@ GameObject:
   - component: {fileID: 682983528}
   - component: {fileID: 682983530}
   - component: {fileID: 682983529}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shoulder_Elbow_low1:Group60197
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4611,7 +4611,7 @@ GameObject:
   - component: {fileID: 727800385}
   - component: {fileID: 727800387}
   - component: {fileID: 727800386}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shoulder_Plate_01_low2:Group62824
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4694,7 +4694,7 @@ GameObject:
   - component: {fileID: 730048566}
   - component: {fileID: 730048568}
   - component: {fileID: 730048567}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group53174
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4880,7 +4880,7 @@ GameObject:
   - component: {fileID: 805954394}
   - component: {fileID: 805954393}
   - component: {fileID: 805954392}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5170,7 +5170,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 819385723}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Metal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5371,7 +5371,7 @@ GameObject:
   - component: {fileID: 864470327}
   - component: {fileID: 864470329}
   - component: {fileID: 864470328}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group10602
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5454,7 +5454,7 @@ GameObject:
   - component: {fileID: 885882091}
   - component: {fileID: 885882093}
   - component: {fileID: 885882092}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bracer_Plates_low1:Group38364
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5582,7 +5582,7 @@ GameObject:
   - component: {fileID: 914936628}
   - component: {fileID: 914936630}
   - component: {fileID: 914936629}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Head_Mask_low1:Group658
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5665,7 +5665,7 @@ GameObject:
   - component: {fileID: 929732555}
   - component: {fileID: 929732557}
   - component: {fileID: 929732556}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shoulder_Plate_03_low2:Group16406
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5748,7 +5748,7 @@ GameObject:
   - component: {fileID: 951314091}
   - component: {fileID: 951314093}
   - component: {fileID: 951314092}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group12193
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5832,7 +5832,7 @@ GameObject:
   - component: {fileID: 981085774}
   - component: {fileID: 981085773}
   - component: {fileID: 981085772}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6072,7 +6072,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 998201966}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Leather
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6128,7 +6128,7 @@ GameObject:
   - component: {fileID: 1047747508}
   - component: {fileID: 1047747510}
   - component: {fileID: 1047747509}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group54033
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6211,7 +6211,7 @@ GameObject:
   - component: {fileID: 1050821013}
   - component: {fileID: 1050821015}
   - component: {fileID: 1050821014}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low2:Group13725
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6294,7 +6294,7 @@ GameObject:
   - component: {fileID: 1055333998}
   - component: {fileID: 1055334000}
   - component: {fileID: 1055333999}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group29664
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6449,7 +6449,7 @@ GameObject:
   - component: {fileID: 1075594289}
   - component: {fileID: 1075594291}
   - component: {fileID: 1075594290}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low1:Group41992
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6532,7 +6532,7 @@ GameObject:
   - component: {fileID: 1085607194}
   - component: {fileID: 1085607196}
   - component: {fileID: 1085607195}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shoulder_Plate_02_low2:Group64510
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6616,7 +6616,7 @@ GameObject:
   - component: {fileID: 1085770012}
   - component: {fileID: 1085770011}
   - component: {fileID: 1085770010}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6720,7 +6720,7 @@ GameObject:
   - component: {fileID: 1116105274}
   - component: {fileID: 1116105276}
   - component: {fileID: 1116105275}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group3931
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6841,7 +6841,7 @@ GameObject:
   - component: {fileID: 1135853837}
   - component: {fileID: 1135853839}
   - component: {fileID: 1135853838}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group65491
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6924,7 +6924,7 @@ GameObject:
   - component: {fileID: 1136178390}
   - component: {fileID: 1136178392}
   - component: {fileID: 1136178391}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group24398
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7007,7 +7007,7 @@ GameObject:
   - component: {fileID: 1148478111}
   - component: {fileID: 1148478113}
   - component: {fileID: 1148478112}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: UnderShoulder_UnderLeather_low1:Group23786
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7090,7 +7090,7 @@ GameObject:
   - component: {fileID: 1156540511}
   - component: {fileID: 1156540513}
   - component: {fileID: 1156540512}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7171,7 +7171,7 @@ GameObject:
   - component: {fileID: 1175381449}
   - component: {fileID: 1175381451}
   - component: {fileID: 1175381450}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group64626
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7254,7 +7254,7 @@ GameObject:
   - component: {fileID: 1175437218}
   - component: {fileID: 1175437220}
   - component: {fileID: 1175437219}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group49789
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7336,7 +7336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1197996102}
   - component: {fileID: 1197996103}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Reflection Probe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7402,7 +7402,7 @@ GameObject:
   - component: {fileID: 1199625096}
   - component: {fileID: 1199625098}
   - component: {fileID: 1199625097}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group30024
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7573,11 +7573,11 @@ Transform:
   m_GameObject: {fileID: 1210698790}
   serializedVersion: 2
   m_LocalRotation: {x: -0.26082903, y: 0.019627899, z: 0.35104293, w: 0.8990839}
-  m_LocalPosition: {x: -2.186, y: -2.29, z: -1.148}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1829329954}
   m_LocalEulerAnglesHint: {x: -28.868, y: -9.718, z: 45.163}
 --- !u!1 &1213616199
 GameObject:
@@ -7590,7 +7590,7 @@ GameObject:
   - component: {fileID: 1213616200}
   - component: {fileID: 1213616202}
   - component: {fileID: 1213616201}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shoulder_Plate_02_low1:Group64510
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7671,7 +7671,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1229013103}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Metal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7783,7 +7783,7 @@ GameObject:
   - component: {fileID: 1234309788}
   - component: {fileID: 1234309790}
   - component: {fileID: 1234309789}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low1:Group61824
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7866,7 +7866,7 @@ GameObject:
   - component: {fileID: 1247497722}
   - component: {fileID: 1247497724}
   - component: {fileID: 1247497723}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low1:Group1941
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7949,7 +7949,7 @@ GameObject:
   - component: {fileID: 1261160906}
   - component: {fileID: 1261160908}
   - component: {fileID: 1261160907}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group63001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8032,7 +8032,7 @@ GameObject:
   - component: {fileID: 1261315239}
   - component: {fileID: 1261315241}
   - component: {fileID: 1261315240}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Bracer_Strap_low1:Group13056
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8114,7 +8114,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1289454183}
   - component: {fileID: 1289454184}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Reflection Probe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8180,7 +8180,7 @@ GameObject:
   - component: {fileID: 1312374717}
   - component: {fileID: 1312374719}
   - component: {fileID: 1312374718}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Belt_SideRing_low1:Group10964
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8263,7 +8263,7 @@ GameObject:
   - component: {fileID: 1318824502}
   - component: {fileID: 1318824504}
   - component: {fileID: 1318824503}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group4738
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8346,7 +8346,7 @@ GameObject:
   - component: {fileID: 1319994613}
   - component: {fileID: 1319994615}
   - component: {fileID: 1319994614}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group12661
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8427,7 +8427,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1326801083}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Leather
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8482,7 +8482,7 @@ GameObject:
   - component: {fileID: 1330740088}
   - component: {fileID: 1330740090}
   - component: {fileID: 1330740089}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Belt_SideRing_low1:Group4928
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8565,7 +8565,7 @@ GameObject:
   - component: {fileID: 1335077714}
   - component: {fileID: 1335077716}
   - component: {fileID: 1335077715}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group31075
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8648,7 +8648,7 @@ GameObject:
   - component: {fileID: 1348175011}
   - component: {fileID: 1348175013}
   - component: {fileID: 1348175012}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArmStrap_Rings_low4:Group50309
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8731,7 +8731,7 @@ GameObject:
   - component: {fileID: 1350480777}
   - component: {fileID: 1350480779}
   - component: {fileID: 1350480778}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group20434
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8814,7 +8814,7 @@ GameObject:
   - component: {fileID: 1358222233}
   - component: {fileID: 1358222235}
   - component: {fileID: 1358222234}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group17713
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8897,7 +8897,7 @@ GameObject:
   - component: {fileID: 1384435664}
   - component: {fileID: 1384435666}
   - component: {fileID: 1384435665}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group62768
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8980,7 +8980,7 @@ GameObject:
   - component: {fileID: 1410161293}
   - component: {fileID: 1410161295}
   - component: {fileID: 1410161294}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Boot_Toe_low1:Group47025
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9063,7 +9063,7 @@ GameObject:
   - component: {fileID: 1411869671}
   - component: {fileID: 1411869673}
   - component: {fileID: 1411869672}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bracer_Ring_low1:Group64411
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9146,7 +9146,7 @@ GameObject:
   - component: {fileID: 1416696950}
   - component: {fileID: 1416696952}
   - component: {fileID: 1416696951}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group41863
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9229,7 +9229,7 @@ GameObject:
   - component: {fileID: 1433998845}
   - component: {fileID: 1433998847}
   - component: {fileID: 1433998846}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Merged_Sword_Sides_low1:Group62261
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9312,7 +9312,7 @@ GameObject:
   - component: {fileID: 1443833046}
   - component: {fileID: 1443833048}
   - component: {fileID: 1443833047}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Bracer_Under_low1:Group62987
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9395,7 +9395,7 @@ GameObject:
   - component: {fileID: 1449974685}
   - component: {fileID: 1449974687}
   - component: {fileID: 1449974686}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group17911
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9478,7 +9478,7 @@ GameObject:
   - component: {fileID: 1450170693}
   - component: {fileID: 1450170695}
   - component: {fileID: 1450170694}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low1:Group13725
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9561,7 +9561,7 @@ GameObject:
   - component: {fileID: 1461830345}
   - component: {fileID: 1461830347}
   - component: {fileID: 1461830346}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Belt_SideRing_low1:Group41826
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9642,7 +9642,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1466010007}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Lnight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9680,7 +9680,7 @@ GameObject:
   - component: {fileID: 1500282339}
   - component: {fileID: 1500282338}
   - component: {fileID: 1500282337}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9784,7 +9784,7 @@ GameObject:
   - component: {fileID: 1523248205}
   - component: {fileID: 1523248207}
   - component: {fileID: 1523248206}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Merged_Sword_Sides_low1:Group28594
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9867,7 +9867,7 @@ GameObject:
   - component: {fileID: 1533676161}
   - component: {fileID: 1533676163}
   - component: {fileID: 1533676162}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group17224
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9948,7 +9948,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1538631737}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9984,7 +9984,7 @@ GameObject:
   - component: {fileID: 1540836101}
   - component: {fileID: 1540836103}
   - component: {fileID: 1540836102}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low2:Group41992
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10067,7 +10067,7 @@ GameObject:
   - component: {fileID: 1563951696}
   - component: {fileID: 1563951698}
   - component: {fileID: 1563951697}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Bracer_Over_low1:Group9614
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10150,7 +10150,7 @@ GameObject:
   - component: {fileID: 1584986571}
   - component: {fileID: 1584986573}
   - component: {fileID: 1584986572}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Merged_Sword_Sides_low1:Group26170
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10233,7 +10233,7 @@ GameObject:
   - component: {fileID: 1601553378}
   - component: {fileID: 1601553380}
   - component: {fileID: 1601553379}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArmStrap_Straps_low3:Group57527
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10316,7 +10316,7 @@ GameObject:
   - component: {fileID: 1602536274}
   - component: {fileID: 1602536276}
   - component: {fileID: 1602536275}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group32719
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10399,7 +10399,7 @@ GameObject:
   - component: {fileID: 1603133502}
   - component: {fileID: 1603133504}
   - component: {fileID: 1603133503}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group50798
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10482,7 +10482,7 @@ GameObject:
   - component: {fileID: 1611881737}
   - component: {fileID: 1611881739}
   - component: {fileID: 1611881738}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group584
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10565,7 +10565,7 @@ GameObject:
   - component: {fileID: 1652939281}
   - component: {fileID: 1652939283}
   - component: {fileID: 1652939282}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group44169
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10648,7 +10648,7 @@ GameObject:
   - component: {fileID: 1682807503}
   - component: {fileID: 1682807505}
   - component: {fileID: 1682807504}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group33144
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10819,12 +10819,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685570329}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.11114085, y: -4.865, z: -1.1509238}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.0748591, y: -2.5749998, z: -0.0029238462}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1829329954}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1695240362
 GameObject:
@@ -10837,7 +10837,7 @@ GameObject:
   - component: {fileID: 1695240363}
   - component: {fileID: 1695240365}
   - component: {fileID: 1695240364}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Belt_SideRing_low1:Group20066
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10989,7 +10989,7 @@ GameObject:
   - component: {fileID: 1734097698}
   - component: {fileID: 1734097700}
   - component: {fileID: 1734097699}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Belt_SideRing_low1:Group30502
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11072,7 +11072,7 @@ GameObject:
   - component: {fileID: 1749331271}
   - component: {fileID: 1749331273}
   - component: {fileID: 1749331272}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Belt_SideRing_low1:Group51872
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11155,7 +11155,7 @@ GameObject:
   - component: {fileID: 1755165879}
   - component: {fileID: 1755165881}
   - component: {fileID: 1755165880}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Merged_Sword_Sides_low1:Group43544
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11306,7 +11306,7 @@ GameObject:
   - component: {fileID: 1774599067}
   - component: {fileID: 1774599069}
   - component: {fileID: 1774599068}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Belt_SideRing_low1:Group24290
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11389,7 +11389,7 @@ GameObject:
   - component: {fileID: 1807049630}
   - component: {fileID: 1807049632}
   - component: {fileID: 1807049631}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low2:Group47025
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11472,7 +11472,7 @@ GameObject:
   - component: {fileID: 1813815015}
   - component: {fileID: 1813815017}
   - component: {fileID: 1813815016}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shoulder_Right_low1:Group15440
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11555,7 +11555,7 @@ GameObject:
   - component: {fileID: 1822299863}
   - component: {fileID: 1822299865}
   - component: {fileID: 1822299864}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low1:Group45608
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11627,6 +11627,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822299862}
   m_Mesh: {fileID: -3662904385520394804, guid: 564f9e36f3df3435e898daf74ef66a85, type: 3}
+--- !u!1 &1829329953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1829329954}
+  m_Layer: 0
+  m_Name: Objects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1829329954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829329953}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.186, y: -2.29, z: -1.148}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1685570333}
+  - {fileID: 2144138876}
+  - {fileID: 1210698794}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1844638256
 GameObject:
   m_ObjectHideFlags: 0
@@ -11673,7 +11707,7 @@ GameObject:
   - component: {fileID: 1857834944}
   - component: {fileID: 1857834946}
   - component: {fileID: 1857834945}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Boot_Toe_low1:Group16572
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11947,7 +11981,7 @@ GameObject:
   - component: {fileID: 1938414088}
   - component: {fileID: 1938414090}
   - component: {fileID: 1938414089}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shoulder_Left_low1:Group39818
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12030,7 +12064,7 @@ GameObject:
   - component: {fileID: 1938489950}
   - component: {fileID: 1938489952}
   - component: {fileID: 1938489951}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Belt_SideRing_low1:Group63480
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12113,7 +12147,7 @@ GameObject:
   - component: {fileID: 1945268000}
   - component: {fileID: 1945268002}
   - component: {fileID: 1945268001}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chest_FrontPlate_low1:Group20911
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12233,7 +12267,7 @@ GameObject:
   - component: {fileID: 1961167287}
   - component: {fileID: 1961167289}
   - component: {fileID: 1961167288}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Padded_Shirt_low1:Group49776
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12316,7 +12350,7 @@ GameObject:
   - component: {fileID: 1967538690}
   - component: {fileID: 1967538692}
   - component: {fileID: 1967538691}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: RawImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12388,7 +12422,7 @@ GameObject:
   - component: {fileID: 1988599043}
   - component: {fileID: 1988599045}
   - component: {fileID: 1988599044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chest_BackPlate_low1:Group5865
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12471,7 +12505,7 @@ GameObject:
   - component: {fileID: 2015315340}
   - component: {fileID: 2015315342}
   - component: {fileID: 2015315341}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Merged_Sword_Sides_low1:Group62470
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12623,7 +12657,7 @@ GameObject:
   - component: {fileID: 2030867973}
   - component: {fileID: 2030867975}
   - component: {fileID: 2030867974}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Gloves_Gloves_low1:Group35219
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12706,7 +12740,7 @@ GameObject:
   - component: {fileID: 2064380085}
   - component: {fileID: 2064380087}
   - component: {fileID: 2064380086}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Boot_Toe_low2:Group16572
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12789,7 +12823,7 @@ GameObject:
   - component: {fileID: 2067638196}
   - component: {fileID: 2067638198}
   - component: {fileID: 2067638197}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Chest_TopStraps_low1:Group16616
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12977,7 +13011,7 @@ GameObject:
   - component: {fileID: 2116882583}
   - component: {fileID: 2116882585}
   - component: {fileID: 2116882584}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group15103
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13060,7 +13094,7 @@ GameObject:
   - component: {fileID: 2118872140}
   - component: {fileID: 2118872142}
   - component: {fileID: 2118872141}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low2:Group16499
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13160,11 +13194,11 @@ Transform:
   m_GameObject: {fileID: 2144138875}
   serializedVersion: 2
   m_LocalRotation: {x: -0.26082903, y: 0.019627899, z: 0.35104293, w: 0.8990839}
-  m_LocalPosition: {x: 0.369, y: -3.7201748, z: -1.1509238}
+  m_LocalPosition: {x: 2.555, y: -1.4301748, z: -0.0029238462}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1829329954}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &2144138877
 SphereCollider:
@@ -13248,7 +13282,7 @@ GameObject:
   - component: {fileID: 8388100663444819818}
   - component: {fileID: 4825936587826946297}
   - component: {fileID: 6869228453540335977}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.154
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13688,7 +13722,7 @@ GameObject:
   - component: {fileID: 9021495407855293060}
   - component: {fileID: 7066269427401877637}
   - component: {fileID: 5282266213525476027}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.105
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13768,7 +13802,7 @@ GameObject:
   - component: {fileID: 4236170030478469293}
   - component: {fileID: 7739610348730879456}
   - component: {fileID: 7294357878651986564}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.174
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14022,7 +14056,7 @@ GameObject:
   - component: {fileID: 8430662211596875328}
   - component: {fileID: 5824436665656759509}
   - component: {fileID: 7709990876899097790}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14040,7 +14074,7 @@ GameObject:
   - component: {fileID: 8957779394696871868}
   - component: {fileID: 8362047373894386889}
   - component: {fileID: 4944721103987073555}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shoulder_Elbow_low2:Group60197
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14654,7 +14688,7 @@ GameObject:
   - component: {fileID: 2437023164865327376}
   - component: {fileID: 1028879191022360521}
   - component: {fileID: 5315119235119291745}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14809,7 +14843,7 @@ GameObject:
   - component: {fileID: 7739574452459287865}
   - component: {fileID: 3177627316440613681}
   - component: {fileID: 5131212672024825736}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.133
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15005,7 +15039,7 @@ GameObject:
   - component: {fileID: 2503984603001284312}
   - component: {fileID: 1808854631860302539}
   - component: {fileID: 691247872183660600}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group30024
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15038,7 +15072,7 @@ GameObject:
   - component: {fileID: 944365242921904774}
   - component: {fileID: 6923990305116010013}
   - component: {fileID: 4036377007923696537}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Belt_SideRing_low1:Group25267
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15231,7 +15265,7 @@ GameObject:
   - component: {fileID: 2522128318336785845}
   - component: {fileID: 107001078241410567}
   - component: {fileID: 7468771241366083766}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.053
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15307,7 +15341,7 @@ GameObject:
   - component: {fileID: 2623530940699160320}
   - component: {fileID: 6766945682440795383}
   - component: {fileID: 3933700580152318620}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Belt_SideRing_low1:Group10964
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15645,7 +15679,7 @@ GameObject:
   - component: {fileID: 5697395242512412295}
   - component: {fileID: 1746293886305647737}
   - component: {fileID: 1867833456742533443}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.062
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15733,7 +15767,7 @@ GameObject:
   - component: {fileID: 224309057386845024}
   - component: {fileID: 2864883287485949795}
   - component: {fileID: 8060375004107064294}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.076
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15801,7 +15835,7 @@ GameObject:
   - component: {fileID: 6190897312805688420}
   - component: {fileID: 7655853535753100528}
   - component: {fileID: 4468854675131979927}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.038
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15869,7 +15903,7 @@ GameObject:
   - component: {fileID: 4309367153488632261}
   - component: {fileID: 82120059120137209}
   - component: {fileID: 338572044707098692}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.041
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15895,7 +15929,7 @@ GameObject:
   - component: {fileID: 2177277095375261478}
   - component: {fileID: 8973274584681540256}
   - component: {fileID: 5578387959205004752}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.215
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15928,7 +15962,7 @@ GameObject:
   - component: {fileID: 7402830208751825183}
   - component: {fileID: 4012586171277173974}
   - component: {fileID: 8131205753709750987}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.188
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16669,7 +16703,7 @@ GameObject:
   - component: {fileID: 4219139779735147354}
   - component: {fileID: 1502371562290298713}
   - component: {fileID: 4373644014208673533}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.036
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16807,7 +16841,7 @@ GameObject:
   - component: {fileID: 8607750620881588799}
   - component: {fileID: 2878012997576008121}
   - component: {fileID: 3488238967161611707}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.226
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16825,7 +16859,7 @@ GameObject:
   - component: {fileID: 546351811550517834}
   - component: {fileID: 902184819297946999}
   - component: {fileID: 3498284681673108556}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.130
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16969,7 +17003,7 @@ GameObject:
   - component: {fileID: 3980585440523225736}
   - component: {fileID: 7894536576870152519}
   - component: {fileID: 5977764621536906214}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.155
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17002,7 +17036,7 @@ GameObject:
   - component: {fileID: 8254483909660817781}
   - component: {fileID: 1673928059905925345}
   - component: {fileID: 8470053972273152601}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.096
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17020,7 +17054,7 @@ GameObject:
   - component: {fileID: 6919478839258010451}
   - component: {fileID: 8049798427181245999}
   - component: {fileID: 3771565766589451708}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.100
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17121,7 +17155,7 @@ GameObject:
   - component: {fileID: 2116576204939443433}
   - component: {fileID: 5339375326892042842}
   - component: {fileID: 6730426782258254795}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: 1_Cylinder_uv.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17451,7 +17485,7 @@ GameObject:
   - component: {fileID: 6074881740575650278}
   - component: {fileID: 2306551269260538444}
   - component: {fileID: 503523866423734424}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.176
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17531,7 +17565,7 @@ GameObject:
   - component: {fileID: 3575560175167713247}
   - component: {fileID: 4796764066860848470}
   - component: {fileID: 6908014615355899799}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Merged_Sword_Sides_low1:Group28594
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17925,7 +17959,7 @@ GameObject:
   - component: {fileID: 4215680596691946627}
   - component: {fileID: 7874848353576699405}
   - component: {fileID: 5976306122336922928}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.160
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18074,7 +18108,7 @@ GameObject:
   - component: {fileID: 859083120975120387}
   - component: {fileID: 3069494781401133903}
   - component: {fileID: 2066214938610541149}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group29664
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18704,7 +18738,7 @@ GameObject:
   - component: {fileID: 8646186352833920960}
   - component: {fileID: 3672214614356746094}
   - component: {fileID: 8450671845779136941}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.060
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18779,7 +18813,7 @@ GameObject:
   - component: {fileID: 2274331901267163570}
   - component: {fileID: 4900269432457131384}
   - component: {fileID: 6585750621123931501}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group60164
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18797,7 +18831,7 @@ GameObject:
   - component: {fileID: 1765712223063721261}
   - component: {fileID: 959050718357492245}
   - component: {fileID: 3737818144695508222}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.035
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19105,7 +19139,7 @@ GameObject:
   - component: {fileID: 4562089357356278068}
   - component: {fileID: 4867670952357404105}
   - component: {fileID: 3971134198758398679}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.101
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19138,7 +19172,7 @@ GameObject:
   - component: {fileID: 7996169740696609872}
   - component: {fileID: 7901576453009743911}
   - component: {fileID: 2583949100390498403}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19298,7 +19332,7 @@ GameObject:
   - component: {fileID: 1287417998382858078}
   - component: {fileID: 4321357182694707911}
   - component: {fileID: 4296852160069285244}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.098
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19316,7 +19350,7 @@ GameObject:
   - component: {fileID: 8223935157904907571}
   - component: {fileID: 8644103222556677915}
   - component: {fileID: 6386673357504003475}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.139
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19334,7 +19368,7 @@ GameObject:
   - component: {fileID: 4465770046034978679}
   - component: {fileID: 1106673070440964378}
   - component: {fileID: 1997084896243813753}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shoulder_Plate_02_low2:Group64510
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19438,7 +19472,7 @@ GameObject:
   - component: {fileID: 3379676211960872655}
   - component: {fileID: 1940274712852123724}
   - component: {fileID: 1971165063233110125}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19581,7 +19615,7 @@ GameObject:
   - component: {fileID: 2948329130338037715}
   - component: {fileID: 6469768810555844202}
   - component: {fileID: 7310638902823176703}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.131
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20064,7 +20098,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543450652754462881}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Knight_All
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20150,7 +20184,7 @@ GameObject:
   - component: {fileID: 1944732418890448133}
   - component: {fileID: 5770089844852377177}
   - component: {fileID: 334340189820783208}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.190
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20380,7 +20414,7 @@ GameObject:
   - component: {fileID: 5121854068729513361}
   - component: {fileID: 8554110154992173518}
   - component: {fileID: 1890499674881103623}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.083
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20406,7 +20440,7 @@ GameObject:
   - component: {fileID: 3612115424042474758}
   - component: {fileID: 1214280647020072654}
   - component: {fileID: 6905273372881571698}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.211
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20680,7 +20714,7 @@ GameObject:
   - component: {fileID: 8733148586848030850}
   - component: {fileID: 3873512406051471479}
   - component: {fileID: 4784496117716538570}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group50798
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20789,7 +20823,7 @@ GameObject:
   - component: {fileID: 5429882894492124867}
   - component: {fileID: 9220428659605931398}
   - component: {fileID: 7150845462083604645}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArmStrap_Straps_low3:Group57527
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21140,7 +21174,7 @@ GameObject:
   - component: {fileID: 41106683877964893}
   - component: {fileID: 2358082250967973972}
   - component: {fileID: 8275538164676296114}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArmStrap_Straps_low3:Group37115
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21296,7 +21330,7 @@ GameObject:
   - component: {fileID: 2012353119879150933}
   - component: {fileID: 2668468216669082725}
   - component: {fileID: 6204215904256104473}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.223
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21459,7 +21493,7 @@ GameObject:
   - component: {fileID: 4455658076848975934}
   - component: {fileID: 1201978593560979170}
   - component: {fileID: 6371802999477865070}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.039
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21492,7 +21526,7 @@ GameObject:
   - component: {fileID: 4352073139839252743}
   - component: {fileID: 2711517768985292703}
   - component: {fileID: 793128851288323439}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.112
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21576,7 +21610,7 @@ GameObject:
   - component: {fileID: 3029609077887202941}
   - component: {fileID: 8633201182255561191}
   - component: {fileID: 6660666001374849079}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Belt_SideRing_low1:Group30502
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22077,7 +22111,7 @@ GameObject:
   - component: {fileID: 6051431728888642711}
   - component: {fileID: 4738580494905201829}
   - component: {fileID: 8954462056181052069}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.142
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22857,7 +22891,7 @@ GameObject:
   - component: {fileID: 4969246073365506414}
   - component: {fileID: 271255998047503167}
   - component: {fileID: 7546163435450788283}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.058
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23285,7 +23319,7 @@ GameObject:
   - component: {fileID: 8869916887871846068}
   - component: {fileID: 6619473521599476101}
   - component: {fileID: 8151786267073775804}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group9553
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23303,7 +23337,7 @@ GameObject:
   - component: {fileID: 5524942439033886546}
   - component: {fileID: 4455849232348483042}
   - component: {fileID: 3166097758248610510}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.159
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23383,7 +23417,7 @@ GameObject:
   - component: {fileID: 1667785900625051709}
   - component: {fileID: 2660872287064814872}
   - component: {fileID: 2853946700001060249}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group33144
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23476,7 +23510,7 @@ GameObject:
   - component: {fileID: 8993552569606194388}
   - component: {fileID: 6223597032035182722}
   - component: {fileID: 1210845067011257226}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.218
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23596,7 +23630,7 @@ GameObject:
   - component: {fileID: 3713432034719418574}
   - component: {fileID: 1256157896834464181}
   - component: {fileID: 1665396525933072706}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shoulder_Plate_02_low1:Group64510
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23828,7 +23862,7 @@ GameObject:
   - component: {fileID: 4919375949097496030}
   - component: {fileID: 6238866722832646755}
   - component: {fileID: 5050032715473250070}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.022
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23930,7 +23964,7 @@ GameObject:
   - component: {fileID: 8468958179084177376}
   - component: {fileID: 4077681149232325114}
   - component: {fileID: 1162847065473031962}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group65491
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24161,7 +24195,7 @@ GameObject:
   - component: {fileID: 7280401391645575252}
   - component: {fileID: 4284085233069033968}
   - component: {fileID: 2412475936317106750}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.206
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24682,7 +24716,7 @@ GameObject:
   - component: {fileID: 4451945359593150036}
   - component: {fileID: 1507250165772734193}
   - component: {fileID: 5454981034875606217}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.153
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24929,7 +24963,7 @@ GameObject:
   - component: {fileID: 392442685885878983}
   - component: {fileID: 1396793552403821881}
   - component: {fileID: 5722224227010307959}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.049
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25664,7 +25698,7 @@ GameObject:
   - component: {fileID: 6195420839426111343}
   - component: {fileID: 6457046451030576310}
   - component: {fileID: 7970169656886679802}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Bracer_Under_low1:Group62987
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25906,7 +25940,7 @@ GameObject:
   - component: {fileID: 8896078256135253771}
   - component: {fileID: 5340629409218541810}
   - component: {fileID: 9206926139841173429}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.158
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26059,7 +26093,7 @@ GameObject:
   - component: {fileID: 8789759701848475431}
   - component: {fileID: 2386996121556839598}
   - component: {fileID: 6729340189051564141}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: vitrage.back.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26285,7 +26319,7 @@ GameObject:
   - component: {fileID: 1913333370772981391}
   - component: {fileID: 8276621263859010179}
   - component: {fileID: 8414140064844449830}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.024
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26439,7 +26473,7 @@ GameObject:
   - component: {fileID: 9020371472242883415}
   - component: {fileID: 3937573310536091468}
   - component: {fileID: 6040999419126698370}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.201
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26490,7 +26524,7 @@ GameObject:
   - component: {fileID: 1081771908221797059}
   - component: {fileID: 5391581972324267259}
   - component: {fileID: 7807667335013404227}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group17713
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27288,7 +27322,7 @@ GameObject:
   - component: {fileID: 2935224726340549270}
   - component: {fileID: 3054070358727813569}
   - component: {fileID: 2644516682713346461}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.023
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27406,7 +27440,7 @@ GameObject:
   - component: {fileID: 8655032991706637134}
   - component: {fileID: 1859780604879512413}
   - component: {fileID: 8212526320390325264}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.214
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27496,7 +27530,7 @@ GameObject:
   - component: {fileID: 8766511314017927046}
   - component: {fileID: 1256704017607039640}
   - component: {fileID: 8893797935158884978}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.107
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27597,7 +27631,7 @@ GameObject:
   - component: {fileID: 4265314811432241713}
   - component: {fileID: 7799859337213829817}
   - component: {fileID: 8135202870184329199}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.108
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27639,7 +27673,7 @@ GameObject:
   - component: {fileID: 1896961294257844690}
   - component: {fileID: 5935925236480578463}
   - component: {fileID: 4497696678545351893}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Belt_SideRing_low1:Group63480
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27788,7 +27822,7 @@ GameObject:
   - component: {fileID: 7781256490991944731}
   - component: {fileID: 8761074628735428608}
   - component: {fileID: 344574816708357852}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.210
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27897,7 +27931,7 @@ GameObject:
   - component: {fileID: 5557563040891686796}
   - component: {fileID: 3343032579297888821}
   - component: {fileID: 6666608746766803188}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Padded_NeckStrap_low1:Group38206
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28227,7 +28261,7 @@ GameObject:
   - component: {fileID: 6512082292094199312}
   - component: {fileID: 9058425217989007154}
   - component: {fileID: 6256605430370989543}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28420,7 +28454,7 @@ GameObject:
   - component: {fileID: 6727921636446168220}
   - component: {fileID: 7557749562003496028}
   - component: {fileID: 4328933534582708059}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.099
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28496,7 +28530,7 @@ GameObject:
   - component: {fileID: 7991704401538512608}
   - component: {fileID: 967239231695129299}
   - component: {fileID: 4517996881969302121}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.025
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28538,7 +28572,7 @@ GameObject:
   - component: {fileID: 2637613752884657920}
   - component: {fileID: 5265201885672603717}
   - component: {fileID: 3082777322717160520}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28662,7 +28696,7 @@ GameObject:
   - component: {fileID: 7995834641876549469}
   - component: {fileID: 4859878352108355318}
   - component: {fileID: 4745838943531972513}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.068
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29496,7 +29530,7 @@ GameObject:
   - component: {fileID: 7084324484931439805}
   - component: {fileID: 6058280929072500508}
   - component: {fileID: 3191753700766443050}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.121
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29652,7 +29686,7 @@ GameObject:
   - component: {fileID: 2878472484714297740}
   - component: {fileID: 1220868458352756705}
   - component: {fileID: 1038822112440178723}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.044
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29902,7 +29936,7 @@ GameObject:
   - component: {fileID: 5331313258796610345}
   - component: {fileID: 7661384079643021546}
   - component: {fileID: 1649019342800602502}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.172
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30132,7 +30166,7 @@ GameObject:
   - component: {fileID: 744975668739081659}
   - component: {fileID: 8808146316259223538}
   - component: {fileID: 6283751784039731317}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.182
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30314,7 +30348,7 @@ GameObject:
   - component: {fileID: 856949257800666346}
   - component: {fileID: 3733461464977089288}
   - component: {fileID: 6144765636422582393}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.134
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30374,7 +30408,7 @@ GameObject:
   - component: {fileID: 6119476096301612672}
   - component: {fileID: 609282960555441722}
   - component: {fileID: 1524846331436769394}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.026
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30400,7 +30434,7 @@ GameObject:
   - component: {fileID: 8418089723107115823}
   - component: {fileID: 1011379999708690969}
   - component: {fileID: 7932316661414434411}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chest_BackPlate_low1:Group5865
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30510,7 +30544,7 @@ GameObject:
   - component: {fileID: 2143987151667733052}
   - component: {fileID: 8224858747330481095}
   - component: {fileID: 6823468728380038228}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Merged_Sword_Sides_low1:Group62261
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30614,7 +30648,7 @@ GameObject:
   - component: {fileID: 6511771379819674837}
   - component: {fileID: 5714727688511800653}
   - component: {fileID: 5877927735934814095}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.089
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30705,7 +30739,7 @@ GameObject:
   - component: {fileID: 7971758042196822224}
   - component: {fileID: 6667246389252422409}
   - component: {fileID: 5639757054103146113}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Bracer_Strap_low1:Group13056
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31241,7 +31275,7 @@ GameObject:
   - component: {fileID: 5791420822071474038}
   - component: {fileID: 6756540469824915622}
   - component: {fileID: 2295429584887333288}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group62768
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31274,7 +31308,7 @@ GameObject:
   - component: {fileID: 3316992659475231584}
   - component: {fileID: 9203870078884943927}
   - component: {fileID: 7783642030307932215}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31310,7 +31344,7 @@ GameObject:
   - component: {fileID: 2853455627528310285}
   - component: {fileID: 52223240001306478}
   - component: {fileID: 480826789447435436}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.082
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31487,7 +31521,7 @@ GameObject:
   - component: {fileID: 3196847744937325574}
   - component: {fileID: 727301558319447525}
   - component: {fileID: 3674880020761758483}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group12193
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31665,7 +31699,7 @@ GameObject:
   - component: {fileID: 3950384189765315111}
   - component: {fileID: 8373918891274312589}
   - component: {fileID: 7298114332775337781}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.132
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32129,7 +32163,7 @@ GameObject:
   - component: {fileID: 958566127852946009}
   - component: {fileID: 7142244436567239982}
   - component: {fileID: 6830351741073606816}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.205
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32245,7 +32279,7 @@ GameObject:
   - component: {fileID: 836088232846813053}
   - component: {fileID: 3576736810728842117}
   - component: {fileID: 482192679710238886}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.085
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32263,7 +32297,7 @@ GameObject:
   - component: {fileID: 1239302528191393307}
   - component: {fileID: 8399326744474924191}
   - component: {fileID: 4636927538981439763}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.151
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32281,7 +32315,7 @@ GameObject:
   - component: {fileID: 3239675043734159214}
   - component: {fileID: 8706235791337222821}
   - component: {fileID: 8490298671284933879}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.024
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32413,7 +32447,7 @@ GameObject:
   - component: {fileID: 2660640661984792882}
   - component: {fileID: 1264384251752722182}
   - component: {fileID: 6148596153633109366}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32560,7 +32594,7 @@ GameObject:
   - component: {fileID: 8500290976613019060}
   - component: {fileID: 61214625771872240}
   - component: {fileID: 3023196373279324721}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.191
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32604,7 +32638,7 @@ GameObject:
   - component: {fileID: 5241182251099488248}
   - component: {fileID: 2775594429517007686}
   - component: {fileID: 8557504770918358076}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.037
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32664,7 +32698,7 @@ GameObject:
   - component: {fileID: 4455947900742765268}
   - component: {fileID: 2435146067114872145}
   - component: {fileID: 7932670354905491641}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.050
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33199,7 +33233,7 @@ GameObject:
   - component: {fileID: 2181689811343210006}
   - component: {fileID: 8356718460872536339}
   - component: {fileID: 4450561972081277031}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.063
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33240,7 +33274,7 @@ GameObject:
   - component: {fileID: 2191138217765643623}
   - component: {fileID: 2283364981477985870}
   - component: {fileID: 8999654212644423575}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArmStrap_Rings_low4:Group9510
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33258,7 +33292,7 @@ GameObject:
   - component: {fileID: 799171230330113989}
   - component: {fileID: 6710137419414005761}
   - component: {fileID: 376177025320707917}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33365,7 +33399,7 @@ GameObject:
   - component: {fileID: 9089406063314073654}
   - component: {fileID: 1926371774580649280}
   - component: {fileID: 4382853132590448318}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group24398
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33519,7 +33553,7 @@ GameObject:
   - component: {fileID: 3023877240969910860}
   - component: {fileID: 4086783648737059848}
   - component: {fileID: 8672007402495174056}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.065
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33578,7 +33612,7 @@ GameObject:
   - component: {fileID: 7016222260788116801}
   - component: {fileID: 5124121139285749555}
   - component: {fileID: 8955271635655324791}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.097
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33671,7 +33705,7 @@ GameObject:
   - component: {fileID: 5310425404543310920}
   - component: {fileID: 7504225886384704407}
   - component: {fileID: 6586899291471232042}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.150
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33822,7 +33856,7 @@ GameObject:
   - component: {fileID: 8237386549886665323}
   - component: {fileID: 7269441911934248110}
   - component: {fileID: 4192362915315142026}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Belt_SideRing_low1:Group24290
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33908,7 +33942,7 @@ GameObject:
   - component: {fileID: 6432358112462276094}
   - component: {fileID: 3496923414380905830}
   - component: {fileID: 7417874803346161770}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.113
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34006,7 +34040,7 @@ GameObject:
   - component: {fileID: 7209417502318152818}
   - component: {fileID: 7446043291903685775}
   - component: {fileID: 2600160216211551389}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.028
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34089,7 +34123,7 @@ GameObject:
   - component: {fileID: 4369062518499649685}
   - component: {fileID: 6902437751973540835}
   - component: {fileID: 8403909571272324713}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.048
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34206,7 +34240,7 @@ GameObject:
   - component: {fileID: 1746492723656108462}
   - component: {fileID: 489271403254567384}
   - component: {fileID: 2357228525965813880}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shoulder_Plate_01_low2:Group62824
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34533,7 +34567,7 @@ GameObject:
   - component: {fileID: 5191895996935499085}
   - component: {fileID: 5761917022846493857}
   - component: {fileID: 1923711970110978067}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.193
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34559,7 +34593,7 @@ GameObject:
   - component: {fileID: 1332524211317327792}
   - component: {fileID: 28995979273448308}
   - component: {fileID: 4388897819205704766}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: 1_leave_p1_uv.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34577,7 +34611,7 @@ GameObject:
   - component: {fileID: 6614996720141055420}
   - component: {fileID: 5341121481150814187}
   - component: {fileID: 7934638893842729012}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34716,7 +34750,7 @@ GameObject:
   - component: {fileID: 8765428098995867675}
   - component: {fileID: 4190212823141855869}
   - component: {fileID: 7734472135728843416}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Bracer_Over_low1:Group9614
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34878,7 +34912,7 @@ GameObject:
   - component: {fileID: 4549054293463077898}
   - component: {fileID: 7775544557876681284}
   - component: {fileID: 2114634198766476656}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group49789
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34911,7 +34945,7 @@ GameObject:
   - component: {fileID: 2966791116204006807}
   - component: {fileID: 2524100804866532085}
   - component: {fileID: 6238837940920214452}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.026
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34937,7 +34971,7 @@ GameObject:
   - component: {fileID: 8046580989809567166}
   - component: {fileID: 1573175750362851630}
   - component: {fileID: 817959438584174303}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group8960
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35016,7 +35050,7 @@ GameObject:
   - component: {fileID: 3963118719672574558}
   - component: {fileID: 3722799967593848884}
   - component: {fileID: 3818407454777336690}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Padded_Shirt_low1:Group49776
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35083,7 +35117,7 @@ GameObject:
   - component: {fileID: 3061677260553330310}
   - component: {fileID: 5417865927743911114}
   - component: {fileID: 2367451154701783163}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Boot_Toe_low1:Group47025
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35275,7 +35309,7 @@ GameObject:
   - component: {fileID: 2516246744072941583}
   - component: {fileID: 8891413585433926273}
   - component: {fileID: 6522773055442391141}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.080
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35366,7 +35400,7 @@ GameObject:
   - component: {fileID: 8901336729577155275}
   - component: {fileID: 1794064386211766552}
   - component: {fileID: 8434616763859603625}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.077
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35529,7 +35563,7 @@ GameObject:
   - component: {fileID: 8810578493435999248}
   - component: {fileID: 4399643358097097926}
   - component: {fileID: 4300311762970835938}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.202
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35763,7 +35797,7 @@ GameObject:
   - component: {fileID: 5065058748416221442}
   - component: {fileID: 9033204959606819143}
   - component: {fileID: 7764658452378496603}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.090
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35781,7 +35815,7 @@ GameObject:
   - component: {fileID: 5801172154383339098}
   - component: {fileID: 5050361425237249884}
   - component: {fileID: 3720538678213970985}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36047,7 +36081,7 @@ GameObject:
   - component: {fileID: 1015975396785575922}
   - component: {fileID: 7335927443464822047}
   - component: {fileID: 2506659139758081907}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: 1_Cylinder_uv.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36217,7 +36251,7 @@ GameObject:
   - component: {fileID: 3177401153552004440}
   - component: {fileID: 297335743722365644}
   - component: {fileID: 782092100348724444}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Gloves_Gloves_low1:Group35219
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36235,7 +36269,7 @@ GameObject:
   - component: {fileID: 8056737864756570278}
   - component: {fileID: 8695124702198397443}
   - component: {fileID: 1232547875207259715}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.069
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36526,7 +36560,7 @@ GameObject:
   - component: {fileID: 7149799952012254848}
   - component: {fileID: 2842185285396626367}
   - component: {fileID: 1809733742392935673}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.074
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36582,7 +36616,7 @@ GameObject:
   - component: {fileID: 7461764748020980028}
   - component: {fileID: 169448324761972832}
   - component: {fileID: 6744406729407849972}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group32719
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37053,7 +37087,7 @@ GameObject:
   - component: {fileID: 1708940301170669896}
   - component: {fileID: 8741488577166099103}
   - component: {fileID: 3756507620782214190}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArmStrap_Rings_low4:Group29911
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37115,7 +37149,7 @@ GameObject:
   - component: {fileID: 4262874088795969165}
   - component: {fileID: 713713159029868426}
   - component: {fileID: 6867712591704755274}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.147
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37148,7 +37182,7 @@ GameObject:
   - component: {fileID: 7870098248306777689}
   - component: {fileID: 378863358110664525}
   - component: {fileID: 2194178688530592951}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.103
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37599,7 +37633,7 @@ GameObject:
   - component: {fileID: 1966271708213953318}
   - component: {fileID: 2376387750173117094}
   - component: {fileID: 6047711960393717562}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.143
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37770,7 +37804,7 @@ GameObject:
   - component: {fileID: 9048121000343004729}
   - component: {fileID: 3785040156307316614}
   - component: {fileID: 2451847169454003492}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group9211
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37872,7 +37906,7 @@ GameObject:
   - component: {fileID: 1572598442132470316}
   - component: {fileID: 2144622425847087075}
   - component: {fileID: 8924298920548591468}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Boot_Toe_low1:Group16572
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37906,7 +37940,7 @@ GameObject:
   - component: {fileID: 8641284821283148144}
   - component: {fileID: 8133803511008222042}
   - component: {fileID: 8199688561561570840}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37966,7 +38000,7 @@ GameObject:
   - component: {fileID: 8206897211025612363}
   - component: {fileID: 3198161216229403754}
   - component: {fileID: 5704806419291053289}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low2:Group41992
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38007,7 +38041,7 @@ GameObject:
   - component: {fileID: 5002688006829984714}
   - component: {fileID: 4126394041886570250}
   - component: {fileID: 7201995487772145331}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.094
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38125,7 +38159,7 @@ GameObject:
   - component: {fileID: 8972389479948160126}
   - component: {fileID: 3765192564724352214}
   - component: {fileID: 4105430505315675676}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.197
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38318,7 +38352,7 @@ GameObject:
   - component: {fileID: 715223662924790347}
   - component: {fileID: 8758271063760968827}
   - component: {fileID: 3428462532180337008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chest_FrontPlate_low1:Group20911
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38525,7 +38559,7 @@ GameObject:
   - component: {fileID: 4493443418317530141}
   - component: {fileID: 5465706935546519421}
   - component: {fileID: 1212512938660334258}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.031
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38566,7 +38600,7 @@ GameObject:
   - component: {fileID: 5756862526309126272}
   - component: {fileID: 2167441472071529239}
   - component: {fileID: 5526670897454513795}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.040
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38910,7 +38944,7 @@ GameObject:
   - component: {fileID: 5126830683107974193}
   - component: {fileID: 8671608396740424693}
   - component: {fileID: 5029523620240296954}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.093
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39126,7 +39160,7 @@ GameObject:
   - component: {fileID: 356101774654824975}
   - component: {fileID: 160437149646115956}
   - component: {fileID: 1666606443078135862}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.177
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39159,7 +39193,7 @@ GameObject:
   - component: {fileID: 5990638430585676095}
   - component: {fileID: 6227713785837316343}
   - component: {fileID: 782207588271879556}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.043
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39331,7 +39365,7 @@ GameObject:
   - component: {fileID: 5724366919519186953}
   - component: {fileID: 4184559376391620491}
   - component: {fileID: 2616614110584346728}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.200
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39533,7 +39567,7 @@ GameObject:
   - component: {fileID: 6626260092278295623}
   - component: {fileID: 4820521798352818238}
   - component: {fileID: 7832123775395410116}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39638,7 +39672,7 @@ GameObject:
   - component: {fileID: 5953308493886527160}
   - component: {fileID: 3315569093539689792}
   - component: {fileID: 5220056967648573008}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.213
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39758,7 +39792,7 @@ GameObject:
   - component: {fileID: 1562716418204475309}
   - component: {fileID: 873894835085159404}
   - component: {fileID: 9198038782465572837}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.084
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39820,7 +39854,7 @@ GameObject:
   - component: {fileID: 2489641354477593164}
   - component: {fileID: 6534613441030430517}
   - component: {fileID: 4209392068122320352}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39838,7 +39872,7 @@ GameObject:
   - component: {fileID: 1879949926826596351}
   - component: {fileID: 6239308820005431119}
   - component: {fileID: 8548060761159813717}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.217
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39856,7 +39890,7 @@ GameObject:
   - component: {fileID: 8539556715851246199}
   - component: {fileID: 2601236247387257864}
   - component: {fileID: 8600143372105030212}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.221
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39965,7 +39999,7 @@ GameObject:
   - component: {fileID: 7098534486261617849}
   - component: {fileID: 5656882799221931840}
   - component: {fileID: 5250529449124828193}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.199
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40090,7 +40124,7 @@ GameObject:
   - component: {fileID: 6426448319246075088}
   - component: {fileID: 568357331330486114}
   - component: {fileID: 4505331244745604816}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40538,7 +40572,7 @@ GameObject:
   - component: {fileID: 2947579891435705800}
   - component: {fileID: 8215706933224493486}
   - component: {fileID: 1706418986510591125}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: UnderShoulder_UnderLeather_low1:Group23786
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40630,7 +40664,7 @@ GameObject:
   - component: {fileID: 7548274156354598613}
   - component: {fileID: 1203729978030892736}
   - component: {fileID: 4238958129441344525}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.088
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40805,7 +40839,7 @@ GameObject:
   - component: {fileID: 4164437059758079690}
   - component: {fileID: 5169342058895753523}
   - component: {fileID: 6526899357182667260}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.028
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40890,7 +40924,7 @@ GameObject:
   - component: {fileID: 5337579361222062936}
   - component: {fileID: 1199853673536752681}
   - component: {fileID: 1366492947815065408}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.165
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41118,7 +41152,7 @@ GameObject:
   - component: {fileID: 4081031148099857865}
   - component: {fileID: 4721190134960807851}
   - component: {fileID: 9121389873211577505}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group44169
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41162,7 +41196,7 @@ GameObject:
   - component: {fileID: 6743049071377715563}
   - component: {fileID: 6312283653885984068}
   - component: {fileID: 4922193270062820556}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.220
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41180,7 +41214,7 @@ GameObject:
   - component: {fileID: 6018117269129187978}
   - component: {fileID: 322257263233948639}
   - component: {fileID: 3732447029261672528}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.163
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41240,7 +41274,7 @@ GameObject:
   - component: {fileID: 1341041533386852602}
   - component: {fileID: 1540232771825894845}
   - component: {fileID: 6717159003712418935}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Padded_Pants_low1:Group5200
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41302,7 +41336,7 @@ GameObject:
   - component: {fileID: 6732398568097662637}
   - component: {fileID: 6816842339598631468}
   - component: {fileID: 1746654309766875293}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41378,7 +41412,7 @@ GameObject:
   - component: {fileID: 1540558082997642402}
   - component: {fileID: 2078101148260689217}
   - component: {fileID: 6943212457938361003}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group4738
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41548,7 +41582,7 @@ GameObject:
   - component: {fileID: 2415035601794969089}
   - component: {fileID: 395296316888396104}
   - component: {fileID: 3226017083848439998}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.035
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41799,7 +41833,7 @@ GameObject:
   - component: {fileID: 7515060822346588394}
   - component: {fileID: 1582202843129338987}
   - component: {fileID: 3388792471993342626}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.075
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41859,7 +41893,7 @@ GameObject:
   - component: {fileID: 4409261094249661818}
   - component: {fileID: 8110304307573046182}
   - component: {fileID: 7626502923850281326}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.027
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41953,7 +41987,7 @@ GameObject:
   - component: {fileID: 3535014368706664310}
   - component: {fileID: 7570095782118390511}
   - component: {fileID: 8018828343041308732}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group41863
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42107,7 +42141,7 @@ GameObject:
   - component: {fileID: 6977396856238634547}
   - component: {fileID: 49707563532421481}
   - component: {fileID: 6465315489793951269}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low1:Group61824
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42220,7 +42254,7 @@ GameObject:
   - component: {fileID: 1571867432312446051}
   - component: {fileID: 9137594679873409421}
   - component: {fileID: 1814992381410822223}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.164
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42238,7 +42272,7 @@ GameObject:
   - component: {fileID: 7028362982650243373}
   - component: {fileID: 6293575316846025180}
   - component: {fileID: 2593913249912592628}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.138
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42256,7 +42290,7 @@ GameObject:
   - component: {fileID: 8305638088123318349}
   - component: {fileID: 7085471003286555325}
   - component: {fileID: 4927354126053364977}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.185
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42334,7 +42368,7 @@ GameObject:
   - component: {fileID: 7572724462152610254}
   - component: {fileID: 2184637989513208771}
   - component: {fileID: 1229680496962248731}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.183
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42367,7 +42401,7 @@ GameObject:
   - component: {fileID: 2820970870333197978}
   - component: {fileID: 1538394477577889209}
   - component: {fileID: 3499340552203861307}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.067
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42665,7 +42699,7 @@ GameObject:
   - component: {fileID: 4517890473204941885}
   - component: {fileID: 6098563478938302561}
   - component: {fileID: 6507810593161593255}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group32658
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42769,7 +42803,7 @@ GameObject:
   - component: {fileID: 7753587278698992181}
   - component: {fileID: 6918514559209284994}
   - component: {fileID: 3602353876962646154}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shoulder_Plate_03_low2:Group16406
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43308,7 +43342,7 @@ GameObject:
   - component: {fileID: 8821488538795384074}
   - component: {fileID: 7118197910938888872}
   - component: {fileID: 7620961696516268454}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shoulder_Plate_01_low1:Group62824
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43341,7 +43375,7 @@ GameObject:
   - component: {fileID: 6506252436418518845}
   - component: {fileID: 6040238286657501243}
   - component: {fileID: 3415285750052764865}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Gloves_Gloves_low2:Group35219
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43544,7 +43578,7 @@ GameObject:
   - component: {fileID: 1735943683410965732}
   - component: {fileID: 7386460480812163433}
   - component: {fileID: 2786213503555275324}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.052
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43810,7 +43844,7 @@ GameObject:
   - component: {fileID: 304661458098823586}
   - component: {fileID: 7186899925718763112}
   - component: {fileID: 6440933632353597886}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low1:Group41992
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44080,7 +44114,7 @@ GameObject:
   - component: {fileID: 2892267967818445532}
   - component: {fileID: 1957042997664699550}
   - component: {fileID: 9129727726533808706}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44280,7 +44314,7 @@ GameObject:
   - component: {fileID: 8435469830761499822}
   - component: {fileID: 5237301783761963437}
   - component: {fileID: 1107601080328710324}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.178
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44542,7 +44576,7 @@ GameObject:
   - component: {fileID: 863783425269147550}
   - component: {fileID: 439028767844168318}
   - component: {fileID: 2192155071140468879}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.203
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44644,7 +44678,7 @@ GameObject:
   - component: {fileID: 1594762012934472788}
   - component: {fileID: 8964449235626401169}
   - component: {fileID: 9006868891915701643}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.227
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44742,7 +44776,7 @@ GameObject:
   - component: {fileID: 6195438877180264816}
   - component: {fileID: 5042320760038641765}
   - component: {fileID: 4164166268608762193}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Belt_SideRing_low1:Group6118
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44783,7 +44817,7 @@ GameObject:
   - component: {fileID: 1199921746955465250}
   - component: {fileID: 1986594489358378490}
   - component: {fileID: 5986842058873625918}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group31075
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44958,7 +44992,7 @@ GameObject:
   - component: {fileID: 2966295962267388843}
   - component: {fileID: 2282296348089774828}
   - component: {fileID: 4075823951470173388}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.030
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45544,7 +45578,7 @@ GameObject:
   - component: {fileID: 2169337334469094398}
   - component: {fileID: 5070763256818279357}
   - component: {fileID: 4195819542279488079}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45562,7 +45596,7 @@ GameObject:
   - component: {fileID: 6564837466157476178}
   - component: {fileID: 531338946677430605}
   - component: {fileID: 3190880132053344146}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low2:Group45608
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46319,7 +46353,7 @@ GameObject:
   - component: {fileID: 4423818177386582206}
   - component: {fileID: 4692891278544261993}
   - component: {fileID: 3149574842350425696}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.038
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46463,7 +46497,7 @@ GameObject:
   - component: {fileID: 5928805755144151728}
   - component: {fileID: 4818404982246089839}
   - component: {fileID: 174671866749075634}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low1:Group1941
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46630,7 +46664,7 @@ GameObject:
   - component: {fileID: 6657778082357744396}
   - component: {fileID: 2859961592567329157}
   - component: {fileID: 7740402992252696568}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.179
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47065,7 +47099,7 @@ GameObject:
   - component: {fileID: 1528211361201561639}
   - component: {fileID: 7606134584709549307}
   - component: {fileID: 122608337413480996}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47222,7 +47256,7 @@ GameObject:
   - component: {fileID: 944031891104811501}
   - component: {fileID: 3826434253387562029}
   - component: {fileID: 7674805231444626233}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.208
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47324,7 +47358,7 @@ GameObject:
   - component: {fileID: 5573422887084343784}
   - component: {fileID: 1343188224666815694}
   - component: {fileID: 131231271137826300}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chest_Rings_low1:Group56180
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47384,7 +47418,7 @@ GameObject:
   - component: {fileID: 3515520804420402921}
   - component: {fileID: 6626242991879675678}
   - component: {fileID: 3347043409432178748}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: 1_Cylinder_uv.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47402,7 +47436,7 @@ GameObject:
   - component: {fileID: 5180692358459320118}
   - component: {fileID: 5927550600640262815}
   - component: {fileID: 2471510011751407458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shoulder_Elbow_low1:Group60197
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47871,7 +47905,7 @@ GameObject:
   - component: {fileID: 2724474977658119107}
   - component: {fileID: 5891753467297511757}
   - component: {fileID: 4135947361656984869}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.209
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48080,7 +48114,7 @@ GameObject:
   - component: {fileID: 3146058107861677705}
   - component: {fileID: 4100125721699997274}
   - component: {fileID: 165277582979576982}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.145
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48171,7 +48205,7 @@ GameObject:
   - component: {fileID: 1231520347202030906}
   - component: {fileID: 6725479996669254247}
   - component: {fileID: 9000901513844418036}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49126,7 +49160,7 @@ GameObject:
   - component: {fileID: 5817261230896631366}
   - component: {fileID: 3036508502775947036}
   - component: {fileID: 1421739019527084529}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.152
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49152,7 +49186,7 @@ GameObject:
   - component: {fileID: 7579895761680515995}
   - component: {fileID: 9105642611177124132}
   - component: {fileID: 2262461833814472369}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: mug.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49170,7 +49204,7 @@ GameObject:
   - component: {fileID: 6964559366208912777}
   - component: {fileID: 2431466724005605436}
   - component: {fileID: 8374129860970667017}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.102
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49508,7 +49542,7 @@ GameObject:
   - component: {fileID: 3120177517121439096}
   - component: {fileID: 1182602431382313827}
   - component: {fileID: 6468517368870508704}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group54033
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49585,7 +49619,7 @@ GameObject:
   - component: {fileID: 135887622345440936}
   - component: {fileID: 6476955788972563005}
   - component: {fileID: 5358296013589958259}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group64626
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49603,7 +49637,7 @@ GameObject:
   - component: {fileID: 4303257856516483572}
   - component: {fileID: 7684778579932046042}
   - component: {fileID: 9023774413029272659}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49932,7 +49966,7 @@ GameObject:
   - component: {fileID: 2794524142257898526}
   - component: {fileID: 703252190972755145}
   - component: {fileID: 8610898140692634650}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.032
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50200,7 +50234,7 @@ GameObject:
   - component: {fileID: 4807141095641240598}
   - component: {fileID: 181110272322119765}
   - component: {fileID: 4923532716562456030}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.129
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50480,7 +50514,7 @@ GameObject:
   - component: {fileID: 3778743258975227430}
   - component: {fileID: 6800231406679615879}
   - component: {fileID: 6130241826294760938}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.204
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50596,7 +50630,7 @@ GameObject:
   - component: {fileID: 2640689923009740431}
   - component: {fileID: 3944956512396637494}
   - component: {fileID: 4963535490257265156}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.056
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51129,7 +51163,7 @@ GameObject:
   - component: {fileID: 6016448750450349222}
   - component: {fileID: 5236638253570281469}
   - component: {fileID: 7879685566136846633}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.078
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51173,7 +51207,7 @@ GameObject:
   - component: {fileID: 2708453366839061337}
   - component: {fileID: 2905441013842556027}
   - component: {fileID: 2009925855070150403}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51209,7 +51243,7 @@ GameObject:
   - component: {fileID: 8786515502868849704}
   - component: {fileID: 4251502004830298463}
   - component: {fileID: 1738719096068271517}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.095
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51257,7 +51291,7 @@ GameObject:
   - component: {fileID: 4634061704935290420}
   - component: {fileID: 3120995102464795982}
   - component: {fileID: 2483442646042460099}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.180
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51412,7 +51446,7 @@ GameObject:
   - component: {fileID: 2358170229290113882}
   - component: {fileID: 2812023002341164512}
   - component: {fileID: 6822439616150769194}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.144
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51584,7 +51618,7 @@ GameObject:
   - component: {fileID: 9020468726561412913}
   - component: {fileID: 8819089971683827904}
   - component: {fileID: 4817306438918923995}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.195
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51766,7 +51800,7 @@ GameObject:
   - component: {fileID: 6165597811403136684}
   - component: {fileID: 3810635702339009839}
   - component: {fileID: 6503914187045891691}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low2:Group47025
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52039,7 +52073,7 @@ GameObject:
   - component: {fileID: 3732820752563124018}
   - component: {fileID: 6768739087320360466}
   - component: {fileID: 7743480365610562860}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52241,7 +52275,7 @@ GameObject:
   - component: {fileID: 1308845696619145250}
   - component: {fileID: 390638070483211519}
   - component: {fileID: 4215653737240882105}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low2:Group16499
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52366,7 +52400,7 @@ GameObject:
   - component: {fileID: 6618555713064191578}
   - component: {fileID: 6099342864396005214}
   - component: {fileID: 5979376833726123735}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.124
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52555,7 +52589,7 @@ GameObject:
   - component: {fileID: 6883265063264771104}
   - component: {fileID: 2918188603210524552}
   - component: {fileID: 9162338699811146307}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.044
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52689,7 +52723,7 @@ GameObject:
   - component: {fileID: 1372133035403614451}
   - component: {fileID: 4171331179287287094}
   - component: {fileID: 8702217648301432955}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: 1_leave_p1_uv
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52854,7 +52888,7 @@ GameObject:
   - component: {fileID: 3468366853449228580}
   - component: {fileID: 2167202047481421785}
   - component: {fileID: 265713726186853775}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group63001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52872,7 +52906,7 @@ GameObject:
   - component: {fileID: 4966445974615997612}
   - component: {fileID: 1396312926459314015}
   - component: {fileID: 1875920687499457783}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.046
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53093,7 +53127,7 @@ GameObject:
   - component: {fileID: 4325410163442300705}
   - component: {fileID: 2125330850218851540}
   - component: {fileID: 634561429252560076}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53360,7 +53394,7 @@ GameObject:
   - component: {fileID: 6918000420257043714}
   - component: {fileID: 1241056288538387411}
   - component: {fileID: 876150829750410487}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53393,7 +53427,7 @@ GameObject:
   - component: {fileID: 5392611098919160781}
   - component: {fileID: 6020154723287617110}
   - component: {fileID: 1186643850009854048}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.136
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53426,7 +53460,7 @@ GameObject:
   - component: {fileID: 1787429246232674368}
   - component: {fileID: 2647341178382429975}
   - component: {fileID: 6037075850313971441}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Belt_SideRing_low1:Group51872
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53444,7 +53478,7 @@ GameObject:
   - component: {fileID: 1537969423899208537}
   - component: {fileID: 7879526850396864656}
   - component: {fileID: 8923664751718483897}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.123
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53844,7 +53878,7 @@ GameObject:
   - component: {fileID: 2333308346940426313}
   - component: {fileID: 1280228294266125180}
   - component: {fileID: 7199200007663977599}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.119
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53870,7 +53904,7 @@ GameObject:
   - component: {fileID: 5118080396104486225}
   - component: {fileID: 6615469748468911270}
   - component: {fileID: 8457383533567238143}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.029
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53903,7 +53937,7 @@ GameObject:
   - component: {fileID: 7446839572677920480}
   - component: {fileID: 2238493188212122152}
   - component: {fileID: 2699122501782015627}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.170
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54023,7 +54057,7 @@ GameObject:
   - component: {fileID: 4463050001192896135}
   - component: {fileID: 4335147093222502706}
   - component: {fileID: 6575718941156412608}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group12661
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54041,7 +54075,7 @@ GameObject:
   - component: {fileID: 3327094656083019927}
   - component: {fileID: 8571349071107619583}
   - component: {fileID: 4685081761942134652}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.079
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54101,7 +54135,7 @@ GameObject:
   - component: {fileID: 8602234878501707366}
   - component: {fileID: 1549209745608000228}
   - component: {fileID: 2194120375189832888}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.106
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54323,7 +54357,7 @@ GameObject:
   - component: {fileID: 6163792852051073608}
   - component: {fileID: 3282496780312101169}
   - component: {fileID: 2193468171226602672}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Belt_SideRing_low1:Group20066
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54492,7 +54526,7 @@ GameObject:
   - component: {fileID: 6776603325185782306}
   - component: {fileID: 1733331973896790633}
   - component: {fileID: 5165635094563749624}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low1:Group16499
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54510,7 +54544,7 @@ GameObject:
   - component: {fileID: 4192185103447386344}
   - component: {fileID: 7522261385240779625}
   - component: {fileID: 5740763375956805155}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Coiled Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54627,7 +54661,7 @@ GameObject:
   - component: {fileID: 393744899266826847}
   - component: {fileID: 7485494620441730269}
   - component: {fileID: 2539233863742937890}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.184
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54661,7 +54695,7 @@ GameObject:
   - component: {fileID: 301683158536587772}
   - component: {fileID: 2510405250590951600}
   - component: {fileID: 6803798906945998573}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.036
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54787,7 +54821,7 @@ GameObject:
   - component: {fileID: 8456746580455930147}
   - component: {fileID: 8919002124551902208}
   - component: {fileID: 227263062105412322}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.104
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55340,7 +55374,7 @@ GameObject:
   - component: {fileID: 8422535501157700615}
   - component: {fileID: 9015195152002789615}
   - component: {fileID: 6487704158039178161}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.192
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55433,7 +55467,7 @@ GameObject:
   - component: {fileID: 7773157511151439951}
   - component: {fileID: 745443040630280500}
   - component: {fileID: 6979220929483443854}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55505,7 +55539,7 @@ GameObject:
   - component: {fileID: 1863676076093340986}
   - component: {fileID: 4395428561277274117}
   - component: {fileID: 8289735139138923839}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Belt_SideRing_low1:Group41826
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55972,7 +56006,7 @@ GameObject:
   - component: {fileID: 4332227276876658133}
   - component: {fileID: 7944571837803854476}
   - component: {fileID: 7895342591907130248}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.135
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56005,7 +56039,7 @@ GameObject:
   - component: {fileID: 443750761650859696}
   - component: {fileID: 2384113084461221971}
   - component: {fileID: 820713989776483714}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.115
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56023,7 +56057,7 @@ GameObject:
   - component: {fileID: 1564362877417372902}
   - component: {fileID: 7384672212700864214}
   - component: {fileID: 3309794049265563818}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group584
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56065,7 +56099,7 @@ GameObject:
   - component: {fileID: 352199114991081566}
   - component: {fileID: 5156114330321853612}
   - component: {fileID: 7295764365043116443}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.148
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56083,7 +56117,7 @@ GameObject:
   - component: {fileID: 440317525870745146}
   - component: {fileID: 2004443943114657595}
   - component: {fileID: 7369817609371042248}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.070
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56226,7 +56260,7 @@ GameObject:
   - component: {fileID: 5800924018548746819}
   - component: {fileID: 52701357957631094}
   - component: {fileID: 5974134982035123590}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.216
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56506,7 +56540,7 @@ GameObject:
   - component: {fileID: 433675371534029630}
   - component: {fileID: 3070601032591574462}
   - component: {fileID: 4261106287793675893}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bracer_Plates_low1:Group38364
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56746,7 +56780,7 @@ GameObject:
   - component: {fileID: 8079448465953893764}
   - component: {fileID: 1223812982913426450}
   - component: {fileID: 577664114516898155}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Boot_Toe_low2:Group16572
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56764,7 +56798,7 @@ GameObject:
   - component: {fileID: 1355660813916210565}
   - component: {fileID: 4649756785701684963}
   - component: {fileID: 8737743260471078474}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.081
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57167,7 +57201,7 @@ GameObject:
   - component: {fileID: 6005934242202907432}
   - component: {fileID: 2430855546227860540}
   - component: {fileID: 2858224186848242974}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.045
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57258,7 +57292,7 @@ GameObject:
   - component: {fileID: 4862408656012396035}
   - component: {fileID: 3428925721110198816}
   - component: {fileID: 4337525289762297668}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.198
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57505,7 +57539,7 @@ GameObject:
   - component: {fileID: 5924346442043835660}
   - component: {fileID: 1227129571217583423}
   - component: {fileID: 4731925750573192760}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.110
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57663,7 +57697,7 @@ GameObject:
   - component: {fileID: 5254947293116836200}
   - component: {fileID: 869336757559527039}
   - component: {fileID: 4891234335412863483}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: 1_leave_uv
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57799,7 +57833,7 @@ GameObject:
   - component: {fileID: 973252633932430157}
   - component: {fileID: 6970644046232523917}
   - component: {fileID: 4609719359952540802}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.023
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58364,7 +58398,7 @@ GameObject:
   - component: {fileID: 4131766688359349978}
   - component: {fileID: 296585580297280479}
   - component: {fileID: 3998882377545067283}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Chest_TopStraps_low1:Group16616
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59270,7 +59304,7 @@ GameObject:
   - component: {fileID: 2832406151376170052}
   - component: {fileID: 6344692269417787835}
   - component: {fileID: 4290389257518486665}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59314,7 +59348,7 @@ GameObject:
   - component: {fileID: 6113195552202566682}
   - component: {fileID: 8105466386817643200}
   - component: {fileID: 5824679897686654119}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.114
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59350,7 +59384,7 @@ GameObject:
   - component: {fileID: 5064440747410339372}
   - component: {fileID: 2102291818599059547}
   - component: {fileID: 5923690553058975636}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group15103
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59386,7 +59420,7 @@ GameObject:
   - component: {fileID: 3611547299370588631}
   - component: {fileID: 6196657403712885756}
   - component: {fileID: 3275171278705815821}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chest_Bolts_low1:Group10493
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59435,7 +59469,7 @@ GameObject:
   - component: {fileID: 701573670014768475}
   - component: {fileID: 8095963196564482560}
   - component: {fileID: 1330050444653322231}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.116
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59980,7 +60014,7 @@ GameObject:
   - component: {fileID: 6976741097836150022}
   - component: {fileID: 3929495882987969407}
   - component: {fileID: 3262162812212473725}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.033
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59998,7 +60032,7 @@ GameObject:
   - component: {fileID: 8291469035498383684}
   - component: {fileID: 4221422575664147194}
   - component: {fileID: 6667107638652492845}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60398,7 +60432,7 @@ GameObject:
   - component: {fileID: 5482359120521010501}
   - component: {fileID: 2759526170891925705}
   - component: {fileID: 4799917031561307923}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Merged_Sword_Sides_low1:Group62470
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60614,7 +60648,7 @@ GameObject:
   - component: {fileID: 5765882310119166518}
   - component: {fileID: 7978064805042676232}
   - component: {fileID: 983734270892358907}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Merged_Sword_Sides_low1:Group43544
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60893,7 +60927,7 @@ GameObject:
   - component: {fileID: 5993847948468670466}
   - component: {fileID: 8777296174559202457}
   - component: {fileID: 8089062574425155071}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60941,7 +60975,7 @@ GameObject:
   - component: {fileID: 8431471649538140659}
   - component: {fileID: 1385616742661986171}
   - component: {fileID: 7452270732173341514}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.091
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61051,7 +61085,7 @@ GameObject:
   - component: {fileID: 7716535256989060593}
   - component: {fileID: 8576791884371611842}
   - component: {fileID: 6342253073945637782}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: 1_Cylinder_uv.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61287,7 +61321,7 @@ GameObject:
   - component: {fileID: 5590114323186234836}
   - component: {fileID: 3391344105417818776}
   - component: {fileID: 4105678668378157144}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.187
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61305,7 +61339,7 @@ GameObject:
   - component: {fileID: 5538689656365419252}
   - component: {fileID: 6931893821901675972}
   - component: {fileID: 5961193057517846135}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.073
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61373,7 +61407,7 @@ GameObject:
   - component: {fileID: 7963319798109949070}
   - component: {fileID: 9154019755718968196}
   - component: {fileID: 3307260872456326698}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.025
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61391,7 +61425,7 @@ GameObject:
   - component: {fileID: 8886080241197069280}
   - component: {fileID: 309215598469378540}
   - component: {fileID: 3800082497654093169}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.219
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61493,7 +61527,7 @@ GameObject:
   - component: {fileID: 5968704077170097753}
   - component: {fileID: 6036584113633008229}
   - component: {fileID: 1794052173514544841}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low1:Group45608
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61956,7 +61990,7 @@ GameObject:
   - component: {fileID: 4175789940968677804}
   - component: {fileID: 386205941971341165}
   - component: {fileID: 4734130446748008475}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.117
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62482,7 +62516,7 @@ GameObject:
   - component: {fileID: 8277779653989683990}
   - component: {fileID: 6276553747928950550}
   - component: {fileID: 8175055282252840111}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.194
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62656,7 +62690,7 @@ GameObject:
   - component: {fileID: 4774886296107341665}
   - component: {fileID: 6126978517976940968}
   - component: {fileID: 1555271766249532645}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63104,7 +63138,7 @@ GameObject:
   - component: {fileID: 7550448120960467888}
   - component: {fileID: 617739840565084707}
   - component: {fileID: 8115220072366665633}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.140
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63380,7 +63414,7 @@ GameObject:
   - component: {fileID: 932315614556743399}
   - component: {fileID: 8492675867970016866}
   - component: {fileID: 4666581074706026077}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.032
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63896,7 +63930,7 @@ GameObject:
   - component: {fileID: 3924232459396912582}
   - component: {fileID: 3763447768823359344}
   - component: {fileID: 3280927519579439570}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63937,7 +63971,7 @@ GameObject:
   - component: {fileID: 7767319139153963661}
   - component: {fileID: 1805106058195842677}
   - component: {fileID: 2387077923768990988}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.126
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64162,7 +64196,7 @@ GameObject:
   - component: {fileID: 9138310047600688467}
   - component: {fileID: 8935159567216641221}
   - component: {fileID: 1226124841557093426}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shoulder_Plate_03_low1:Group16406
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64237,7 +64271,7 @@ GameObject:
   - component: {fileID: 7858997639037552690}
   - component: {fileID: 7431373714973561536}
   - component: {fileID: 8329505205311335826}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.118
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64301,7 +64335,7 @@ GameObject:
   - component: {fileID: 5411057185598849269}
   - component: {fileID: 6377097857453770105}
   - component: {fileID: 415326795346321266}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64524,7 +64558,7 @@ GameObject:
   - component: {fileID: 9175473208035170065}
   - component: {fileID: 2647624104166171421}
   - component: {fileID: 5699350943125152924}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.169
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64558,7 +64592,7 @@ GameObject:
   - component: {fileID: 4826544459951076395}
   - component: {fileID: 6379105890373109094}
   - component: {fileID: 1655316483221273879}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.186
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64701,7 +64735,7 @@ GameObject:
   - component: {fileID: 7554154577494323193}
   - component: {fileID: 267959864612397996}
   - component: {fileID: 2657929481993999418}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.166
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64858,7 +64892,7 @@ GameObject:
   - component: {fileID: 6467983047304134122}
   - component: {fileID: 3844916452767561063}
   - component: {fileID: 1856689105411467382}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group20434
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64918,7 +64952,7 @@ GameObject:
   - component: {fileID: 1397536812911448942}
   - component: {fileID: 6577964774723838816}
   - component: {fileID: 7963425708658970403}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.092
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65070,7 +65104,7 @@ GameObject:
   - component: {fileID: 1303355424918417755}
   - component: {fileID: 7866334326577789372}
   - component: {fileID: 1124334043208662857}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.120
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65299,7 +65333,7 @@ GameObject:
   - component: {fileID: 8664468207930053395}
   - component: {fileID: 4075790041787262585}
   - component: {fileID: 2024131021603546630}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.181
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65400,7 +65434,7 @@ GameObject:
   - component: {fileID: 485770863187196238}
   - component: {fileID: 4279937009879758307}
   - component: {fileID: 6446322393860919326}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.146
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65504,7 +65538,7 @@ GameObject:
   - component: {fileID: 841237790406831063}
   - component: {fileID: 2505783421647633914}
   - component: {fileID: 4480048957694490282}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: 1_leave_p1_uv.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66256,7 +66290,7 @@ GameObject:
   - component: {fileID: 691070155796400867}
   - component: {fileID: 2184654417751453342}
   - component: {fileID: 7984322102572673941}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.034
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66274,7 +66308,7 @@ GameObject:
   - component: {fileID: 452965024962134452}
   - component: {fileID: 8816220696590986504}
   - component: {fileID: 5180999754681806535}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.167
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66654,7 +66688,7 @@ GameObject:
   - component: {fileID: 7271094523164749859}
   - component: {fileID: 6209139611532804084}
   - component: {fileID: 7586615602605057476}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.057
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66672,7 +66706,7 @@ GameObject:
   - component: {fileID: 7843767852546245631}
   - component: {fileID: 4231607509140159602}
   - component: {fileID: 5820500091327992922}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.047
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67135,7 +67169,7 @@ GameObject:
   - component: {fileID: 415012660927009027}
   - component: {fileID: 172769885851535419}
   - component: {fileID: 3917198478393693729}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.162
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67236,7 +67270,7 @@ GameObject:
   - component: {fileID: 3337869981757441614}
   - component: {fileID: 1091473718146107286}
   - component: {fileID: 4292314008018247132}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Head_Mask_low1:Group658
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67400,7 +67434,7 @@ GameObject:
   - component: {fileID: 291666036790286012}
   - component: {fileID: 2468355167161810870}
   - component: {fileID: 2302638039786210721}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.051
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67791,7 +67825,7 @@ GameObject:
   - component: {fileID: 8475312635213686605}
   - component: {fileID: 7302959558576672580}
   - component: {fileID: 459105787596549477}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.196
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67809,7 +67843,7 @@ GameObject:
   - component: {fileID: 6439390518255127330}
   - component: {fileID: 2077732988488737715}
   - component: {fileID: 5081100823182139277}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low1:Group13725
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68007,7 +68041,7 @@ GameObject:
   - component: {fileID: 3551520505227956402}
   - component: {fileID: 7276209753401989418}
   - component: {fileID: 8576890517025647025}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.022
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68098,7 +68132,7 @@ GameObject:
   - component: {fileID: 7392108719110419539}
   - component: {fileID: 7387459634567989335}
   - component: {fileID: 8568216071975196474}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.055
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68227,7 +68261,7 @@ GameObject:
   - component: {fileID: 5795622404142368817}
   - component: {fileID: 538318240442129922}
   - component: {fileID: 8151266407640347250}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shoulder_Left_low1:Group39818
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68426,7 +68460,7 @@ GameObject:
   - component: {fileID: 7633696946940735786}
   - component: {fileID: 8417819468882508015}
   - component: {fileID: 2173330870425143615}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Banner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68467,7 +68501,7 @@ GameObject:
   - component: {fileID: 3294792469284678485}
   - component: {fileID: 3328068891893134513}
   - component: {fileID: 1039553553972805353}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.122
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68733,7 +68767,7 @@ GameObject:
   - component: {fileID: 2417613475936064541}
   - component: {fileID: 1695009284131151200}
   - component: {fileID: 1677853203430600335}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.109
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68759,7 +68793,7 @@ GameObject:
   - component: {fileID: 5049705523504769680}
   - component: {fileID: 8844556913449445507}
   - component: {fileID: 7474017946943645809}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.040
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68911,7 +68945,7 @@ GameObject:
   - component: {fileID: 2841881207583176613}
   - component: {fileID: 5721844379787344059}
   - component: {fileID: 1690326569787227334}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.034
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69167,7 +69201,7 @@ GameObject:
   - component: {fileID: 6210421592706033290}
   - component: {fileID: 7590932035736345342}
   - component: {fileID: 6357732851935006756}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.029
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69235,7 +69269,7 @@ GameObject:
   - component: {fileID: 362966670489253970}
   - component: {fileID: 3241148142391058673}
   - component: {fileID: 757539506500783041}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group5739
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69253,7 +69287,7 @@ GameObject:
   - component: {fileID: 2026539616931462155}
   - component: {fileID: 5551539048810799983}
   - component: {fileID: 2577134587367290337}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArmStrap_Straps_low3:Group16702
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69271,7 +69305,7 @@ GameObject:
   - component: {fileID: 534970632707643273}
   - component: {fileID: 8716404908687210593}
   - component: {fileID: 793326892037596294}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.072
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69381,7 +69415,7 @@ GameObject:
   - component: {fileID: 4713845769107309914}
   - component: {fileID: 3475792996360791699}
   - component: {fileID: 3895611182455169576}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Merged_Sword_Sides_low1:Group26170
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69555,7 +69589,7 @@ GameObject:
   - component: {fileID: 254345078723801683}
   - component: {fileID: 2031040239725479161}
   - component: {fileID: 3420750056708613403}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.033
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69606,7 +69640,7 @@ GameObject:
   - component: {fileID: 1610005860323577463}
   - component: {fileID: 3553935413845475499}
   - component: {fileID: 3326760553302015326}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69994,7 +70028,7 @@ GameObject:
   - component: {fileID: 4737555839040429616}
   - component: {fileID: 5199431525140262173}
   - component: {fileID: 886839837581556167}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shoulder_Right_low1:Group15440
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70336,7 +70370,7 @@ GameObject:
   - component: {fileID: 8196208053082924129}
   - component: {fileID: 4629311596339007292}
   - component: {fileID: 1762161709223693513}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low2:Group13725
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70438,7 +70472,7 @@ GameObject:
   - component: {fileID: 5362852863338761745}
   - component: {fileID: 2199664821833718030}
   - component: {fileID: 7365283714902524307}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70533,7 +70567,7 @@ GameObject:
   - component: {fileID: 3790117904349300919}
   - component: {fileID: 7215728216165239382}
   - component: {fileID: 2227691560260700946}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.054
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70719,7 +70753,7 @@ GameObject:
   - component: {fileID: 925154460740926742}
   - component: {fileID: 1536666522464751258}
   - component: {fileID: 6088008351881020009}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.189
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71157,7 +71191,7 @@ GameObject:
   - component: {fileID: 646048903011345973}
   - component: {fileID: 8631931294356283295}
   - component: {fileID: 7345173043913812324}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group17224
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71216,7 +71250,7 @@ GameObject:
   - component: {fileID: 162228115244808752}
   - component: {fileID: 365186200363312042}
   - component: {fileID: 6245615153875387651}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hood_Hood_low1:Group48674
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71397,7 +71431,7 @@ GameObject:
   - component: {fileID: 349060114283449309}
   - component: {fileID: 4667655761454212110}
   - component: {fileID: 8727151168878106104}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.066
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71552,7 +71586,7 @@ GameObject:
   - component: {fileID: 4595923358993885779}
   - component: {fileID: 3939211715676385590}
   - component: {fileID: 3677956569435126316}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.061
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71753,7 +71787,7 @@ GameObject:
   - component: {fileID: 7521402487246701246}
   - component: {fileID: 6617263111866789652}
   - component: {fileID: 2952244143990373505}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.222
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71835,7 +71869,7 @@ GameObject:
   - component: {fileID: 3547240391133284841}
   - component: {fileID: 7860318438276931086}
   - component: {fileID: 4259242775952115305}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.141
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71918,7 +71952,7 @@ GameObject:
   - component: {fileID: 94117346948642410}
   - component: {fileID: 1603980486343722735}
   - component: {fileID: 7448773903887996887}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group3931
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72127,7 +72161,7 @@ GameObject:
   - component: {fileID: 7342284021352816756}
   - component: {fileID: 7615933089996749027}
   - component: {fileID: 7009534545821754460}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72302,7 +72336,7 @@ GameObject:
   - component: {fileID: 9219962562492181262}
   - component: {fileID: 1816418841028791077}
   - component: {fileID: 4043250950812629044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group53174
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73065,7 +73099,7 @@ GameObject:
   - component: {fileID: 9222750125344724551}
   - component: {fileID: 6934174297396330642}
   - component: {fileID: 683486105073854764}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Padded_Cover_low1:Group50185
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73125,7 +73159,7 @@ GameObject:
   - component: {fileID: 4152066766781039847}
   - component: {fileID: 3456186547399352839}
   - component: {fileID: 6341254479829123456}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73300,7 +73334,7 @@ GameObject:
   - component: {fileID: 5898042516451704205}
   - component: {fileID: 8138253435076692008}
   - component: {fileID: 1786204459265883043}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.168
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73333,7 +73367,7 @@ GameObject:
   - component: {fileID: 5557043460903209408}
   - component: {fileID: 6894834311636583988}
   - component: {fileID: 7317918377478138585}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73351,7 +73385,7 @@ GameObject:
   - component: {fileID: 4287418753569394476}
   - component: {fileID: 2112554694819050169}
   - component: {fileID: 5285940413994062953}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.212
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73557,7 +73591,7 @@ GameObject:
   - component: {fileID: 6476666697946437872}
   - component: {fileID: 8470061721789720799}
   - component: {fileID: 7696211617452275451}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.125
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73583,7 +73617,7 @@ GameObject:
   - component: {fileID: 6601832860421405122}
   - component: {fileID: 7948939155095303095}
   - component: {fileID: 1269198667939468462}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.071
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73985,7 +74019,7 @@ GameObject:
   - component: {fileID: 26083264520198948}
   - component: {fileID: 698516714043227692}
   - component: {fileID: 8146789966017000447}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.157
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74045,7 +74079,7 @@ GameObject:
   - component: {fileID: 7648369438977613252}
   - component: {fileID: 8121733857532113473}
   - component: {fileID: 722602833065378440}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.224
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74257,7 +74291,7 @@ GameObject:
   - component: {fileID: 1265150719006448633}
   - component: {fileID: 6619942395887687564}
   - component: {fileID: 8327351191206815776}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.086
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74746,7 +74780,7 @@ GameObject:
   - component: {fileID: 8417974561739010986}
   - component: {fileID: 6168357468264314764}
   - component: {fileID: 4521523823797026934}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.173
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75204,7 +75238,7 @@ GameObject:
   - component: {fileID: 7805644055315494038}
   - component: {fileID: 7020202693506092979}
   - component: {fileID: 6085725812688081487}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.161
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75230,7 +75264,7 @@ GameObject:
   - component: {fileID: 4980610881422432165}
   - component: {fileID: 6544783319331256020}
   - component: {fileID: 3308329571914075205}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.031
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75450,7 +75484,7 @@ GameObject:
   - component: {fileID: 3115672292792522049}
   - component: {fileID: 5646646212488861877}
   - component: {fileID: 530638174455717562}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.127
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75510,7 +75544,7 @@ GameObject:
   - component: {fileID: 5968317598715993230}
   - component: {fileID: 8397292624675998349}
   - component: {fileID: 102719668500551940}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low2:Group1941
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75611,7 +75645,7 @@ GameObject:
   - component: {fileID: 301347929642880252}
   - component: {fileID: 2423220685350893726}
   - component: {fileID: 813022190579978671}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.207
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75843,7 +75877,7 @@ GameObject:
   - component: {fileID: 3712279207781382877}
   - component: {fileID: 8653405632125968112}
   - component: {fileID: 3338883105847142688}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Crown:Group19458
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75869,7 +75903,7 @@ GameObject:
   - component: {fileID: 1176371195836650378}
   - component: {fileID: 6550598949806567139}
   - component: {fileID: 6512113150295184954}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boot_Toe_low2:Group61824
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76367,7 +76401,7 @@ GameObject:
   - component: {fileID: 4785787022986473333}
   - component: {fileID: 921947131535141918}
   - component: {fileID: 3388048764411342761}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.137
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76632,7 +76666,7 @@ GameObject:
   - component: {fileID: 9054513434028175455}
   - component: {fileID: 6610168138418134379}
   - component: {fileID: 6842877283849648507}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.175
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77143,7 +77177,7 @@ GameObject:
   - component: {fileID: 3404609710164507462}
   - component: {fileID: 8718931592454586797}
   - component: {fileID: 4731459411623215343}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArmStrap_Rings_low4:Group50309
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77305,7 +77339,7 @@ GameObject:
   - component: {fileID: 5757285799669505728}
   - component: {fileID: 6966857898520191299}
   - component: {fileID: 4478871437254014472}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.128
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77723,7 +77757,7 @@ GameObject:
   - component: {fileID: 7895622523025028387}
   - component: {fileID: 7925291002322468559}
   - component: {fileID: 1080712108781316967}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.042
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77757,7 +77791,7 @@ GameObject:
   - component: {fileID: 8109183089892694315}
   - component: {fileID: 7967116840546170642}
   - component: {fileID: 1715894464257293984}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Belt_SideRing_low1:Group4928
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77926,7 +77960,7 @@ GameObject:
   - component: {fileID: 2808700587640227524}
   - component: {fileID: 5282007179086391759}
   - component: {fileID: 3732095800900285338}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group17911
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78112,7 +78146,7 @@ GameObject:
   - component: {fileID: 8954307523597737812}
   - component: {fileID: 3418447565331419304}
   - component: {fileID: 3817542992192386285}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.171
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78310,7 +78344,7 @@ GameObject:
   - component: {fileID: 1236324747737820872}
   - component: {fileID: 8032348858042339044}
   - component: {fileID: 8843049029546092132}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.225
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78344,7 +78378,7 @@ GameObject:
   - component: {fileID: 2842974815621139651}
   - component: {fileID: 5356561718200355987}
   - component: {fileID: 4583982785513581333}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cylinder.039
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78598,7 +78632,7 @@ GameObject:
   - component: {fileID: 8255898391591998006}
   - component: {fileID: 3978281643136863850}
   - component: {fileID: 8278336861049582034}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.156
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78712,7 +78746,7 @@ GameObject:
   - component: {fileID: 4588771358118018305}
   - component: {fileID: 583794752714629790}
   - component: {fileID: 9158983220060930829}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group10602
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78886,7 +78920,7 @@ GameObject:
   - component: {fileID: 5588137346724384499}
   - component: {fileID: 8201430951634727791}
   - component: {fileID: 3590204897337956240}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.030
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79293,7 +79327,7 @@ GameObject:
   - component: {fileID: 2542781979703198369}
   - component: {fileID: 8861983535253110575}
   - component: {fileID: 4940319344900225400}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bracer_Ring_low1:Group64411
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79326,7 +79360,7 @@ GameObject:
   - component: {fileID: 2973958397011362634}
   - component: {fileID: 3408014856863088649}
   - component: {fileID: 1046607529330121205}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Chest_Belts_low1:Group58192
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79540,7 +79574,7 @@ GameObject:
   - component: {fileID: 2157811056368572523}
   - component: {fileID: 3901442699378794173}
   - component: {fileID: 6985993564038712696}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.149
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79871,7 +79905,7 @@ GameObject:
   - component: {fileID: 1097364444607498790}
   - component: {fileID: 8921584892942190268}
   - component: {fileID: 3576001032042658398}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glove_MainPlate_low1:Group21053
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79889,7 +79923,7 @@ GameObject:
   - component: {fileID: 8922584836248349419}
   - component: {fileID: 7875986574007216396}
   - component: {fileID: 7066712042903059238}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.111
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79907,7 +79941,7 @@ GameObject:
   - component: {fileID: 1712846989131904710}
   - component: {fileID: 6545998574422554226}
   - component: {fileID: 5693378234006456050}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.064
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79940,7 +79974,7 @@ GameObject:
   - component: {fileID: 6192137625203941293}
   - component: {fileID: 6521110692940015783}
   - component: {fileID: 1836863385277818916}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.059
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80110,7 +80144,7 @@ GameObject:
   - component: {fileID: 5364654238753947567}
   - component: {fileID: 3094358377734226645}
   - component: {fileID: 4249103849107646690}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: leave_p1.087
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80198,8 +80232,6 @@ SceneRoots:
   - {fileID: 423198944}
   - {fileID: 150425523}
   - {fileID: 774294677}
-  - {fileID: 1685570333}
-  - {fileID: 2144138876}
-  - {fileID: 1210698794}
+  - {fileID: 1829329954}
   - {fileID: 576760767}
   - {fileID: 144513969}
