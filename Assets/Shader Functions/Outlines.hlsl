@@ -48,6 +48,7 @@ float3 outline_color(float2 uv, fixed3 base_color, float3 lightDirection)
     float depth = getDepth(uv);
     float3 normal = getNormal(uv);
     // return normal;
+    // return normal;
     float3 normal_edge_bias = normalize(float3(1, 1, 1));
 
     float2 neighbour_depths[4];
