@@ -1,0 +1,58 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 27.03.2017 20:48:09
+
+newmtl 04___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka I:\XPS\XPS10.9.6\data\- Conv\- DS3\- Characters\Dancer\Dancer of the Boreal Valley\c5270_wea_d2.png
+	map_Kd I:\XPS\XPS10.9.6\data\- Conv\- DS3\- Characters\Dancer\Dancer of the Boreal Valley\c5270_wea_d2.png
+
+newmtl 03___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka I:\XPS\XPS10.9.6\data\- Conv\- DS3\- Characters\Dancer\Dancer of the Boreal Valley\c5270_wea_d1.png
+	map_Kd I:\XPS\XPS10.9.6\data\- Conv\- DS3\- Characters\Dancer\Dancer of the Boreal Valley\c5270_wea_d1.png
+
+newmtl 01___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka I:\XPS\XPS10.9.6\data\- Conv\- DS3\- Characters\Dancer\Dancer of the Boreal Valley\c5270_armor_d.png
+	map_Kd I:\XPS\XPS10.9.6\data\- Conv\- DS3\- Characters\Dancer\Dancer of the Boreal Valley\c5270_armor_d.png
+
+newmtl 02___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka I:\XPS\XPS10.9.6\data\- Conv\- DS3\- Characters\Dancer\Dancer of the Boreal Valley\c5270_veil_d.png
+	map_Kd I:\XPS\XPS10.9.6\data\- Conv\- DS3\- Characters\Dancer\Dancer of the Boreal Valley\c5270_veil_d.png

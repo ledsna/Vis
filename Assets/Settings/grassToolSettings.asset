@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bba1a5cf5fb3a4179b844c35b5b54e7d, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c2d2c31e2d39fe48a10ccd3a9358c04, type: 3}
   m_Name: grassToolSettings
   m_EditorClassIdentifier: 
   layerBlocking:
@@ -24,8 +24,8 @@ MonoBehaviour:
   layerFading: 0100000000000000
   VertexColorSettings: 0
   VertexFade: 0
-  sizeWidth: 0.123
-  sizeLength: 0.067
+  sizeWidth: 1
+  sizeLength: 1
   adjustWidth: 0
   adjustLength: 0
   adjustWidthMax: 2
@@ -34,20 +34,20 @@ MonoBehaviour:
   rangeR: 0
   rangeG: 0
   rangeB: 0
-  AdjustedColor: {r: 0, g: 0.3708868, b: 1, a: 1}
+  AdjustedColor: {r: 1, g: 1, b: 1, a: 1}
   paintBlockMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 0
   hitMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 1
   paintMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 1
   brushSize: 4
   brushFalloffSize: 0.8
-  Flow: 0.1
+  Flow: 0
   density: 1
   normalLimit: 1
   grassAmountToGenerate: 100000
-  generationDensity: 0.873
+  generationDensity: 1

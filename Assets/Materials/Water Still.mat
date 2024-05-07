@@ -93,7 +93,7 @@ Material:
     - _Horizon_Gradient_Depth: 2.7
     - _Horizon_Gradient_Levels: 13
     - _Horizon_Gradient_Strength: 0.02
-    - _PBR: 1
+    - _PBR: 0
     - _Quantization: 15
     - _QueueControl: 0
     - _QueueOffset: 0

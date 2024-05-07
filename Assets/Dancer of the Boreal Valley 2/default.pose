@@ -1,0 +1,273 @@
+mask001: 0 0 0 0 0 0 1 1 1
+root twist: 0 0 0 0 0 0 1 1 1
+spine lower: 0 0 0 0 0 0 1 1 1
+spine middle: 0 0 0 0 0 0 1 1 1
+spine upper: 0 0 0 0 0 0 1 1 1
+head neck lower: 0 0 0 0 0 0 1 1 1
+head neck middle: 0 0 0 0 0 0 1 1 1
+head neck upper: 0 0 0 0 0 0 1 1 1
+arm left shoulder 1: 0 0 0 0 0 0 1 1 1
+arm left shoulder 2: 0 0 0 0 0 0 1 1 1
+arm left forearm: 0 0 0 0 0 0 1 1 1
+arm left wrist: 0 0 0 0 0 0 1 1 1
+arm left finger 0: 0 0 0 0 0 0 1 1 1
+arm left finger 01: 0 0 0 0 0 0 1 1 1
+arm left finger 02: 0 0 0 0 0 0 1 1 1
+arm left finger 1: 0 0 0 0 0 0 1 1 1
+arm left finger 11: 0 0 0 0 0 0 1 1 1
+arm left finger 12: 0 0 0 0 0 0 1 1 1
+arm left finger 2: 0 0 0 0 0 0 1 1 1
+arm left finger 21: 0 0 0 0 0 0 1 1 1
+arm left finger 22: 0 0 0 0 0 0 1 1 1
+arm left finger 3: 0 0 0 0 0 0 1 1 1
+arm left finger 31: 0 0 0 0 0 0 1 1 1
+arm left finger 32: 0 0 0 0 0 0 1 1 1
+arm left finger 4: 0 0 0 0 0 0 1 1 1
+arm left finger 41: 0 0 0 0 0 0 1 1 1
+arm left finger 42: 0 0 0 0 0 0 1 1 1
+arm left weapon: 0 0 0 0 0 0 1 1 1
+l forearm1: 0 0 0 0 0 0 1 1 1
+l forearm2: 0 0 0 0 0 0 1 1 1
+l forearm3: 0 0 0 0 0 0 1 1 1
+l forearm4: 0 0 0 0 0 0 1 1 1
+l forearm5: 0 0 0 0 0 0 1 1 1
+l upperarm1: 0 0 0 0 0 0 1 1 1
+l upperarm2: 0 0 0 0 0 0 1 1 1
+l upperarm3: 0 0 0 0 0 0 1 1 1
+l upperarm4: 0 0 0 0 0 0 1 1 1
+l upperarm5: 0 0 0 0 0 0 1 1 1
+l elbow: 0 0 0 0 0 0 1 1 1
+l shoulder: 0 0 0 0 0 0 1 1 1
+arm right shoulder 1: 0 0 0 0 0 0 1 1 1
+arm right shoulder 2: 0 0 0 0 0 0 1 1 1
+arm right forearm: 0 0 0 0 0 0 1 1 1
+arm right wrist: 0 0 0 0 0 0 1 1 1
+arm right finger 0: 0 0 0 0 0 0 1 1 1
+arm right finger 01: 0 0 0 0 0 0 1 1 1
+arm right finger 02: 0 0 0 0 0 0 1 1 1
+arm right finger 1: 0 0 0 0 0 0 1 1 1
+arm right finger 11: 0 0 0 0 0 0 1 1 1
+arm right finger 12: 0 0 0 0 0 0 1 1 1
+arm right finger 2: 0 0 0 0 0 0 1 1 1
+arm right finger 21: 0 0 0 0 0 0 1 1 1
+arm right finger 22: 0 0 0 0 0 0 1 1 1
+arm right finger 3: 0 0 0 0 0 0 1 1 1
+arm right finger 31: 0 0 0 0 0 0 1 1 1
+arm right finger 32: 0 0 0 0 0 0 1 1 1
+arm right finger 4: 0 0 0 0 0 0 1 1 1
+arm right finger 41: 0 0 0 0 0 0 1 1 1
+arm right finger 42: 0 0 0 0 0 0 1 1 1
+arm right weapon: 0 0 0 0 0 0 1 1 1
+r forearm1: 0 0 0 0 0 0 1 1 1
+r forearm2: 0 0 0 0 0 0 1 1 1
+r forearm3: 0 0 0 0 0 0 1 1 1
+r forearm4: 0 0 0 0 0 0 1 1 1
+r forearm5: 0 0 0 0 0 0 1 1 1
+r upperarm1: 0 0 0 0 0 0 1 1 1
+r upperarm2: 0 0 0 0 0 0 1 1 1
+r upperarm3: 0 0 0 0 0 0 1 1 1
+r upperarm4: 0 0 0 0 0 0 1 1 1
+r upperarm5: 0 0 0 0 0 0 1 1 1
+r elbow: 0 0 0 0 0 0 1 1 1
+r shoulder: 0 0 0 0 0 0 1 1 1
+veil point 81: 0 0 0 0 0 0 1 1 1
+veil point 82: 0 0 0 0 0 0 1 1 1
+veil point 83: 0 0 0 0 0 0 1 1 1
+veil point 84: 0 0 0 0 0 0 1 1 1
+veil point 85: 0 0 0 0 0 0 1 1 1
+veil point 86: 0 0 0 0 0 0 1 1 1
+veil point 87: 0 0 0 0 0 0 1 1 1
+veil point 88: 0 0 0 0 0 0 1 1 1
+veil point 89: 0 0 0 0 0 0 1 1 1
+veil point 90: 0 0 0 0 0 0 1 1 1
+veil point 91: 0 0 0 0 0 0 1 1 1
+veil point 92: 0 0 0 0 0 0 1 1 1
+veil point 93: 0 0 0 0 0 0 1 1 1
+veil point 94: 0 0 0 0 0 0 1 1 1
+veil point 95: 0 0 0 0 0 0 1 1 1
+veil point 96: 0 0 0 0 0 0 1 1 1
+veil point 97: 0 0 0 0 0 0 1 1 1
+veil point 98: 0 0 0 0 0 0 1 1 1
+veil point 99: 0 0 0 0 0 0 1 1 1
+veil point 100: 0 0 0 0 0 0 1 1 1
+veil point 101: 0 0 0 0 0 0 1 1 1
+veil point 102: 0 0 0 0 0 0 1 1 1
+veil point 103: 0 0 0 0 0 0 1 1 1
+veil point 104: 0 0 0 0 0 0 1 1 1
+veil point 105: 0 0 0 0 0 0 1 1 1
+veil point 106: 0 0 0 0 0 0 1 1 1
+veil point 107: 0 0 0 0 0 0 1 1 1
+veil point 108: 0 0 0 0 0 0 1 1 1
+veil point 109: 0 0 0 0 0 0 1 1 1
+veil point 110: 0 0 0 0 0 0 1 1 1
+veil point 111: 0 0 0 0 0 0 1 1 1
+veil point 112: 0 0 0 0 0 0 1 1 1
+veil point 113: 0 0 0 0 0 0 1 1 1
+veil point 114: 0 0 0 0 0 0 1 1 1
+veil point 115: 0 0 0 0 0 0 1 1 1
+veil point 116: 0 0 0 0 0 0 1 1 1
+veil point 117: 0 0 0 0 0 0 1 1 1
+veil point 118: 0 0 0 0 0 0 1 1 1
+veil point 119: 0 0 0 0 0 0 1 1 1
+veil point 120: 0 0 0 0 0 0 1 1 1
+veil point 121: 0 0 0 0 0 0 1 1 1
+veil point 122: 0 0 0 0 0 0 1 1 1
+veil point 123: 0 0 0 0 0 0 1 1 1
+veil point 124: 0 0 0 0 0 0 1 1 1
+veil point 125: 0 0 0 0 0 0 1 1 1
+veil point 126: 0 0 0 0 0 0 1 1 1
+veil point 127: 0 0 0 0 0 0 1 1 1
+veil point 128: 0 0 0 0 0 0 1 1 1
+veil point 129: 0 0 0 0 0 0 1 1 1
+veil point 130: 0 0 0 0 0 0 1 1 1
+veil point 131: 0 0 0 0 0 0 1 1 1
+veil point 132: 0 0 0 0 0 0 1 1 1
+veil point 133: 0 0 0 0 0 0 1 1 1
+veil point 134: 0 0 0 0 0 0 1 1 1
+veil point 135: 0 0 0 0 0 0 1 1 1
+veil point 136: 0 0 0 0 0 0 1 1 1
+veil point 137: 0 0 0 0 0 0 1 1 1
+veil point 138: 0 0 0 0 0 0 1 1 1
+veil point 139: 0 0 0 0 0 0 1 1 1
+veil point 140: 0 0 0 0 0 0 1 1 1
+veil point 141: 0 0 0 0 0 0 1 1 1
+veil point 142: 0 0 0 0 0 0 1 1 1
+veil point 143: 0 0 0 0 0 0 1 1 1
+veil point 01: 0 0 0 0 0 0 1 1 1
+veil point 02: 0 0 0 0 0 0 1 1 1
+veil point 03: 0 0 0 0 0 0 1 1 1
+veil point 04: 0 0 0 0 0 0 1 1 1
+veil point 05: 0 0 0 0 0 0 1 1 1
+veil point 06: 0 0 0 0 0 0 1 1 1
+veil point 07: 0 0 0 0 0 0 1 1 1
+veil point 08: 0 0 0 0 0 0 1 1 1
+veil point 09: 0 0 0 0 0 0 1 1 1
+veil point 10: 0 0 0 0 0 0 1 1 1
+veil point 11: 0 0 0 0 0 0 1 1 1
+veil point 12: 0 0 0 0 0 0 1 1 1
+veil point 13: 0 0 0 0 0 0 1 1 1
+veil point 14: 0 0 0 0 0 0 1 1 1
+veil point 15: 0 0 0 0 0 0 1 1 1
+veil point 16: 0 0 0 0 0 0 1 1 1
+veil point 17: 0 0 0 0 0 0 1 1 1
+veil point 18: 0 0 0 0 0 0 1 1 1
+veil point 19: 0 0 0 0 0 0 1 1 1
+veil point 20: 0 0 0 0 0 0 1 1 1
+veil point 21: 0 0 0 0 0 0 1 1 1
+veil point 22: 0 0 0 0 0 0 1 1 1
+veil point 23: 0 0 0 0 0 0 1 1 1
+veil point 24: 0 0 0 0 0 0 1 1 1
+veil point 25: 0 0 0 0 0 0 1 1 1
+veil point 26: 0 0 0 0 0 0 1 1 1
+veil point 27: 0 0 0 0 0 0 1 1 1
+veil point 28: 0 0 0 0 0 0 1 1 1
+veil point 29: 0 0 0 0 0 0 1 1 1
+veil point 30: 0 0 0 0 0 0 1 1 1
+veil point 31: 0 0 0 0 0 0 1 1 1
+veil point 32: 0 0 0 0 0 0 1 1 1
+veil point 33: 0 0 0 0 0 0 1 1 1
+veil point 34: 0 0 0 0 0 0 1 1 1
+veil point 35: 0 0 0 0 0 0 1 1 1
+veil point 37: 0 0 0 0 0 0 1 1 1
+veil point 38: 0 0 0 0 0 0 1 1 1
+veil point 39: 0 0 0 0 0 0 1 1 1
+veil point 40: 0 0 0 0 0 0 1 1 1
+veil point 41: 0 0 0 0 0 0 1 1 1
+veil point 42: 0 0 0 0 0 0 1 1 1
+veil point 43: 0 0 0 0 0 0 1 1 1
+veil point 44: 0 0 0 0 0 0 1 1 1
+veil point 45: 0 0 0 0 0 0 1 1 1
+veil point 46: 0 0 0 0 0 0 1 1 1
+veil point 47: 0 0 0 0 0 0 1 1 1
+veil point 48: 0 0 0 0 0 0 1 1 1
+veil point 49: 0 0 0 0 0 0 1 1 1
+veil point 50: 0 0 0 0 0 0 1 1 1
+veil point 51: 0 0 0 0 0 0 1 1 1
+veil point 52: 0 0 0 0 0 0 1 1 1
+veil point 53: 0 0 0 0 0 0 1 1 1
+veil point 54: 0 0 0 0 0 0 1 1 1
+veil point 55: 0 0 0 0 0 0 1 1 1
+veil point 56: 0 0 0 0 0 0 1 1 1
+veil point 57: 0 0 0 0 0 0 1 1 1
+veil point 58: 0 0 0 0 0 0 1 1 1
+veil point 59: 0 0 0 0 0 0 1 1 1
+veil point 60: 0 0 0 0 0 0 1 1 1
+veil point 61: 0 0 0 0 0 0 1 1 1
+veil point 62: 0 0 0 0 0 0 1 1 1
+veil point 63: 0 0 0 0 0 0 1 1 1
+veil point 64: 0 0 0 0 0 0 1 1 1
+veil point 65: 0 0 0 0 0 0 1 1 1
+veil point 66: 0 0 0 0 0 0 1 1 1
+veil point 67: 0 0 0 0 0 0 1 1 1
+veil point 68: 0 0 0 0 0 0 1 1 1
+veil point 69: 0 0 0 0 0 0 1 1 1
+veil point 70: 0 0 0 0 0 0 1 1 1
+veil point 71: 0 0 0 0 0 0 1 1 1
+veil point 72: 0 0 0 0 0 0 1 1 1
+veil point 00: 0 0 0 0 0 0 1 1 1
+veil point 73: 0 0 0 0 0 0 1 1 1
+veil point 74: 0 0 0 0 0 0 1 1 1
+veil point 75: 0 0 0 0 0 0 1 1 1
+veil point 76: 0 0 0 0 0 0 1 1 1
+veil point 77: 0 0 0 0 0 0 1 1 1
+veil point 78: 0 0 0 0 0 0 1 1 1
+veil point 79: 0 0 0 0 0 0 1 1 1
+veil point 80: 0 0 0 0 0 0 1 1 1
+l waistarmor1: 0 0 0 0 0 0 1 1 1
+l waistarmor3: 0 0 0 0 0 0 1 1 1
+l waistarmor2: 0 0 0 0 0 0 1 1 1
+r waistarmor1: 0 0 0 0 0 0 1 1 1
+r waistarmor3: 0 0 0 0 0 0 1 1 1
+r waistarmor2: 0 0 0 0 0 0 1 1 1
+pelvis: 0 0 0 0 0 0 1 1 1
+leg left thigh: 0 0 0 0 0 0 1 1 1
+leg left knee: 0 0 0 0 0 0 1 1 1
+leg left ankle: 0 0 0 0 0 0 1 1 1
+leg left toe0: 0 0 0 0 0 0 1 1 1
+l calf00: 0 0 0 0 0 0 1 1 1
+l calf01: 0 0 0 0 0 0 1 1 1
+l calf02: 0 0 0 0 0 0 1 1 1
+l calf03: 0 0 0 0 0 0 1 1 1
+l calf04: 0 0 0 0 0 0 1 1 1
+l thigh00: 0 0 0 0 0 0 1 1 1
+l thigh01: 0 0 0 0 0 0 1 1 1
+l thigh02: 0 0 0 0 0 0 1 1 1
+l thigh03: 0 0 0 0 0 0 1 1 1
+l thigh04: 0 0 0 0 0 0 1 1 1
+l knee: 0 0 0 0 0 0 1 1 1
+leg right thigh: 0 0 0 0 0 0 1 1 1
+leg right knee: 0 0 0 0 0 0 1 1 1
+leg right ankle: 0 0 0 0 0 0 1 1 1
+leg right toe0: 0 0 0 0 0 0 1 1 1
+r calf00: 0 0 0 0 0 0 1 1 1
+r calf01: 0 0 0 0 0 0 1 1 1
+r calf02: 0 0 0 0 0 0 1 1 1
+r calf03: 0 0 0 0 0 0 1 1 1
+r calf04: 0 0 0 0 0 0 1 1 1
+r thigh00: 0 0 0 0 0 0 1 1 1
+r thigh01: 0 0 0 0 0 0 1 1 1
+r thigh02: 0 0 0 0 0 0 1 1 1
+r thigh03: 0 0 0 0 0 0 1 1 1
+r thigh04: 0 0 0 0 0 0 1 1 1
+r knee: 0 0 0 0 0 0 1 1 1
+root hips: 0 0 0 0 0 0 1 1 1
+l weapon00: 0 0 0 0 0 0 1 1 1
+l weapon01: 0 0 0 0 0 0 1 1 1
+l weapon02: 0 0 0 0 0 0 1 1 1
+l weapon03: 0 0 0 0 0 0 1 1 1
+l weapon04: 0 0 0 0 0 0 1 1 1
+l weapon05: 0 0 0 0 0 0 1 1 1
+l weapon06: 0 0 0 0 0 0 1 1 1
+l weapon07: 0 0 0 0 0 0 1 1 1
+l weapon08: 0 0 0 0 0 0 1 1 1
+l weapon09: 0 0 0 0 0 0 1 1 1
+r weapon00: 0 0 0 0 0 0 1 1 1
+r weapon01: 0 0 0 0 0 0 1 1 1
+r weapon02: 0 0 0 0 0 0 1 1 1
+r weapon03: 0 0 0 0 0 0 1 1 1
+r weapon04: 0 0 0 0 0 0 1 1 1
+r weapon05: 0 0 0 0 0 0 1 1 1
+r weapon06: 0 0 0 0 0 0 1 1 1
+r weapon07: 0 0 0 0 0 0 1 1 1
+r weapon08: 0 0 0 0 0 0 1 1 1
+r weapon09: 0 0 0 0 0 0 1 1 1

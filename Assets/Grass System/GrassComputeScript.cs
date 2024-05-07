@@ -104,32 +104,18 @@ public class GrassComputeScript : MonoBehaviour
     {
         view = scene;
         if (!Application.isPlaying)
-        {
-            if (view.camera != null)
-            {
-                _mainCamera = view.camera;
-            }
-        }
+            if (view.camera != null) _mainCamera = view.camera;
         else
-        {
             _mainCamera = Camera.main;
-        }
     }
 
     private void OnValidate()
     {
         // Set up components
         if (!Application.isPlaying)
-        {
-            if (view != null)
-            {
-                _mainCamera = view.camera;
-            }
-        }
+            if (view != null) _mainCamera = view.camera;
         else
-        {
             _mainCamera = Camera.main;
-        }
     }
 #endif
 
@@ -139,9 +125,7 @@ public class GrassComputeScript : MonoBehaviour
     {
         // If initialized, call on disable to clean things up
         if (_initialized)
-        {
             OnDisable();
-        }
 
         MainSetup(true);
     }
@@ -164,7 +148,7 @@ public class GrassComputeScript : MonoBehaviour
 
         if (currentPresets.shaderToUse == null || currentPresets.materialToUse == null)
         {
-            Debug.LogWarning("Missing Compute Shader/Material in grass Settings", this);
+            Debug.LogWarning("Missing Compute Shader / Material in Grass Settings", this);
             return;
         }
 

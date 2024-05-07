@@ -15,8 +15,8 @@ Material:
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 1
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
@@ -55,18 +55,18 @@ Material:
     m_Ints: []
     m_Floats:
     - _AmbientOcclusion: 1
-    - _Diffuse_Quantization_Steps: -1
+    - _Diffuse_Quantization_Steps: 4
     - _FresnelPower: 5
     - _FresnelSteps: 0
-    - _MaxQuantizationStepsPerLight: -1
+    - _MaxQuantizationStepsPerLight: 5
     - _Metallic: 0
     - _NormalStrength: 0
     - _OutlineEnabled: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Rim_Quantization_Steps: -1
+    - _Rim_Quantization_Steps: 0
     - _Smoothness: 0
-    - _Specular_Quantization_Steps: -1
+    - _Specular_Quantization_Steps: 3
     m_Colors:
     - _MainColor: {r: 0.11320752, g: 0.1026732, b: 0.09665359, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}

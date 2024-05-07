@@ -31,7 +31,7 @@ void GetComputeData_float(float vertexID, out float3 worldPos, out float3 normal
 // world space uv for blending
 void GetWorldUV_float(float3 worldPos, out float2 worldUV)
 {
-    float2 uv =worldPos.xz - _OrthographicCamPosTerrain.xz;
+    float2 uv = worldPos.xz - _OrthographicCamPosTerrain.xz;
     uv = uv / (_OrthographicCamSizeTerrain * 2);
     uv += 0.5;
     worldUV = uv;

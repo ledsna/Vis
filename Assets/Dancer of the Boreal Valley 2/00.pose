@@ -1,0 +1,353 @@
+HeadCloth: 0 0 0 0 0 0 1 1 1
+body003: 0 0 0 0 0 0 1 1 1
+MorphDiff Shoulder Chain V2 13: 0 0 0 0 0 0 1 1 1
+shoulderpad: 0 0 0 0 0 0 1 1 1
+waist acce: 0 0 0 0 0 0 1 1 1
+mask001: 0 0 0 0 0 0 1 1 1
+AccessorieslChain: 0 0 0 0 0 0 1 1 1
+AccessoriesLine: 0 0 0 0 0 0 1 1 1
+Neckls: 0 0 0 0 0 0 1 1 1
+waistpad: 0 0 0 0 0 0 1 1 1
+shoulderacce: 0 0 0 0 0 0 1 1 1
+top veil: 0 0 0 0 0 0 1 1 1
+waistcloth: 0 0 0 0 0 0 1 1 1
+center001: 0 0 0 0 0 0 1 1 1
+??Kp8SFX: 0 0 0 0 0 0 1 1 1
+DummyPoly Const: 0 0 0 0 0 0 1 1 1
+Dummy ??,: 0 0 0 0 0 0 1 1 1
+ClothDummyPoly: 0 0 0 0 0 0 1 1 1
+Shoulder veil: 0 0 0 0 0 0 1 1 1
+DummyPolySound: 0 0 0 0 0 0 1 1 1
+????????????001: 0 0 0 0 0 0 1 1 1
+root twist: 60 14 9 0 0 0 1 1 1
+spine lower: 21 10 8 0 0 0 1 1 1
+spine middle: 7 0 0 0 0 0 1 1 1
+spine upper: 0 0 0 0 0 0 1 1 1
+head neck lower: -19 9 -8 0 0 0 1 1 1
+head neck middle: -28 7 -16 0 0 0 1 1 1
+head neck upper: -12 16 -15 0 0 0 1 1 1
+arm left shoulder 1: 0 0 0 0 0 0 1 1 1
+arm left shoulder 2: 0 0 0 0 0 0 1 1 1
+arm left forearm: 0 0 0 0 0 0 1 1 1
+arm left wrist: 0 0 0 0 0 0 1 1 1
+arm left finger 0: 0 0 0 0 0 0 1 1 1
+arm left finger 01: 0 0 0 0 0 0 1 1 1
+arm left finger 02: 0 0 0 0 0 0 1 1 1
+arm left finger 1: 0 0 0 0 0 0 1 1 1
+arm left finger 11: 0 0 0 0 0 0 1 1 1
+arm left finger 12: 0 0 0 0 0 0 1 1 1
+arm left finger 2: 0 0 0 0 0 0 1 1 1
+arm left finger 21: 0 0 0 0 0 0 1 1 1
+arm left finger 22: 0 0 0 0 0 0 1 1 1
+arm left finger 3: 0 0 0 0 0 0 1 1 1
+arm left finger 31: 0 0 0 0 0 0 1 1 1
+arm left finger 32: 0 0 0 0 0 0 1 1 1
+arm left finger 4: 0 0 0 0 0 0 1 1 1
+arm left finger 41: 0 0 0 0 0 0 1 1 1
+arm left finger 42: 0 0 0 0 0 0 1 1 1
+arm left weapon: 0 0 0 0 0 0 1 1 1
+L Forearm1: 0 0 0 0 0 0 1 1 1
+L Forearm2: 0 0 0 0 0 0 1 1 1
+L Forearm3: 0 0 0 0 0 0 1 1 1
+L Forearm4: 0 0 0 0 0 0 1 1 1
+L Forearm5: 0 0 0 0 0 0 1 1 1
+L UpperArm1: 0 0 0 0 0 0 1 1 1
+L UpperArm2: 0 0 0 0 0 0 1 1 1
+L UpperArm3: 0 0 0 0 0 0 1 1 1
+L UpperArm4: 0 0 0 0 0 0 1 1 1
+L UpperArm5: 0 0 0 0 0 0 1 1 1
+L Elbow: 0 0 0 0 0 0 1 1 1
+L Shoulder: 0 0 0 0 0 0 1 1 1
+arm right shoulder 1: 0 0 0 0 0 0 1 1 1
+arm right shoulder 2: 0 0 0 0 0 0 1 1 1
+arm right forearm: 0 0 0 0 0 0 1 1 1
+arm right wrist: 0 0 0 0 0 0 1 1 1
+arm right finger 0: 0 0 0 0 0 0 1 1 1
+arm right finger 01: 0 0 0 0 0 0 1 1 1
+arm right finger 02: 0 0 0 0 0 0 1 1 1
+arm right finger 1: 0 0 0 0 0 0 1 1 1
+arm right finger 11: 0 0 0 0 0 0 1 1 1
+arm right finger 12: 0 0 0 0 0 0 1 1 1
+arm right finger 2: 0 0 0 0 0 0 1 1 1
+arm right finger 21: 0 0 0 0 0 0 1 1 1
+arm right finger 22: 0 0 0 0 0 0 1 1 1
+arm right finger 3: 0 0 0 0 0 0 1 1 1
+arm right finger 31: 0 0 0 0 0 0 1 1 1
+arm right finger 32: 0 0 0 0 0 0 1 1 1
+arm right finger 4: 0 0 0 0 0 0 1 1 1
+arm right finger 41: 0 0 0 0 0 0 1 1 1
+arm right finger 42: 0 0 0 0 0 0 1 1 1
+arm right weapon: 0 0 0 0 0 0 1 1 1
+R Forearm1: 0 0 0 0 0 0 1 1 1
+R Forearm2: 0 0 0 0 0 0 1 1 1
+R Forearm3: 0 0 0 0 0 0 1 1 1
+R Forearm4: 0 0 0 0 0 0 1 1 1
+R Forearm5: 0 0 0 0 0 0 1 1 1
+R UpperArm1: 0 0 0 0 0 0 1 1 1
+R UpperArm2: 0 0 0 0 0 0 1 1 1
+R UpperArm3: 0 0 0 0 0 0 1 1 1
+R UpperArm4: 0 0 0 0 0 0 1 1 1
+R UpperArm5: 0 0 0 0 0 0 1 1 1
+R Elbow: 0 0 0 0 0 0 1 1 1
+R Shoulder: 0 0 0 0 0 0 1 1 1
+VeilPoint81: 0 0 0 0 0 0 1 1 1
+VeilPoint82: 0 0 0 0 0 0 1 1 1
+VeilPoint83: 0 0 0 0 0 0 1 1 1
+VeilPoint84: 0 0 0 0 0 0 1 1 1
+VeilPoint85: 0 0 0 0 0 0 1 1 1
+VeilPoint86: 0 0 0 0 0 0 1 1 1
+VeilPoint87: 0 0 0 0 0 0 1 1 1
+VeilPoint88: 0 0 0 0 0 0 1 1 1
+VeilPoint89: 0 0 0 0 0 0 1 1 1
+VeilPoint90: 0 0 0 0 0 0 1 1 1
+VeilPoint91: 0 0 0 0 0 0 1 1 1
+VeilPoint92: 0 0 0 0 0 0 1 1 1
+VeilPoint93: 0 0 0 0 0 0 1 1 1
+VeilPoint94: 0 0 0 0 0 0 1 1 1
+VeilPoint95: 0 0 0 0 0 0 1 1 1
+VeilPoint96: 0 0 0 0 0 0 1 1 1
+VeilPoint97: 0 0 0 0 0 0 1 1 1
+VeilPoint98: 0 0 0 0 0 0 1 1 1
+VeilPoint99: 0 0 0 0 0 0 1 1 1
+VeilPoint100: 0 0 0 0 0 0 1 1 1
+VeilPoint101: 0 0 0 0 0 0 1 1 1
+VeilPoint102: 0 0 0 0 0 0 1 1 1
+VeilPoint103: 0 0 0 0 0 0 1 1 1
+VeilPoint104: 0 0 0 0 0 0 1 1 1
+VeilPoint105: 0 0 0 0 0 0 1 1 1
+VeilPoint106: 0 0 0 0 0 0 1 1 1
+VeilPoint107: 0 0 0 0 0 0 1 1 1
+VeilPoint108: 0 0 0 0 0 0 1 1 1
+VeilPoint109: 0 0 0 0 0 0 1 1 1
+VeilPoint110: 0 0 0 0 0 0 1 1 1
+VeilPoint111: 0 0 0 0 0 0 1 1 1
+VeilPoint112: 0 0 0 0 0 0 1 1 1
+VeilPoint113: 0 0 0 0 0 0 1 1 1
+VeilPoint114: 0 0 0 0 0 0 1 1 1
+VeilPoint115: 0 0 0 0 0 0 1 1 1
+VeilPoint116: 0 0 0 0 0 0 1 1 1
+VeilPoint117: 0 0 0 0 0 0 1 1 1
+VeilPoint118: 0 0 0 0 0 0 1 1 1
+VeilPoint119: 0 0 0 0 0 0 1 1 1
+VeilPoint120: 0 0 0 0 0 0 1 1 1
+VeilPoint121: 0 0 0 0 0 0 1 1 1
+VeilPoint122: 0 0 0 0 0 0 1 1 1
+VeilPoint123: 0 0 0 0 0 0 1 1 1
+VeilPoint124: 0 0 0 0 0 0 1 1 1
+VeilPoint125: 0 0 0 0 0 0 1 1 1
+VeilPoint126: 0 0 0 0 0 0 1 1 1
+VeilPoint127: 0 0 0 0 0 0 1 1 1
+VeilPoint128: 0 0 0 0 0 0 1 1 1
+VeilPoint129: 0 0 0 0 0 0 1 1 1
+VeilPoint130: 0 0 0 0 0 0 1 1 1
+VeilPoint131: 0 0 0 0 0 0 1 1 1
+VeilPoint132: 0 0 0 0 0 0 1 1 1
+VeilPoint133: 0 0 0 0 0 0 1 1 1
+VeilPoint134: 0 0 0 0 0 0 1 1 1
+VeilPoint135: 0 0 0 0 0 0 1 1 1
+VeilPoint136: 0 0 0 0 0 0 1 1 1
+VeilPoint137: 0 0 0 0 0 0 1 1 1
+VeilPoint138: 0 0 0 0 0 0 1 1 1
+VeilPoint139: 0 0 0 0 0 0 1 1 1
+VeilPoint140: 0 0 0 0 0 0 1 1 1
+VeilPoint141: 0 0 0 0 0 0 1 1 1
+VeilPoint142: 0 0 0 0 0 0 1 1 1
+VeilPoint143: 0 0 0 0 0 0 1 1 1
+VeilPoint01: 0 0 0 0 0 0 1 1 1
+VeilPoint02: 0 0 0 0 0 0 1 1 1
+VeilPoint03: 0 0 0 0 0 0 1 1 1
+VeilPoint04: 0 0 0 0 0 0 1 1 1
+VeilPoint05: 0 0 0 0 0 0 1 1 1
+VeilPoint06: 0 0 0 0 0 0 1 1 1
+VeilPoint07: 0 0 0 0 0 0 1 1 1
+VeilPoint08: 0 0 0 0 0 0 1 1 1
+VeilPoint09: 0 0 0 0 0 0 1 1 1
+VeilPoint10: 0 0 0 0 0 0 1 1 1
+VeilPoint11: 0 0 0 0 0 0 1 1 1
+VeilPoint12: 0 0 0 0 0 0 1 1 1
+VeilPoint13: 0 0 0 0 0 0 1 1 1
+VeilPoint14: 0 0 0 0 0 0 1 1 1
+VeilPoint15: 0 0 0 0 0 0 1 1 1
+VeilPoint16: 0 0 0 0 0 0 1 1 1
+VeilPoint17: 0 0 0 0 0 0 1 1 1
+VeilPoint18: 0 0 0 0 0 0 1 1 1
+VeilPoint19: 0 0 0 0 0 0 1 1 1
+VeilPoint20: 0 0 0 0 0 0 1 1 1
+VeilPoint21: 0 0 0 0 0 0 1 1 1
+VeilPoint22: 0 0 0 0 0 0 1 1 1
+VeilPoint23: 0 0 0 0 0 0 1 1 1
+VeilPoint24: 0 0 0 0 0 0 1 1 1
+VeilPoint25: 0 0 0 0 0 0 1 1 1
+VeilPoint26: 0 0 0 0 0 0 1 1 1
+VeilPoint27: 0 0 0 0 0 0 1 1 1
+VeilPoint28: 0 0 0 0 0 0 1 1 1
+VeilPoint29: 0 0 0 0 0 0 1 1 1
+VeilPoint30: 0 0 0 0 0 0 1 1 1
+VeilPoint31: 0 0 0 0 0 0 1 1 1
+VeilPoint32: 0 0 0 0 0 0 1 1 1
+VeilPoint33: 0 0 0 0 0 0 1 1 1
+VeilPoint34: 0 0 0 0 0 0 1 1 1
+VeilPoint35: 0 0 0 0 0 0 1 1 1
+VeilPoint36: 0 0 0 0 0 0 1 1 1
+VeilPoint37: 0 0 0 0 0 0 1 1 1
+VeilPoint38: 0 0 0 0 0 0 1 1 1
+VeilPoint39: 0 0 0 0 0 0 1 1 1
+VeilPoint40: 0 0 0 0 0 0 1 1 1
+VeilPoint41: 0 0 0 0 0 0 1 1 1
+VeilPoint42: 0 0 0 0 0 0 1 1 1
+VeilPoint43: 0 0 0 0 0 0 1 1 1
+VeilPoint44: 0 0 0 0 0 0 1 1 1
+VeilPoint45: 0 0 0 0 0 0 1 1 1
+VeilPoint46: 0 0 0 0 0 0 1 1 1
+VeilPoint47: 0 0 0 0 0 0 1 1 1
+VeilPoint48: 0 0 0 0 0 0 1 1 1
+VeilPoint49: 0 0 0 0 0 0 1 1 1
+VeilPoint50: 0 0 0 0 0 0 1 1 1
+VeilPoint51: 0 0 0 0 0 0 1 1 1
+VeilPoint52: 0 0 0 0 0 0 1 1 1
+VeilPoint53: 0 0 0 0 0 0 1 1 1
+VeilPoint54: 0 0 0 0 0 0 1 1 1
+VeilPoint55: 0 0 0 0 0 0 1 1 1
+VeilPoint56: 0 0 0 0 0 0 1 1 1
+VeilPoint57: 0 0 0 0 0 0 1 1 1
+VeilPoint58: 0 0 0 0 0 0 1 1 1
+VeilPoint59: 0 0 0 0 0 0 1 1 1
+VeilPoint60: 0 0 0 0 0 0 1 1 1
+VeilPoint61: 0 0 0 0 0 0 1 1 1
+VeilPoint62: 0 0 0 0 0 0 1 1 1
+VeilPoint63: 0 0 0 0 0 0 1 1 1
+VeilPoint64: 0 0 0 0 0 0 1 1 1
+VeilPoint65: 0 0 0 0 0 0 1 1 1
+VeilPoint66: 0 0 0 0 0 0 1 1 1
+VeilPoint67: 0 0 0 0 0 0 1 1 1
+VeilPoint68: 0 0 0 0 0 0 1 1 1
+VeilPoint69: 0 0 0 0 0 0 1 1 1
+VeilPoint70: 0 0 0 0 0 0 1 1 1
+VeilPoint71: 0 0 0 0 0 0 1 1 1
+VeilPoint72: 0 0 0 0 0 0 1 1 1
+VeilPoint00: 0 0 0 0 0 0 1 1 1
+VeilPoint73: 0 0 0 0 0 0 1 1 1
+VeilPoint74: 0 0 0 0 0 0 1 1 1
+VeilPoint75: 0 0 0 0 0 0 1 1 1
+VeilPoint76: 0 0 0 0 0 0 1 1 1
+VeilPoint77: 0 0 0 0 0 0 1 1 1
+VeilPoint78: 0 0 0 0 0 0 1 1 1
+VeilPoint79: 0 0 0 0 0 0 1 1 1
+VeilPoint80: 0 0 0 0 0 0 1 1 1
+XXXClothDummy01: 0 0 0 0 0 0 1 1 1
+XXXClothDummy04: 0 0 0 0 0 0 1 1 1
+XXXClothDummy07: 0 0 0 0 0 0 1 1 1
+XXXClothDummy09: 0 0 0 0 0 0 1 1 1
+XXXClothDummy10: 0 0 0 0 0 0 1 1 1
+XXXClothDummy13: 0 0 0 0 0 0 1 1 1
+XXXClothDummy16: 0 0 0 0 0 0 1 1 1
+XXXClothDummy19: 0 0 0 0 0 0 1 1 1
+XXXClothDummy21: 0 0 0 0 0 0 1 1 1
+XXXClothDummy22: 0 0 0 0 0 0 1 1 1
+XXXClothDummy40: 0 0 0 0 0 0 1 1 1
+XXXClothDummy44: 0 0 0 0 0 0 1 1 1
+XXXClothDummy75: 0 0 0 0 0 0 1 1 1
+XXXClothDummy79: 0 0 0 0 0 0 1 1 1
+XXXClothDummy111: 0 0 0 0 0 0 1 1 1
+XXXClothDummy115: 0 0 0 0 0 0 1 1 1
+XXXClothDummy135: 0 0 0 0 0 0 1 1 1
+XXXClothDummy139: 0 0 0 0 0 0 1 1 1
+XXXClothDummy147: 0 0 0 0 0 0 1 1 1
+XXXClothDummy151: 0 0 0 0 0 0 1 1 1
+L WaistArmor1: 0 0 0 0 0 0 1 1 1
+L WaistArmor3: 0 0 0 0 0 0 1 1 1
+L WaistArmor2: 0 0 0 0 0 0 1 1 1
+R WaistArmor1: 0 0 0 0 0 0 1 1 1
+R WaistArmor3: 0 0 0 0 0 0 1 1 1
+R WaistArmor2: 0 0 0 0 0 0 1 1 1
+pelvis: -23 13 -2 0 0 0 1 1 1
+leg left thigh: -17 -1 -12 0 -0.002 0 1 1 1
+leg left knee: 29 11 0 0 0 0 1 1 1
+leg left ankle: 0 0 0 0 0 0 1 1 1
+leg left toe0: 0 0 0 0 0 0 1 1 1
+L Calf00: 0 0 0 0 0 0 1 1 1
+L Calf01: 0 0 0 0 0 0 1 1 1
+L Calf02: 0 0 0 0 0 0 1 1 1
+L Calf03: 0 0 0 0 0 0 1 1 1
+L Calf04: 0 0 0 0 0 0 1 1 1
+L Thigh00: 0 0 0 0 0 0 1 1 1
+L Thigh01: 0 0 0 0 0 0 1 1 1
+L Thigh02: 0 0 0 0 0 0 1 1 1
+L Thigh03: 0 0 0 0 0 0 1 1 1
+L Thigh04: 0 0 0 0 0 0 1 1 1
+L Knee: 0 0 0 0 0 0 1 1 1
+leg right thigh: -92 2 -2 0 0 0 1 1 1
+leg right knee: 79 0 0 0 0.005 -0.032 1 1 1
+leg right ankle: 25 0 -1 0 0 0 1 1 1
+leg right toe0: -22 0 0 0 -0.05 0.049 1 1 1
+R Calf00: 0 0 0 0 0 0 1 1 1
+R Calf01: 0 0 0 0 0 0 1 1 1
+R Calf02: 0 0 0 0 0 0 1 1 1
+R Calf03: 0 0 0 0 0 0 1 1 1
+R Calf04: 0 0 0 0 0 0 1 1 1
+R Thigh00: 0 0 0 0 0 0 1 1 1
+R Thigh01: 0 0 0 0 0 0 1 1 1
+R Thigh02: 0 0 0 0 0 0 1 1 1
+R Thigh03: 0 0 0 0 0 0 1 1 1
+R Thigh04: 0 0 0 0 0 0 1 1 1
+R Knee: 0 0 0 0 0 0 1 1 1
+Sword001: 0 0 0 0 0 0 1 1 1
+????????????002: 0 0 0 0 0 0 1 1 1
+Dummy ??SFX: 0 0 0 0 0 0 1 1 1
+bwae003: 0 0 0 0 0 0 1 1 1
+Box006: 0 0 0 0 0 0 1 1 1
+Throw Target2: 0 0 0 0 0 0 1 1 1
+Throw Target1: 0 0 0 0 0 0 1 1 1
+Throw Target: 0 0 0 0 0 0 1 1 1
+L Hand Target2: 0 0 0 0 0 0 1 1 1
+L Hand Target1: 0 0 0 0 0 0 1 1 1
+L Hand Target: 0 0 0 0 0 0 1 1 1
+R Hand Target2: 0 0 0 0 0 0 1 1 1
+R Hand Target1: 0 0 0 0 0 0 1 1 1
+R Hand Target: 0 0 0 0 0 0 1 1 1
+leg left foot target2: 0 0 0 0 0 0 1 1 1
+leg left foot target1: 0 0 0 0 0 0 1 1 1
+leg left foot target: 0 0 0 0 0 0 1 1 1
+leg right foot target2: 0 0 0 0 0 0 1 1 1
+leg right foot target1: 0 0 0 0 0 0 1 1 1
+leg right foot target: 0 0 0 0 0 0 1 1 1
+root hips: 0 0 0 0 0 0 1 1 1
+L Weapon00: 0 0 0 0 0 0 1 1 1
+L Weapon01: 0 0 0 0 0 0 1 1 1
+L Weapon02: 0 0 0 0 0 0 1 1 1
+L Weapon03: 0 0 0 0 0 0 1 1 1
+L Weapon04: 0 0 0 0 0 0 1 1 1
+L Weapon05: 0 0 0 0 0 0 1 1 1
+L Weapon06: 0 0 0 0 0 0 1 1 1
+L Weapon07: 0 0 0 0 0 0 1 1 1
+L Weapon08: 0 0 0 0 0 0 1 1 1
+L Weapon09: 0 0 0 0 0 0 1 1 1
+R Weapon00: 0 0 0 0 0 0 1 1 1
+R Weapon01: 0 0 0 0 0 0 1 1 1
+R Weapon02: 0 0 0 0 0 0 1 1 1
+R Weapon03: 0 0 0 0 0 0 1 1 1
+R Weapon04: 0 0 0 0 0 0 1 1 1
+R Weapon05: 0 0 0 0 0 0 1 1 1
+R Weapon06: 0 0 0 0 0 0 1 1 1
+R Weapon07: 0 0 0 0 0 0 1 1 1
+R Weapon08: 0 0 0 0 0 0 1 1 1
+R Weapon09: 0 0 0 0 0 0 1 1 1
+VeilRoot: 0 0 0 0 0 0 1 1 1
+VeilRoot001: 0 0 0 0 0 0 1 1 1
+VeilRoot002: 0 0 0 0 0 0 1 1 1
+VeilRoot003: 0 0 0 0 0 0 1 1 1
+VeilRoot004: 0 0 0 0 0 0 1 1 1
+VeilRoot005: 0 0 0 0 0 0 1 1 1
+VeilRoot006: 0 0 0 0 0 0 1 1 1
+VeilRoot007: 0 0 0 0 0 0 1 1 1
+VeilRoot008: 0 0 0 0 0 0 1 1 1
+VeilRoot009: 0 0 0 0 0 0 1 1 1
+VeilRoot010: 0 0 0 0 0 0 1 1 1
+VeilRoot011: 0 0 0 0 0 0 1 1 1
+VeilRoot012: 0 0 0 0 0 0 1 1 1
+VeilRoot013: 0 0 0 0 0 0 1 1 1
+VeilRoot014: 0 0 0 0 0 0 1 1 1
+VeilRoot015: 0 0 0 0 0 0 1 1 1
+VeilRoot016: 0 0 0 0 0 0 1 1 1
+VeilRoot017: 0 0 0 0 0 0 1 1 1
+XX ClothRoot: 0 0 0 0 0 0 1 1 1
