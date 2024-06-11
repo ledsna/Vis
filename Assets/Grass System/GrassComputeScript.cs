@@ -1,8 +1,11 @@
+// @Minionsart version
+// credits  to  forkercat https://gist.github.com/junhaowww/fb6c030c17fe1e109a34f1c92571943f
+// and  NedMakesGames https://gist.github.com/NedMakesGames/3e67fabe49e2e3363a657ef8a6a09838
+// for the base setup for compute shaders
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 [ExecuteInEditMode]
 public class GrassComputeScript : MonoBehaviour
@@ -11,38 +14,38 @@ public class GrassComputeScript : MonoBehaviour
     public bool autoUpdate;
 
     // main camera
-    private Camera _mainCamera;
+    private Camera m_MainCamera;
 
     // grass settings to send to the compute shader
     public SO_GrassSettings currentPresets;
 
     // interactors
-    ShaderInteractor[] _interactors;
+    ShaderInteractor[] interactors;
 
     // base data lists
     [SerializeField, HideInInspector]
     List<GrassData> grassData = new List<GrassData>();
 
     // list of all visible grass ids, rest are culled
-    List<int> _grassVisibleIDs = new List<int>();
+    List<int> grassVisibleIDList = new List<int>();
 
     // A state variable to help keep track of whether compute buffers have been set up
-    private bool _initialized;
+    private bool m_Initialized;
     // A compute buffer to hold vertex data of the source mesh
-    private ComputeBuffer _sourceVertBuffer;
+    private ComputeBuffer m_SourceVertBuffer;
     // A compute buffer to hold vertex data of the generated mesh
-    private ComputeBuffer _drawBuffer;
+    private ComputeBuffer m_DrawBuffer;
     // A compute buffer to hold indirect draw arguments
-    private ComputeBuffer _argsBuffer;
+    private ComputeBuffer m_ArgsBuffer;
     // Instantiate the shaders so data belong to their unique compute buffers
-    private ComputeShader _instantiatedComputeShader;
+    private ComputeShader m_InstantiatedComputeShader;
     // buffer that contains the ids of all visible instances
-    private ComputeBuffer _visibleIDBuffer;
-    [FormerlySerializedAs("m_InstantiatedMaterial")] [SerializeField] Material instantiatedMaterial;
+    private ComputeBuffer m_VisibleIDBuffer;
+    [SerializeField] Material m_InstantiatedMaterial;
     // The id of the kernel in the grass compute shader
-    private int _idGrassKernel;
+    private int m_IdGrassKernel;
     // The x dispatch size for the grass compute shader
-    private int _dispatchSize;
+    private int m_DispatchSize;
     // compute shader thread group size
     uint threadGroupSize;
 
@@ -54,7 +57,7 @@ public class GrassComputeScript : MonoBehaviour
     Bounds bounds;
 
 
-    private uint[] _argsBufferReset = new uint[5]
+    private uint[] argsBufferReset = new uint[5]
    {
         0,  // Number of vertices to render (Calculated in the compute shader with "InterlockedAdd(_IndirectArgsBuffer[0].numVertices);")
         1,  // Number of instances to render (should only be 1 instance since it should produce a single mesh)
@@ -104,18 +107,32 @@ public class GrassComputeScript : MonoBehaviour
     {
         view = scene;
         if (!Application.isPlaying)
-            if (view.camera != null) _mainCamera = view.camera;
+        {
+            if (view.camera != null)
+            {
+                m_MainCamera = view.camera;
+            }
+        }
         else
-            _mainCamera = Camera.main;
+        {
+            m_MainCamera = Camera.main;
+        }
     }
 
     private void OnValidate()
     {
         // Set up components
         if (!Application.isPlaying)
-            if (view != null) _mainCamera = view.camera;
+        {
+            if (view != null)
+            {
+                m_MainCamera = view.camera;
+            }
+        }
         else
-            _mainCamera = Camera.main;
+        {
+            m_MainCamera = Camera.main;
+        }
     }
 #endif
 
@@ -124,8 +141,10 @@ public class GrassComputeScript : MonoBehaviour
     private void OnEnable()
     {
         // If initialized, call on disable to clean things up
-        if (_initialized)
+        if (m_Initialized)
+        {
             OnDisable();
+        }
 
         MainSetup(true);
     }
@@ -133,32 +152,42 @@ public class GrassComputeScript : MonoBehaviour
     void MainSetup(bool full)
     {
 #if UNITY_EDITOR
-        SceneView.duringSceneGui += OnScene;
+
+        SceneView.duringSceneGui += this.OnScene;
         if (!Application.isPlaying)
+        {
             if (view != null)
-                _mainCamera = view.camera;
+            {
+                m_MainCamera = view.camera;
+            }
+
+        }
 #endif
         if (Application.isPlaying)
-            _mainCamera = Camera.main;
-        
+        {
+            m_MainCamera = Camera.main;
+        }
+
         // Don't do anything if resources are not found,
         // or no vertex is put on the mesh.
         if (grassData.Count == 0)
+        {
             return;
+        }
 
         if (currentPresets.shaderToUse == null || currentPresets.materialToUse == null)
         {
-            Debug.LogWarning("Missing Compute Shader / Material in Grass Settings", this);
+            Debug.LogWarning("Missing Compute Shader/Material in grass Settings", this);
             return;
         }
 
         // empty array to replace the visible grass with
         PopulateEmptyList(grassData.Count);
-        _initialized = true;
+        m_Initialized = true;
 
         // Instantiate the shaders so they can point to their own buffers
-        _instantiatedComputeShader = Instantiate(currentPresets.shaderToUse);
-        instantiatedMaterial = Instantiate(currentPresets.materialToUse);
+        m_InstantiatedComputeShader = Instantiate(currentPresets.shaderToUse);
+        m_InstantiatedMaterial = Instantiate(currentPresets.materialToUse);
 
         int numSourceVertices = grassData.Count;
 
@@ -170,37 +199,37 @@ public class GrassComputeScript : MonoBehaviour
 
         // Create compute buffers
         // The stride is the size, in bytes, each object in the buffer takes up
-        _sourceVertBuffer = new ComputeBuffer(numSourceVertices, SOURCE_VERT_STRIDE, ComputeBufferType.Structured, ComputeBufferMode.Immutable);
-        _sourceVertBuffer.SetData(grassData);
+        m_SourceVertBuffer = new ComputeBuffer(numSourceVertices, SOURCE_VERT_STRIDE, ComputeBufferType.Structured, ComputeBufferMode.Immutable);
+        m_SourceVertBuffer.SetData(grassData);
 
 
-        _drawBuffer = new ComputeBuffer(maxBufferSize, DRAW_STRIDE, ComputeBufferType.Append);
+        m_DrawBuffer = new ComputeBuffer(maxBufferSize, DRAW_STRIDE, ComputeBufferType.Append);
 
-        _argsBuffer = new ComputeBuffer(1, _argsBufferReset.Length * sizeof(uint), ComputeBufferType.IndirectArguments);
+        m_ArgsBuffer = new ComputeBuffer(1, argsBufferReset.Length * sizeof(uint), ComputeBufferType.IndirectArguments);
 
-        _visibleIDBuffer = new ComputeBuffer(grassData.Count, sizeof(int), ComputeBufferType.Structured); //uint only, per visible grass
+        m_VisibleIDBuffer = new ComputeBuffer(grassData.Count, sizeof(int), ComputeBufferType.Structured); //uint only, per visible grass
 
         // Cache the kernel IDs we will be dispatching
-        _idGrassKernel = _instantiatedComputeShader.FindKernel("Main");
+        m_IdGrassKernel = m_InstantiatedComputeShader.FindKernel("Main");
 
         // Set buffer data
-        _instantiatedComputeShader.SetBuffer(_idGrassKernel, "_SourceVertices",
-            _sourceVertBuffer);
-        _instantiatedComputeShader.SetBuffer(_idGrassKernel, "_DrawTriangles", _drawBuffer);
-        _instantiatedComputeShader.SetBuffer(_idGrassKernel, "_IndirectArgsBuffer", _argsBuffer);
-        _instantiatedComputeShader.SetBuffer(_idGrassKernel, "_VisibleIDBuffer", _visibleIDBuffer);
-        instantiatedMaterial.SetBuffer("_DrawTriangles", _drawBuffer);
+        m_InstantiatedComputeShader.SetBuffer(m_IdGrassKernel, "_SourceVertices",
+            m_SourceVertBuffer);
+        m_InstantiatedComputeShader.SetBuffer(m_IdGrassKernel, "_DrawTriangles", m_DrawBuffer);
+        m_InstantiatedComputeShader.SetBuffer(m_IdGrassKernel, "_IndirectArgsBuffer", m_ArgsBuffer);
+        m_InstantiatedComputeShader.SetBuffer(m_IdGrassKernel, "_VisibleIDBuffer", m_VisibleIDBuffer);
+        m_InstantiatedMaterial.SetBuffer("_DrawTriangles", m_DrawBuffer);
         // Set vertex data
-        _instantiatedComputeShader.SetInt("_NumSourceVertices", numSourceVertices);
+        m_InstantiatedComputeShader.SetInt("_NumSourceVertices", numSourceVertices);
         // cache shader property to int id for interactivity;
         shaderID = Shader.PropertyToID("_PositionsMoving");
 
         // Calculate the number of threads to use. Get the thread size from the kernel
         // Then, divide the number of triangles by that size
-        _instantiatedComputeShader.GetKernelThreadGroupSizes(_idGrassKernel,
+        m_InstantiatedComputeShader.GetKernelThreadGroupSizes(m_IdGrassKernel,
             out threadGroupSize, out _, out _);
         //set once only
-        _dispatchSize = Mathf.CeilToInt(grassData.Count / threadGroupSize);
+        m_DispatchSize = Mathf.CeilToInt(grassData.Count / threadGroupSize);
         SetGrassDataBase(full);
 
         if (full)
@@ -244,13 +273,13 @@ public class GrassComputeScript : MonoBehaviour
         {
             // just make everything visible while editing grass
             GrassFastList(grassData.Count);
-            _visibleIDBuffer.SetData(_grassVisibleIDs);
+            m_VisibleIDBuffer.SetData(grassVisibleIDList);
         }
     }
 
     void GrassFastList(int count)
     {
-        _grassVisibleIDs = Enumerable.Range(0, count).ToArray().ToList();
+        grassVisibleIDList = Enumerable.Range(0, count).ToArray().ToList();
     }
 
     void PopulateEmptyList(int count)
@@ -261,58 +290,58 @@ public class GrassComputeScript : MonoBehaviour
 
     void GetFrustumData()
     {
-        if (_mainCamera == null)
+        if (m_MainCamera == null)
         {
             return;
         }
         // if the camera didnt move, we dont need to change the culling;
-        if (m_cachedCamRot == _mainCamera.transform.rotation && m_cachedCamPos == _mainCamera.transform.position && Application.isPlaying)
+        if (m_cachedCamRot == m_MainCamera.transform.rotation && m_cachedCamPos == m_MainCamera.transform.position && Application.isPlaying)
         {
             return;
         }
         // get frustum data from the main camera
-        cameraOriginalFarPlane = _mainCamera.farClipPlane;
-        _mainCamera.farClipPlane = currentPresets.maxDrawDistance;//allow drawDistance control    
-        GeometryUtility.CalculateFrustumPlanes(_mainCamera, cameraFrustumPlanes);
-        _mainCamera.farClipPlane = cameraOriginalFarPlane;//revert far plane edit
+        cameraOriginalFarPlane = m_MainCamera.farClipPlane;
+        m_MainCamera.farClipPlane = currentPresets.maxDrawDistance;//allow drawDistance control    
+        GeometryUtility.CalculateFrustumPlanes(m_MainCamera, cameraFrustumPlanes);
+        m_MainCamera.farClipPlane = cameraOriginalFarPlane;//revert far plane edit
 
         if (!m_fastMode)
         {
             BoundsListVis.Clear();
-            _visibleIDBuffer.SetData(empty);
-            _grassVisibleIDs.Clear();
-            cullingTree.RetrieveLeaves(cameraFrustumPlanes, BoundsListVis, _grassVisibleIDs);
-            _visibleIDBuffer.SetData(_grassVisibleIDs);
+            m_VisibleIDBuffer.SetData(empty);
+            grassVisibleIDList.Clear();
+            cullingTree.RetrieveLeaves(cameraFrustumPlanes, BoundsListVis, grassVisibleIDList);
+            m_VisibleIDBuffer.SetData(grassVisibleIDList);
         }
 
         // cache camera position to skip culling when not moved
-        m_cachedCamPos = _mainCamera.transform.position;
-        m_cachedCamRot = _mainCamera.transform.rotation;
+        m_cachedCamPos = m_MainCamera.transform.position;
+        m_cachedCamRot = m_MainCamera.transform.rotation;
     }
 
     private void OnDisable()
     {
         // Dispose of buffers and copied shaders here
-        if (_initialized)
+        if (m_Initialized)
         {
             // If the application is not in play mode, we have to call DestroyImmediate
             if (Application.isPlaying)
             {
-                Destroy(_instantiatedComputeShader);
-                Destroy(instantiatedMaterial);
+                Destroy(m_InstantiatedComputeShader);
+                Destroy(m_InstantiatedMaterial);
             }
             else
             {
-                DestroyImmediate(_instantiatedComputeShader);
-                DestroyImmediate(instantiatedMaterial);
+                DestroyImmediate(m_InstantiatedComputeShader);
+                DestroyImmediate(m_InstantiatedMaterial);
             }
             // Release each buffer
-            _sourceVertBuffer?.Release();
-            _drawBuffer?.Release();
-            _argsBuffer?.Release();
-            _visibleIDBuffer?.Release();
+            m_SourceVertBuffer?.Release();
+            m_DrawBuffer?.Release();
+            m_ArgsBuffer?.Release();
+            m_VisibleIDBuffer?.Release();
         }
-        _initialized = false;
+        m_Initialized = false;
     }
 
     // LateUpdate is called after all Update calls
@@ -327,7 +356,7 @@ public class GrassComputeScript : MonoBehaviour
         }
 
         // If not initialized, do nothing (creating zero-length buffer will crash)
-        if (!_initialized)
+        if (!m_Initialized)
         {
             // Initialization is not done, please check if there are null components
             // or just because there is not vertex being painted.
@@ -338,73 +367,73 @@ public class GrassComputeScript : MonoBehaviour
         // Update the shader with frame specific data
         SetGrassDataUpdate();
         // Clear the draw and indirect args buffers of last frame's data
-        _drawBuffer.SetCounterValue(0);
-        _argsBuffer.SetData(_argsBufferReset);
-        _dispatchSize = Mathf.CeilToInt(_grassVisibleIDs.Count / threadGroupSize);
-        if (_grassVisibleIDs.Count > 0)
+        m_DrawBuffer.SetCounterValue(0);
+        m_ArgsBuffer.SetData(argsBufferReset);
+        m_DispatchSize = Mathf.CeilToInt(grassVisibleIDList.Count / threadGroupSize);
+        if (grassVisibleIDList.Count > 0)
         {
             // make sure the compute shader is dispatched even when theres very little grass
-            _dispatchSize += 1;
+            m_DispatchSize += 1;
         }
-        if (_dispatchSize > 0)
+        if (m_DispatchSize > 0)
         {
             // Dispatch the grass shader. It will run on the GPU
-            _instantiatedComputeShader.Dispatch(_idGrassKernel, _dispatchSize, 1, 1);
+            m_InstantiatedComputeShader.Dispatch(m_IdGrassKernel, m_DispatchSize, 1, 1);
             // DrawProceduralIndirect queues a draw call up for our generated mesh
-            Graphics.DrawProceduralIndirect(instantiatedMaterial, bounds, MeshTopology.Triangles,
-            _argsBuffer, 0, null, null, currentPresets.castShadow, true, gameObject.layer);
+            Graphics.DrawProceduralIndirect(m_InstantiatedMaterial, bounds, MeshTopology.Triangles,
+            m_ArgsBuffer, 0, null, null, currentPresets.castShadow, true, gameObject.layer);
         }
     }
 
     private void SetGrassDataBase(bool full)
     {
         // Send things to compute shader that dont need to be set every frame
-        _instantiatedComputeShader.SetFloat("_Time", Time.time);
-        _instantiatedComputeShader.SetFloat("_GrassRandomHeightMin", currentPresets.grassRandomHeightMin);
-        _instantiatedComputeShader.SetFloat("_GrassRandomHeightMax", currentPresets.grassRandomHeightMax);
-        _instantiatedComputeShader.SetFloat("_WindSpeed", currentPresets.windSpeed);
-        _instantiatedComputeShader.SetFloat("_WindStrength", currentPresets.windStrength);
+        m_InstantiatedComputeShader.SetFloat("_Time", Time.time);
+        m_InstantiatedComputeShader.SetFloat("_GrassRandomHeightMin", currentPresets.grassRandomHeightMin);
+        m_InstantiatedComputeShader.SetFloat("_GrassRandomHeightMax", currentPresets.grassRandomHeightMax);
+        m_InstantiatedComputeShader.SetFloat("_WindSpeed", currentPresets.windSpeed);
+        m_InstantiatedComputeShader.SetFloat("_WindStrength", currentPresets.windStrength);
 
 
         if (full)
         {
-            _instantiatedComputeShader.SetFloat("_MinFadeDist", currentPresets.minFadeDistance);
-            _instantiatedComputeShader.SetFloat("_MaxFadeDist", currentPresets.maxDrawDistance);
-            _interactors = (ShaderInteractor[])FindObjectsOfType(typeof(ShaderInteractor));
+            m_InstantiatedComputeShader.SetFloat("_MinFadeDist", currentPresets.minFadeDistance);
+            m_InstantiatedComputeShader.SetFloat("_MaxFadeDist", currentPresets.maxDrawDistance);
+            interactors = (ShaderInteractor[])FindObjectsOfType(typeof(ShaderInteractor));
         }
         else
         {
             // if theres a lot of grass, just cull earlier so we can still see what we're paiting, otherwise it will be invisible
             if (grassData.Count > 200000)
             {
-                _instantiatedComputeShader.SetFloat("_MinFadeDist", 40f);
-                _instantiatedComputeShader.SetFloat("_MaxFadeDist", 50f);
+                m_InstantiatedComputeShader.SetFloat("_MinFadeDist", 40f);
+                m_InstantiatedComputeShader.SetFloat("_MaxFadeDist", 50f);
             }
             else
             {
-                _instantiatedComputeShader.SetFloat("_MinFadeDist", currentPresets.minFadeDistance);
-                _instantiatedComputeShader.SetFloat("_MaxFadeDist", currentPresets.maxDrawDistance);
+                m_InstantiatedComputeShader.SetFloat("_MinFadeDist", currentPresets.minFadeDistance);
+                m_InstantiatedComputeShader.SetFloat("_MaxFadeDist", currentPresets.maxDrawDistance);
             }
 
         }
-        _instantiatedComputeShader.SetFloat("_InteractorStrength", currentPresets.affectStrength);
-        _instantiatedComputeShader.SetFloat("_BladeRadius", currentPresets.bladeRadius);
-        _instantiatedComputeShader.SetFloat("_BladeForward", currentPresets.bladeForwardAmount);
-        _instantiatedComputeShader.SetFloat("_BladeCurve", Mathf.Max(0, currentPresets.bladeCurveAmount));
-        _instantiatedComputeShader.SetFloat("_BottomWidth", currentPresets.bottomWidth);
+        m_InstantiatedComputeShader.SetFloat("_InteractorStrength", currentPresets.affectStrength);
+        m_InstantiatedComputeShader.SetFloat("_BladeRadius", currentPresets.bladeRadius);
+        m_InstantiatedComputeShader.SetFloat("_BladeForward", currentPresets.bladeForwardAmount);
+        m_InstantiatedComputeShader.SetFloat("_BladeCurve", Mathf.Max(0, currentPresets.bladeCurveAmount));
+        m_InstantiatedComputeShader.SetFloat("_BottomWidth", currentPresets.bottomWidth);
 
 
 
-        _instantiatedComputeShader.SetInt("_MaxBladesPerVertex", currentPresets.allowedBladesPerVertex);
-        _instantiatedComputeShader.SetInt("_MaxSegmentsPerBlade", currentPresets.allowedSegmentsPerBlade);
+        m_InstantiatedComputeShader.SetInt("_MaxBladesPerVertex", currentPresets.allowedBladesPerVertex);
+        m_InstantiatedComputeShader.SetInt("_MaxSegmentsPerBlade", currentPresets.allowedSegmentsPerBlade);
 
-        _instantiatedComputeShader.SetFloat("_MinHeight", currentPresets.MinHeight);
-        _instantiatedComputeShader.SetFloat("_MinWidth", currentPresets.MinWidth);
+        m_InstantiatedComputeShader.SetFloat("_MinHeight", currentPresets.MinHeight);
+        m_InstantiatedComputeShader.SetFloat("_MinWidth", currentPresets.MinWidth);
 
-        _instantiatedComputeShader.SetFloat("_MaxHeight", currentPresets.MaxHeight);
-        _instantiatedComputeShader.SetFloat("_MaxWidth", currentPresets.MaxWidth);
-        instantiatedMaterial.SetColor("_TopTint", currentPresets.topTint);
-        instantiatedMaterial.SetColor("_BottomTint", currentPresets.bottomTint);
+        m_InstantiatedComputeShader.SetFloat("_MaxHeight", currentPresets.MaxHeight);
+        m_InstantiatedComputeShader.SetFloat("_MaxWidth", currentPresets.MaxWidth);
+        m_InstantiatedMaterial.SetColor("_TopTint", currentPresets.topTint);
+        m_InstantiatedMaterial.SetColor("_BottomTint", currentPresets.bottomTint);
     }
 
     public void Reset()
@@ -423,30 +452,30 @@ public class GrassComputeScript : MonoBehaviour
     private void SetGrassDataUpdate()
     {
         // variables sent to the shader every frame
-        _instantiatedComputeShader.SetFloat("_Time", Time.time);
-        _instantiatedComputeShader.SetMatrix("_LocalToWorld", transform.localToWorldMatrix);
-        if (_interactors.Length > 0)
+        m_InstantiatedComputeShader.SetFloat("_Time", Time.time);
+        m_InstantiatedComputeShader.SetMatrix("_LocalToWorld", transform.localToWorldMatrix);
+        if (interactors.Length > 0)
         {
-            Vector4[] positions = new Vector4[_interactors.Length];
+            Vector4[] positions = new Vector4[interactors.Length];
 
-            for (int i = 0; i < _interactors.Length; i++)
+            for (int i = 0; i < interactors.Length; i++)
             {
-                positions[i] = new Vector4(_interactors[i].transform.position.x, _interactors[i].transform.position.y, _interactors[i].transform.position.z,
-                _interactors[i].radius);
+                positions[i] = new Vector4(interactors[i].transform.position.x, interactors[i].transform.position.y, interactors[i].transform.position.z,
+                interactors[i].radius);
 
             }
-            _instantiatedComputeShader.SetVectorArray(shaderID, positions);
-            _instantiatedComputeShader.SetFloat("_InteractorsLength", _interactors.Length);
+            m_InstantiatedComputeShader.SetVectorArray(shaderID, positions);
+            m_InstantiatedComputeShader.SetFloat("_InteractorsLength", interactors.Length);
         }
-        if (_mainCamera != null)
+        if (m_MainCamera != null)
         {
-            _instantiatedComputeShader.SetVector("_CameraPositionWS", _mainCamera.transform.position);
+            m_InstantiatedComputeShader.SetVector("_CameraPositionWS", m_MainCamera.transform.position);
         }
 #if UNITY_EDITOR
         // if we dont have a main camera (it gets added during gameplay), use the scene camera
         else if (view != null)
         {
-            _instantiatedComputeShader.SetVector("_CameraPositionWS", view.camera.transform.position);
+            m_InstantiatedComputeShader.SetVector("_CameraPositionWS", view.camera.transform.position);
         }
 #endif
     }
